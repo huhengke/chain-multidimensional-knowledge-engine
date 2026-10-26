@@ -1,0 +1,9 @@
+pydantic>=2
+fastapi
+uvicorn
+httpx
+jsonschema
+pytest
+opencv-python-headless>=4.10
+av>=12
+numpy>=1.26

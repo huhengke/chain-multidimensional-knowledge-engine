@@ -1,0 +1,731 @@
+{
+  "assets": [
+    {
+      "id": "asset-cb9495113f1f4b24943ac38f0473009d",
+      "title": "2025年版中国药典一部凡例公示稿.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "published",
+      "document_id": "kd-7138f430f66aefdb",
+      "indexed_units": 28,
+      "sha256": "29507831fcb89266efd6d5113fd6b7480ecf51b6d4a012b9c5c6ddc06f77740e",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-40b29ac6004446249f71d08839dcff59",
+      "title": "扁鹊镜经.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "pending_review",
+      "document_id": "kd-34f45d3994dd76e0",
+      "indexed_units": 95,
+      "sha256": "98df3b7815c1e30867ff40a3f75afbff7dcb0bd339bbd20fd30b43ad497d6cfb",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-c74866e0686f434dafcafd1f4346b5bb",
+      "title": "黄帝经通释_胡信田注释_天工书局_1984_11427627.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "published",
+      "document_id": "kd-0cd7f989ada15ffc",
+      "indexed_units": 509,
+      "sha256": "5303aeb43c3b0519a1d3b93a132988b78c2afa828e469aac87172f3904b521a3",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-811a360ca760422a854d334680891a6b",
+      "title": "内证观察笔记（高清版）.pdf",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "89e9bd1a1126dc12518984c4f5d5088825216af2885507156573afd89c321c37",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-91759e0359024136a6a11044c8b1f858",
+      "title": "伤寒杂病论-论部条文复原版.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "published",
+      "document_id": "kd-f40442f2c7d03616",
+      "indexed_units": 125,
+      "sha256": "1a53f91ea9e2536505dc1b787118482af2d996b7b22e1575697c1c2abb5a00ea",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-04734c1e79f440038b14cba3a5e86095",
+      "title": "太平经.txt",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "published",
+      "document_id": "kd-92e6fc079806266f",
+      "indexed_units": 902,
+      "sha256": "e6efa2463c95622bf2c88544da78fdd5d1a44fb5fe050e6646dfbdddce6a5fea",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-6b6989cd38af47b681bd4e4c58b95168",
+      "title": "玄隐文本底稿.txt",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "published",
+      "document_id": "kd-7d8d4a3c2fbd1d03",
+      "indexed_units": 964,
+      "sha256": "cf28b62e8d92f6f79d1d3d4676046d41dff3355c4b692d416458d3f211682bf6",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-a6c06f8080ee43e7b09732bb28103b1a",
+      "title": "玄隐遗秘之阴阳大论 (商.容成子著,三申道長傳).pdf",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "27633f1c5d6a25d280a3daa98c7a81435fc98c783fa4ffcb8f613d8aac487e0d",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-83d85a27233a4c019b2ae11a534be3df",
+      "title": "陰陽大論 龜書(1).pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "published",
+      "document_id": "kd-88d6d338826d692d",
+      "indexed_units": 95,
+      "sha256": "c7abefd83024208c33a76b5796e0d69564af81586406b679d14067f84eb4dfe8",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-1df1bc6970114dec941398bf4cfe9905",
+      "title": "兵垣四编.四卷.附录二卷.明.闵声编.明天启元年吴兴闵氏刊朱墨套印本.黑白版.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "published",
+      "document_id": "kd-ac975fd9919a7366",
+      "indexed_units": 388,
+      "sha256": "5c7d946d4f6ddfa2f8d85e584a266bef1ea0da8aa0bbc609aa7473583c03579f",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-126ae808021c4360a204dc1cfa256ebf",
+      "title": "焦氏易林注：第3版下册_13246602.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "pending_review",
+      "document_id": "kd-c30538bed6cba29d",
+      "indexed_units": 649,
+      "sha256": "74cfa021c02ba652e9fe78b9c71da43c19856b5e8f6e2b019bf460fc6e21d2d5",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-5f906360fa6a44c5ab02c113d0b12b85",
+      "title": "焦氏易林注_11395691.pdf",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "26984566f25a857db06426284b60e62e11e58dc772dc4bf4f438fd07f2e22bde",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-cc643f127fe0475fba42e79aa44f235e",
+      "title": "释永信房中补肾秘方.pdf",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "5fab915023a71913fd56ee6edc9a2b95dcac0a5f6c7399a4d722410a33019f4f",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-3cae86f96d904ab69cf070b60c77615d",
+      "title": "微信图片_2025-12-16_155024_863.jpg",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "6aeefd5ba55ec79458a183892edc248bd3527bee90a895e5066dc17b8ce7caa3",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-05f8748b946f4d3eaa94ae0d256917f0",
+      "title": "微信图片_2025-12-16_155051_229.jpg",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "b952f296ea0f3bdf4fe77e94dece09906f4d126d6d5794eaa6c1f2e4ca2cbdb0",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-fd4a7bcc824e417ba10c0afdf6b5a8c4",
+      "title": "微信图片_2025-12-16_155131_836.jpg",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "f14db88e12fbd07e510911487120705267294c6e199f73d0160e0623d727a604",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-4295abe58234476790771c366858bfce",
+      "title": "元汇医镜[清]敲蹻道人.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "pending_review",
+      "document_id": "kd-3adc1669a64b6f02",
+      "indexed_units": 803,
+      "sha256": "22065c5118132f304ed5c41e17db946c83bb856e184f9702be5d9dc9b07fa543",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-d319ed6692084258bb592779ca2fb1ca",
+      "title": "中国古代星占学 卢央.pdf",
+      "brain": "knowledge",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "document_id": null,
+      "indexed_units": null,
+      "sha256": "a75986332ed6c409cb6d3963bffee5620e291973e15de8df7331d3cb46c5444d",
+      "owner": "admin",
+      "original_verified": true
+    },
+    {
+      "id": "asset-85278daf132c4bcc926fc89c7dd6e851",
+      "title": "中医基础理论笔记图解·张景明.pdf",
+      "brain": "knowledge",
+      "status": "ready",
+      "processing_status": null,
+      "publication_status": "pending_review",
+      "document_id": "kd-93978642cc940293",
+      "indexed_units": 287,
+      "sha256": "7bb4061eba6ebf4aa21e9a5e1c53f36a3ea747ecf6c9157b97ef1dcbe6ef1642",
+      "owner": "admin",
+      "original_verified": true
+    }
+  ],
+  "reviews": [
+    {
+      "owner": "admin",
+      "id": "review-6855bb939cce401aa910f0e0c7b73c5b",
+      "document_id": "kd-0cd7f989ada15ffc",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T04:42:35.024828+00:00",
+      "updated_at": "2026-10-13T04:42:35.024828+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-7f8f59f8ccba4d7587aa9a47025188d1",
+      "document_id": "kd-7138f430f66aefdb",
+      "action": "approve",
+      "reason": "测试2",
+      "created_at": "2026-10-13T04:42:44.677000+00:00",
+      "updated_at": "2026-10-13T04:42:44.677000+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-18afc85bbfe84893be2f12745f68c9a9",
+      "document_id": "kd-f40442f2c7d03616",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T08:03:15.156506+00:00",
+      "updated_at": "2026-10-13T08:03:15.156506+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-d1c1244105b243ca9d63aff1f394861d",
+      "document_id": "kd-f40442f2c7d03616",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T08:03:15.347108+00:00",
+      "updated_at": "2026-10-13T08:03:15.347108+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-265e8cafb4c64965a2dd931098dbc3e6",
+      "document_id": "kd-f40442f2c7d03616",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T08:11:26.010980+00:00",
+      "updated_at": "2026-10-13T08:11:26.010980+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-32c74b3c237449d19307316dd83280cc",
+      "document_id": "kd-92e6fc079806266f",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T08:11:33.438809+00:00",
+      "updated_at": "2026-10-13T08:11:33.438809+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-1fdc0b8d51fa44f3bd90f79f3153b7fb",
+      "document_id": "kd-7d8d4a3c2fbd1d03",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T08:11:39.456200+00:00",
+      "updated_at": "2026-10-13T08:11:39.456200+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-9fca58c4f0834ff1b711bc57f1709c89",
+      "document_id": "kd-88d6d338826d692d",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T08:11:44.171943+00:00",
+      "updated_at": "2026-10-13T08:11:44.171943+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-8207de4e2960454da932c8c890455c0f",
+      "document_id": "kd-ac975fd9919a7366",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-13T08:11:53.187034+00:00",
+      "updated_at": "2026-10-13T08:11:53.187034+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-f5fb4d4a29094f438c56558ce82e6c1b",
+      "document_id": "kd-7138f430f66aefdb",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-15T11:53:38.225582+00:00",
+      "updated_at": "2026-10-15T11:53:38.225582+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-82c8b3988e5c4b1698703d021bfa744a",
+      "document_id": "kd-34f45d3994dd76e0",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-15T11:53:51.483259+00:00",
+      "updated_at": "2026-10-15T11:53:51.483259+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-ad825ac7becf48849a3c974466054979",
+      "document_id": "kd-c30538bed6cba29d",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-15T11:54:04.281028+00:00",
+      "updated_at": "2026-10-15T11:54:04.281028+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-308060faf79447388d47c196a8b87e46",
+      "document_id": "kd-3adc1669a64b6f02",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-15T11:54:09.624129+00:00",
+      "updated_at": "2026-10-15T11:54:09.624129+00:00"
+    },
+    {
+      "owner": "admin",
+      "id": "review-256e3df7261049c19f148e158d56d2e2",
+      "document_id": "kd-93978642cc940293",
+      "action": "approve",
+      "reason": "测试",
+      "created_at": "2026-10-15T11:54:14.142543+00:00",
+      "updated_at": "2026-10-15T11:54:14.142543+00:00"
+    }
+  ],
+  "jobs": [
+    {
+      "owner": "admin",
+      "id": "job-266a98fa7b7f498ea0bd71b64acfbeab",
+      "asset_id": "asset-cb9495113f1f4b24943ac38f0473009d",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "ready",
+        "processing_status": null,
+        "publication_status": "published",
+        "review_reasons": []
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成（28 个知识块）；发布待复核：高风险领域「法律」；高风险领域「质量」；高风险领域「医疗」；高风险领域「安全」；高风险语义「合规」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-60c2eab4931d4b6e8d68d0b2606cd1ae",
+      "asset_id": "asset-40b29ac6004446249f71d08839dcff59",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "pending_review",
+        "processing_status": null,
+        "publication_status": "pending_review",
+        "review_reasons": [
+          "原文高风险领域「医疗」；高风险领域「医疗」"
+        ]
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-c539c30d9610466e947ee680fe016ca7",
+      "asset_id": "asset-c74866e0686f434dafcafd1f4346b5bb",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "ready",
+        "processing_status": null,
+        "publication_status": "published",
+        "review_reasons": []
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成（509 个知识块）；发布待复核：高风险领域「法律」；高风险领域「医疗」；高风险领域「安全」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-78ad197f3e9249058650714316c000b8",
+      "asset_id": "asset-811a360ca760422a854d334680891a6b",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-6edfc029b62e4068add0a0325a0623c8",
+      "asset_id": "asset-91759e0359024136a6a11044c8b1f858",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "ready",
+        "processing_status": null,
+        "publication_status": "published",
+        "review_reasons": []
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「法律」；高风险领域「医疗」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-04dd1b031fe34dc9b95c689311a53fc2",
+      "asset_id": "asset-04734c1e79f440038b14cba3a5e86095",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "ready",
+        "processing_status": null,
+        "publication_status": "published",
+        "review_reasons": []
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「法律」；高风险领域「安全」；高风险领域「医疗」；高风险领域「质量」；高风险语义「放行」；高风险语义「不可逆」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-f096f399341549f2887485b0829e9dca",
+      "asset_id": "asset-6b6989cd38af47b681bd4e4c58b95168",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "ready",
+        "processing_status": null,
+        "publication_status": "published",
+        "review_reasons": []
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「医疗」；高风险领域「质量」；高风险领域「法律」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-45555a961a96483d91b172077bd075c6",
+      "asset_id": "asset-a6c06f8080ee43e7b09732bb28103b1a",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-13c123c8fd8f45dfa932cfd169a456e2",
+      "asset_id": "asset-83d85a27233a4c019b2ae11a534be3df",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "ready",
+        "processing_status": null,
+        "publication_status": "published",
+        "review_reasons": []
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「医疗」；高风险领域「法律」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-e5b745e68e2a4bc7934eded1cd3b7b2f",
+      "asset_id": "asset-1df1bc6970114dec941398bf4cfe9905",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "ready",
+        "processing_status": null,
+        "publication_status": "published",
+        "review_reasons": []
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「安全」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-06c0cd85cc7f4e16a8422028b738bee4",
+      "asset_id": "asset-126ae808021c4360a204dc1cfa256ebf",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "pending_review",
+        "processing_status": null,
+        "publication_status": "pending_review",
+        "review_reasons": [
+          "原文高风险领域「医疗」；关联高风险领域「医疗」；关联高风险领域「法律」"
+        ]
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「安全」；高风险领域「医疗」；高风险领域「质量」；高风险领域「法律」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-7c20229783c540f78f52cadc89aae3c5",
+      "asset_id": "asset-5f906360fa6a44c5ab02c113d0b12b85",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-dbb85dc450884bd797c34eed7e016143",
+      "asset_id": "asset-cc643f127fe0475fba42e79aa44f235e",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-f63874eeaacf4f94b93a86b2ebb0178b",
+      "asset_id": "asset-3cae86f96d904ab69cf070b60c77615d",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-2195c23b60e1422c97349ed998cb7fd0",
+      "asset_id": "asset-05f8748b946f4d3eaa94ae0d256917f0",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-aa46d4270dbc4c0791fcd3e8e0e12a41",
+      "asset_id": "asset-fd4a7bcc824e417ba10c0afdf6b5a8c4",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-a28d77a2e443469588a5a4a331186dae",
+      "asset_id": "asset-4295abe58234476790771c366858bfce",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "pending_review",
+        "processing_status": null,
+        "publication_status": "pending_review",
+        "review_reasons": [
+          "原文高风险领域「医疗」；高风险领域「医疗」；关联高风险领域「法律」"
+        ]
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「质量」；高风险领域「医疗」；高风险领域「法律」"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-513585700ff44129b78a9baecb998aa0",
+      "asset_id": "asset-d319ed6692084258bb592779ca2fb1ca",
+      "status": "failed",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": null,
+        "processing_status": null,
+        "publication_status": null,
+        "review_reasons": null
+      },
+      "progress": {
+        "stage": "extracting",
+        "message": "正在读取原件与解析正文"
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "job-e7b3a29e891241fab08c35f157e54d19",
+      "asset_id": "asset-85278daf132c4bcc926fc89c7dd6e851",
+      "status": "succeeded",
+      "processing_status": null,
+      "publication_status": null,
+      "result": {
+        "status": "pending_review",
+        "processing_status": null,
+        "publication_status": "pending_review",
+        "review_reasons": [
+          "原文高风险领域「医疗」；高风险领域「医疗」；高风险语义「结论」"
+        ]
+      },
+      "progress": {
+        "stage": "complete",
+        "message": "解析和索引已完成；发布待复核：高风险领域「医疗」；高风险领域「法律」；高风险领域「质量」；高风险语义「结论」"
+      }
+    }
+  ]
+}

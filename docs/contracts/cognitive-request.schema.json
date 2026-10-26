@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cognitive-request.schema.json",
+  "title": "M2 统一认知请求契约（CognitiveRequest）",
+  "$ref": "#/$defs/CognitiveRequest",
+  "$defs": {
+    "CognitiveRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "request_id": { "type": "string", "minLength": 1 },
+        "trace_id": { "type": "string", "minLength": 1 },
+        "session_id": { "type": ["string", "null"] },
+        "profile_id": { "type": ["string", "null"] },
+        "day_key": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "raw_query": { "type": "string" },
+        "time_scope": { "anyOf": [{ "$ref": "#/$defs/TimeScope" }, { "type": "null" }] },
+        "targets": {
+          "type": ["array", "null"],
+          "items": { "enum": ["memory", "knowledge", "structured"] }
+        },
+        "constraints": { "$ref": "#/$defs/Constraints" }
+      },
+      "required": ["request_id", "trace_id", "raw_query"]
+    },
+    "TimeScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": { "type": "string" },
+        "end": { "type": "string" },
+        "granularity": { "enum": ["none", "day", "month", "year"] },
+        "confidence": { "enum": ["exact", "uncertain"] }
+      },
+      "required": ["start", "end", "granularity", "confidence"]
+    },
+    "Constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "no_fabricated_precision": { "type": "boolean" },
+        "merge_mode": { "enum": ["separate", "sum"] }
+      },
+      "required": ["no_fabricated_precision", "merge_mode"]
+    }
+  }
+}

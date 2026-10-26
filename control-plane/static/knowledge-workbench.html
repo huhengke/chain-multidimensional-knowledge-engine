@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>知识认知脑工作台</title>
+  <link rel="stylesheet" href="/static/knowledge-workbench.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">K</span><span>知识认知脑</span><small>受管运行时与智慧树工作台</small></div>
+    <div class="identity">
+      <label>主体 <input id="principal" value="operator" autocomplete="off"></label>
+      <label>角色 <input id="roles" value="owner" autocomplete="off"></label>
+      <span id="runtime-pill" class="status-pill">加载中</span>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">KNOWLEDGE BRAIN</p>
+        <h1>导入、证据与自动生长</h1>
+      </div>
+      <button id="refresh" class="secondary" type="button">刷新视图</button>
+    </section>
+
+    <section class="overview" aria-label="运行时概况">
+      <div><span>运行时</span><strong id="runtime-name">-</strong></div>
+      <div><span>锁定状态</span><strong id="runtime-lock">-</strong></div>
+      <div><span>知识文档</span><strong id="document-count">0</strong></div>
+      <div><span>知识星团</span><strong id="cluster-count">0</strong></div>
+    </section>
+
+    <section class="workspace-grid">
+      <section class="panel import-panel">
+        <div class="panel-title"><div><p class="eyebrow">INGEST</p><h2>导入资料</h2></div></div>
+        <div class="source-tabs" role="tablist">
+          <button class="source-tab active" data-source="text" type="button">粘贴文本</button>
+          <button class="source-tab" data-source="file" type="button">本地文件</button>
+          <button class="source-tab" data-source="url" type="button">受管 URL</button>
+        </div>
+        <form id="text-form" class="source-form">
+          <label>标题<input id="text-title" placeholder="例如：设备维护规程"></label>
+          <label>权限范围<input id="text-permission" value="public" placeholder="public, team-a"></label>
+          <label>原文<textarea id="text-content" rows="9" placeholder="# 标题&#10;粘贴可引用的原始文本"></textarea></label>
+          <button class="primary" type="submit">创建并启动导入</button>
+        </form>
+        <form id="file-form" class="source-form hidden">
+          <label>文件<input id="file-input" type="file"></label>
+          <label>类型<select id="file-kind"><option value="text">TXT</option><option value="markdown">Markdown</option><option value="csv">CSV</option><option value="html">HTML</option><option value="pdf">PDF</option><option value="word">Word</option><option value="powerpoint">PowerPoint</option><option value="excel">Excel</option><option value="image">图片</option><option value="audio">音频</option><option value="video">视频</option></select></label>
+          <label>权限范围<input id="file-permission" value="public"></label>
+          <button class="primary" type="submit">创建并启动导入</button>
+        </form>
+        <form id="url-form" class="source-form hidden">
+          <label>URL<input id="url-value" type="url" placeholder="https://approved.example/path"></label>
+          <label class="checkbox-label"><input id="url-approved" type="checkbox"> 已在宿主策略中获批</label>
+          <button class="primary" type="submit">创建 URL 草稿</button>
+        </form>
+        <p id="import-message" class="form-message" aria-live="polite"></p>
+      </section>
+
+      <section class="panel task-panel">
+        <div class="panel-title"><div><p class="eyebrow">PIPELINE</p><h2>导入任务</h2></div></div>
+        <div id="task-empty" class="empty-state">创建导入后，这里会显示状态机与安全错误。</div>
+        <div id="task-detail" class="hidden">
+          <div class="task-summary"><strong id="task-title">-</strong><span id="task-status" class="status-pill">-</span></div>
+          <div id="task-steps" class="steps"></div>
+          <div id="task-error" class="error-box hidden"></div>
+          <div class="task-actions"><button id="retry-task" class="secondary hidden" type="button">重试</button><button id="cancel-task" class="secondary hidden" type="button">取消</button></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="workspace-grid lower-grid">
+      <section class="panel search-panel">
+        <div class="panel-title"><div><p class="eyebrow">RETRIEVAL TRACE</p><h2>检索与证据</h2></div></div>
+        <form id="search-form" class="inline-form"><input id="search-query" placeholder="输入知识问题"><button class="primary" type="submit">检索</button></form>
+        <div id="search-result" class="empty-state">检索结果会展示候选、重排和证据轨迹。</div>
+      </section>
+      <section class="panel cluster-panel">
+        <div class="panel-title"><div><p class="eyebrow">WISDOM TREE</p><h2>知识星团</h2></div></div>
+        <div id="cluster-list" class="list empty-state">尚无自动生成的知识星团。</div>
+      </section>
+    </section>
+
+    <section class="workspace-grid lower-grid">
+      <section class="panel">
+        <div class="panel-title"><div><p class="eyebrow">EVIDENCE</p><h2>文档与发布状态</h2></div></div>
+        <div id="document-list" class="list empty-state">尚未导入资料。</div>
+        <div id="document-detail" class="hidden"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-title"><div><p class="eyebrow">CHAINED RECALL</p><h2>跨脑关联候选</h2></div></div>
+        <div id="link-list" class="list empty-state">知识星团发布后会基于公共锚点生成关联候选。</div>
+      </section>
+    </section>
+  </main>
+  <script src="/static/knowledge-workbench.js"></script>
+</body>
+</html>

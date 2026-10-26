@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "runtime-profile.schema.json",
+  "title": "M2 运行配置档契约（RuntimeProfile）",
+  "$ref": "#/$defs/RuntimeProfile",
+  "description": "一次请求只固定一个不可变配置档；禁止静默回退；不允许混用两套配置档。",
+  "$defs": {
+    "RuntimeProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "profile_id": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["draft", "ready", "active"] },
+        "engine": { "type": "string", "minLength": 1 },
+        "generation_pins": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        },
+        "semantic_assets": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      },
+      "required": ["profile_id", "status", "engine"]
+    }
+  }
+}

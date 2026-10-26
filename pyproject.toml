@@ -1,0 +1,23 @@
+[project]
+name = "cognition-knowledge-engine"
+version = "0.1.0"
+description = "链式多维时空知识库引擎 — W0 + M1(统一智慧树认知拓扑) + M2(统一认知控制面)"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2",
+    "fastapi",
+    "uvicorn",
+    "httpx",
+    "jsonschema",
+    "opencv-python-headless>=4.10",
+    "av>=12",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+platform = ["cryptography>=43", "python-multipart>=0.0.18", "python-docx>=1.1", "pypdf>=6,<7", "Pillow>=10"]
+
+[tool.pytest.ini_options]
+testpaths = ["topology/tests", "control-plane/tests", "contracts-tests", "brains", "orchestration/tests", "governance/tests", "acceptance-tests", "platform_server/tests"]
+pythonpath = ["."]

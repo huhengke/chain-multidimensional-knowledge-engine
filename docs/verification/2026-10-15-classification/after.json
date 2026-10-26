@@ -1,0 +1,1977 @@
+{
+  "version": "document-subject-v2",
+  "documents": [
+    {
+      "owner": "admin",
+      "id": "asset-cb9495113f1f4b24943ac38f0473009d",
+      "title": "2025年版中国药典一部凡例公示稿.pdf",
+      "document_id": "kd-7138f430f66aefdb",
+      "status": "ready",
+      "indexed_units": 28,
+      "sha256": "29507831fcb89266efd6d5113fd6b7480ecf51b6d4a012b9c5c6ddc06f77740e",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：药典",
+          "全文领域依据：医疗、中医、药典、本草、临床、处方、用药、剂量、禁忌"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 45,
+            "title_terms": [
+              "药典"
+            ],
+            "body_terms": [
+              "医疗",
+              "中医",
+              "药典",
+              "本草",
+              "临床",
+              "处方",
+              "用药",
+              "剂量",
+              "禁忌"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "quality",
+            "label": "质量",
+            "score": 5,
+            "title_terms": [],
+            "body_terms": [
+              "质量管理",
+              "质量控制"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 2,
+            "title_terms": [],
+            "body_terms": [
+              "法律",
+              "法规"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "设备"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "quality",
+          "legal"
+        ]
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：药典",
+          "全文领域依据：医疗、中医、药典、本草、临床、处方、用药、剂量、禁忌"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 45,
+            "title_terms": [
+              "药典"
+            ],
+            "body_terms": [
+              "医疗",
+              "中医",
+              "药典",
+              "本草",
+              "临床",
+              "处方",
+              "用药",
+              "剂量",
+              "禁忌"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "quality",
+            "label": "质量",
+            "score": 5,
+            "title_terms": [],
+            "body_terms": [
+              "质量管理",
+              "质量控制"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 2,
+            "title_terms": [],
+            "body_terms": [
+              "法律",
+              "法规"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "设备"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "quality",
+          "legal"
+        ]
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-40b29ac6004446249f71d08839dcff59",
+      "title": "扁鹊镜经.pdf",
+      "document_id": "kd-34f45d3994dd76e0",
+      "status": "pending_review",
+      "indexed_units": 95,
+      "sha256": "98df3b7815c1e30867ff40a3f75afbff7dcb0bd339bbd20fd30b43ad497d6cfb",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：扁鹊",
+          "全文领域依据：扁鹊、经络、经脉、脏腑"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 32,
+            "title_terms": [
+              "扁鹊"
+            ],
+            "body_terms": [
+              "扁鹊",
+              "经络",
+              "经脉",
+              "脏腑"
+            ],
+            "eligible": true
+          }
+        ],
+        "related_domains": []
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：扁鹊",
+          "全文领域依据：扁鹊、经络、经脉、脏腑"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 32,
+            "title_terms": [
+              "扁鹊"
+            ],
+            "body_terms": [
+              "扁鹊",
+              "经络",
+              "经脉",
+              "脏腑"
+            ],
+            "eligible": true
+          }
+        ],
+        "related_domains": []
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-c74866e0686f434dafcafd1f4346b5bb",
+      "title": "黄帝经通释_胡信田注释_天工书局_1984_11427627.pdf",
+      "document_id": "kd-0cd7f989ada15ffc",
+      "status": "ready",
+      "indexed_units": 509,
+      "sha256": "5303aeb43c3b0519a1d3b93a132988b78c2afa828e469aac87172f3904b521a3",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "humanities",
+        "label": "人文典籍",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.75",
+        "basis": [
+          "全文领域依据：道教、道藏、天师、修道、儒家、佛教、周易、兵法、军政"
+        ],
+        "candidates": [
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 33,
+            "title_terms": [],
+            "body_terms": [
+              "道教",
+              "道藏",
+              "天师",
+              "修道",
+              "儒家",
+              "佛教",
+              "周易",
+              "兵法",
+              "军政"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 15,
+            "title_terms": [],
+            "body_terms": [
+              "内经",
+              "患者",
+              "禁忌",
+              "养生",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 8,
+            "title_terms": [],
+            "body_terms": [
+              "法律",
+              "甲方",
+              "乙方"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "机械"
+            ],
+            "eligible": false
+          },
+          {
+            "domain": "safety",
+            "label": "安全",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "事故"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical",
+          "legal"
+        ]
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "humanities",
+        "label": "人文典籍",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.75",
+        "basis": [
+          "全文领域依据：道教、道藏、天师、修道、儒家、佛教、周易、兵法、军政"
+        ],
+        "candidates": [
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 33,
+            "title_terms": [],
+            "body_terms": [
+              "道教",
+              "道藏",
+              "天师",
+              "修道",
+              "儒家",
+              "佛教",
+              "周易",
+              "兵法",
+              "军政"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 15,
+            "title_terms": [],
+            "body_terms": [
+              "内经",
+              "患者",
+              "禁忌",
+              "养生",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 8,
+            "title_terms": [],
+            "body_terms": [
+              "法律",
+              "甲方",
+              "乙方"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "机械"
+            ],
+            "eligible": false
+          },
+          {
+            "domain": "safety",
+            "label": "安全",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "事故"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical",
+          "legal"
+        ]
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-811a360ca760422a854d334680891a6b",
+      "title": "内证观察笔记（高清版）.pdf",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "89e9bd1a1126dc12518984c4f5d5088825216af2885507156573afd89c321c37",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-91759e0359024136a6a11044c8b1f858",
+      "title": "伤寒杂病论-论部条文复原版.pdf",
+      "document_id": "kd-f40442f2c7d03616",
+      "status": "ready",
+      "indexed_units": 125,
+      "sha256": "1a53f91ea9e2536505dc1b787118482af2d996b7b22e1575697c1c2abb5a00ea",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：伤寒",
+          "全文领域依据：中医、医药、内经、扁鹊、伤寒、本草、方剂、针灸、经络、经脉、脏腑、病机"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 51,
+            "title_terms": [
+              "伤寒"
+            ],
+            "body_terms": [
+              "中医",
+              "医药",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "方剂",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "辨证",
+              "临床",
+              "用药",
+              "剂量"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "法律"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": []
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：伤寒",
+          "全文领域依据：中医、医药、内经、扁鹊、伤寒、本草、方剂、针灸、经络、经脉、脏腑、病机"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 51,
+            "title_terms": [
+              "伤寒"
+            ],
+            "body_terms": [
+              "中医",
+              "医药",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "方剂",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "辨证",
+              "临床",
+              "用药",
+              "剂量"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "法律"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": []
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-04734c1e79f440038b14cba3a5e86095",
+      "title": "太平经.txt",
+      "document_id": "kd-92e6fc079806266f",
+      "status": "ready",
+      "indexed_units": 902,
+      "sha256": "e6efa2463c95622bf2c88544da78fdd5d1a44fb5fe050e6646dfbdddce6a5fea",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "general",
+        "label": "待归类",
+        "status": "needs_classification",
+        "method": "document-context-rules",
+        "confidence": "0.3",
+        "basis": [
+          "全文领域依据：内经、经脉、禁忌、养生、治病、疾病",
+          "领域依据不足或多领域接近，保留待归类"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 22,
+            "title_terms": [],
+            "body_terms": [
+              "内经",
+              "经脉",
+              "禁忌",
+              "养生",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 20,
+            "title_terms": [],
+            "body_terms": [
+              "道教",
+              "道藏",
+              "天师",
+              "真人",
+              "修道",
+              "兵法"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 6,
+            "title_terms": [],
+            "body_terms": [
+              "法律",
+              "民法"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "safety",
+            "label": "安全",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "事故"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical",
+          "humanities",
+          "legal"
+        ]
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "general",
+        "label": "待归类",
+        "status": "needs_classification",
+        "method": "document-context-rules",
+        "confidence": "0.3",
+        "basis": [
+          "全文领域依据：内经、经脉、禁忌、养生、治病、疾病",
+          "领域依据不足或多领域接近，保留待归类"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 22,
+            "title_terms": [],
+            "body_terms": [
+              "内经",
+              "经脉",
+              "禁忌",
+              "养生",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 20,
+            "title_terms": [],
+            "body_terms": [
+              "道教",
+              "道藏",
+              "天师",
+              "真人",
+              "修道",
+              "兵法"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 6,
+            "title_terms": [],
+            "body_terms": [
+              "法律",
+              "民法"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "safety",
+            "label": "安全",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "事故"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical",
+          "humanities",
+          "legal"
+        ]
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-6b6989cd38af47b681bd4e4c58b95168",
+      "title": "玄隐文本底稿.txt",
+      "document_id": "kd-7d8d4a3c2fbd1d03",
+      "status": "ready",
+      "indexed_units": 964,
+      "sha256": "cf28b62e8d92f6f79d1d3d4676046d41dff3355c4b692d416458d3f211682bf6",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.75",
+        "basis": [
+          "全文领域依据：内经、扁鹊、伤寒、本草、针灸、经络、经脉、脏腑、病机、患者、用药、禁忌"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 53,
+            "title_terms": [],
+            "body_terms": [
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "患者",
+              "用药",
+              "禁忌",
+              "养生",
+              "补肾",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 7,
+            "title_terms": [],
+            "body_terms": [
+              "天师",
+              "真人"
+            ],
+            "eligible": true
+          }
+        ],
+        "related_domains": [
+          "humanities"
+        ]
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.75",
+        "basis": [
+          "全文领域依据：内经、扁鹊、伤寒、本草、针灸、经络、经脉、脏腑、病机、患者、用药、禁忌"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 53,
+            "title_terms": [],
+            "body_terms": [
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "患者",
+              "用药",
+              "禁忌",
+              "养生",
+              "补肾",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 7,
+            "title_terms": [],
+            "body_terms": [
+              "天师",
+              "真人"
+            ],
+            "eligible": true
+          }
+        ],
+        "related_domains": [
+          "humanities"
+        ]
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-a6c06f8080ee43e7b09732bb28103b1a",
+      "title": "玄隐遗秘之阴阳大论 (商.容成子著,三申道長傳).pdf",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "27633f1c5d6a25d280a3daa98c7a81435fc98c783fa4ffcb8f613d8aac487e0d",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-83d85a27233a4c019b2ae11a534be3df",
+      "title": "陰陽大論 龜書(1).pdf",
+      "document_id": "kd-88d6d338826d692d",
+      "status": "ready",
+      "indexed_units": 95,
+      "sha256": "c7abefd83024208c33a76b5796e0d69564af81586406b679d14067f84eb4dfe8",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.75",
+        "basis": [
+          "全文领域依据：伤寒、病机、禁忌、养生、治病"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 14,
+            "title_terms": [],
+            "body_terms": [
+              "伤寒",
+              "病机",
+              "禁忌",
+              "养生",
+              "治病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "天师"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": []
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.75",
+        "basis": [
+          "全文领域依据：伤寒、病机、禁忌、养生、治病"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 14,
+            "title_terms": [],
+            "body_terms": [
+              "伤寒",
+              "病机",
+              "禁忌",
+              "养生",
+              "治病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "天师"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": []
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-1df1bc6970114dec941398bf4cfe9905",
+      "title": "兵垣四编.四卷.附录二卷.明.闵声编.明天启元年吴兴闵氏刊朱墨套印本.黑白版.pdf",
+      "document_id": "kd-ac975fd9919a7366",
+      "status": "ready",
+      "indexed_units": 388,
+      "sha256": "5c7d946d4f6ddfa2f8d85e584a266bef1ea0da8aa0bbc609aa7473583c03579f",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "humanities",
+        "label": "人文典籍",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：兵垣",
+          "全文领域依据：修道、兵书、兵法、兵垣"
+        ],
+        "candidates": [
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 26,
+            "title_terms": [
+              "兵垣"
+            ],
+            "body_terms": [
+              "修道",
+              "兵书",
+              "兵法",
+              "兵垣"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 5,
+            "title_terms": [],
+            "body_terms": [
+              "患者",
+              "养生"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 4,
+            "title_terms": [],
+            "body_terms": [
+              "设备"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "safety",
+            "label": "安全",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "事故"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical",
+          "equipment"
+        ]
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "humanities",
+        "label": "人文典籍",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：兵垣",
+          "全文领域依据：修道、兵书、兵法、兵垣"
+        ],
+        "candidates": [
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 26,
+            "title_terms": [
+              "兵垣"
+            ],
+            "body_terms": [
+              "修道",
+              "兵书",
+              "兵法",
+              "兵垣"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 5,
+            "title_terms": [],
+            "body_terms": [
+              "患者",
+              "养生"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 4,
+            "title_terms": [],
+            "body_terms": [
+              "设备"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "safety",
+            "label": "安全",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "事故"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical",
+          "equipment"
+        ]
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-126ae808021c4360a204dc1cfa256ebf",
+      "title": "焦氏易林注：第3版下册_13246602.pdf",
+      "document_id": "kd-c30538bed6cba29d",
+      "status": "pending_review",
+      "indexed_units": 649,
+      "sha256": "74cfa021c02ba652e9fe78b9c71da43c19856b5e8f6e2b019bf460fc6e21d2d5",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "humanities",
+        "label": "人文典籍",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：易林",
+          "全文领域依据：易林、周易、占筮、星占"
+        ],
+        "candidates": [
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 24,
+            "title_terms": [
+              "易林"
+            ],
+            "body_terms": [
+              "易林",
+              "周易",
+              "占筮",
+              "星占"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 18,
+            "title_terms": [],
+            "body_terms": [
+              "医药",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "禁忌",
+              "养生",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "finance",
+            "label": "财务",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "利润"
+            ],
+            "eligible": false
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "法律"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical"
+        ]
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "humanities",
+        "label": "人文典籍",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：易林",
+          "全文领域依据：易林、周易、占筮、星占"
+        ],
+        "candidates": [
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 24,
+            "title_terms": [
+              "易林"
+            ],
+            "body_terms": [
+              "易林",
+              "周易",
+              "占筮",
+              "星占"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 18,
+            "title_terms": [],
+            "body_terms": [
+              "医药",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "禁忌",
+              "养生",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "finance",
+            "label": "财务",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "利润"
+            ],
+            "eligible": false
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "法律"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "medical"
+        ]
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-5f906360fa6a44c5ab02c113d0b12b85",
+      "title": "焦氏易林注_11395691.pdf",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "26984566f25a857db06426284b60e62e11e58dc772dc4bf4f438fd07f2e22bde",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-cc643f127fe0475fba42e79aa44f235e",
+      "title": "释永信房中补肾秘方.pdf",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "5fab915023a71913fd56ee6edc9a2b95dcac0a5f6c7399a4d722410a33019f4f",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-3cae86f96d904ab69cf070b60c77615d",
+      "title": "微信图片_2025-12-16_155024_863.jpg",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "6aeefd5ba55ec79458a183892edc248bd3527bee90a895e5066dc17b8ce7caa3",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-05f8748b946f4d3eaa94ae0d256917f0",
+      "title": "微信图片_2025-12-16_155051_229.jpg",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "b952f296ea0f3bdf4fe77e94dece09906f4d126d6d5794eaa6c1f2e4ca2cbdb0",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-fd4a7bcc824e417ba10c0afdf6b5a8c4",
+      "title": "微信图片_2025-12-16_155131_836.jpg",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "f14db88e12fbd07e510911487120705267294c6e199f73d0160e0623d727a604",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-4295abe58234476790771c366858bfce",
+      "title": "元汇医镜[清]敲蹻道人.pdf",
+      "document_id": "kd-3adc1669a64b6f02",
+      "status": "pending_review",
+      "indexed_units": 803,
+      "sha256": "22065c5118132f304ed5c41e17db946c83bb856e184f9702be5d9dc9b07fa543",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：医镜",
+          "全文领域依据：医疗、中医、医药、医镜、医经、内经、扁鹊、伤寒、本草、针灸、经络、经脉"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 99,
+            "title_terms": [
+              "医镜"
+            ],
+            "body_terms": [
+              "医疗",
+              "中医",
+              "医药",
+              "医镜",
+              "医经",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "患者",
+              "用药",
+              "养生",
+              "补肾",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 26,
+            "title_terms": [],
+            "body_terms": [
+              "道教",
+              "真人",
+              "修道",
+              "儒家",
+              "佛教",
+              "易学",
+              "周易"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "法律"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "humanities"
+        ]
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：医镜",
+          "全文领域依据：医疗、中医、医药、医镜、医经、内经、扁鹊、伤寒、本草、针灸、经络、经脉"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 99,
+            "title_terms": [
+              "医镜"
+            ],
+            "body_terms": [
+              "医疗",
+              "中医",
+              "医药",
+              "医镜",
+              "医经",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "患者",
+              "用药",
+              "养生",
+              "补肾",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "humanities",
+            "label": "人文典籍",
+            "score": 26,
+            "title_terms": [],
+            "body_terms": [
+              "道教",
+              "真人",
+              "修道",
+              "儒家",
+              "佛教",
+              "易学",
+              "周易"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "legal",
+            "label": "法律",
+            "score": 1,
+            "title_terms": [],
+            "body_terms": [
+              "法律"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": [
+          "humanities"
+        ]
+      }
+    },
+    {
+      "owner": "admin",
+      "id": "asset-d319ed6692084258bb592779ca2fb1ca",
+      "title": "中国古代星占学 卢央.pdf",
+      "document_id": null,
+      "status": "failed",
+      "indexed_units": null,
+      "sha256": "a75986332ed6c409cb6d3963bffee5620e291973e15de8df7331d3cb46c5444d",
+      "original_verified": true,
+      "before": null,
+      "proposed": null
+    },
+    {
+      "owner": "admin",
+      "id": "asset-85278daf132c4bcc926fc89c7dd6e851",
+      "title": "中医基础理论笔记图解·张景明.pdf",
+      "document_id": "kd-93978642cc940293",
+      "status": "pending_review",
+      "indexed_units": 287,
+      "sha256": "7bb4061eba6ebf4aa21e9a5e1c53f36a3ea747ecf6c9157b97ef1dcbe6ef1642",
+      "original_verified": true,
+      "before": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：中医",
+          "全文领域依据：医疗、中医、医药、医经、内经、扁鹊、伤寒、本草、方剂、针灸、经络、经脉"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 115,
+            "title_terms": [
+              "中医"
+            ],
+            "body_terms": [
+              "医疗",
+              "中医",
+              "医药",
+              "医经",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "方剂",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "辨证",
+              "诊断",
+              "临床",
+              "患者",
+              "处方",
+              "用药",
+              "养生",
+              "补肾",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 2,
+            "title_terms": [],
+            "body_terms": [
+              "机械"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": []
+      },
+      "proposed": {
+        "version": "document-subject-v2",
+        "domain": "medical",
+        "label": "医疗",
+        "status": "automatic",
+        "method": "document-context-rules",
+        "confidence": "0.9",
+        "basis": [
+          "标题/章节主题：中医",
+          "全文领域依据：医疗、中医、医药、医经、内经、扁鹊、伤寒、本草、方剂、针灸、经络、经脉"
+        ],
+        "candidates": [
+          {
+            "domain": "medical",
+            "label": "医疗",
+            "score": 115,
+            "title_terms": [
+              "中医"
+            ],
+            "body_terms": [
+              "医疗",
+              "中医",
+              "医药",
+              "医经",
+              "内经",
+              "扁鹊",
+              "伤寒",
+              "本草",
+              "方剂",
+              "针灸",
+              "经络",
+              "经脉",
+              "脏腑",
+              "病机",
+              "辨证",
+              "诊断",
+              "临床",
+              "患者",
+              "处方",
+              "用药",
+              "养生",
+              "补肾",
+              "治病",
+              "疾病"
+            ],
+            "eligible": true
+          },
+          {
+            "domain": "equipment",
+            "label": "设备",
+            "score": 2,
+            "title_terms": [],
+            "body_terms": [
+              "机械"
+            ],
+            "eligible": false
+          }
+        ],
+        "related_domains": []
+      }
+    }
+  ],
+  "current_topology": [
+    {
+      "owner": "admin",
+      "updated_at": "2026-10-15T11:22:45.401676+00:00",
+      "classification_version": "document-subject-v2",
+      "trees": [
+        {
+          "tree_id": "knowledge.general",
+          "label": "待归类知识树",
+          "generation": 1,
+          "history_count": 1,
+          "documents": 1,
+          "published_units": 902,
+          "unit_count": 902,
+          "vector_count": 902,
+          "concept_nodes": 902,
+          "middle_nodes": 0,
+          "outer_nodes": 0,
+          "growth_branches": [],
+          "concepts": [
+            {
+              "path": "待归类 / 太平经",
+              "unit_count": 902,
+              "documents": [
+                {
+                  "document_id": "kd-92e6fc079806266f",
+                  "title": "太平经.txt",
+                  "status": "published",
+                  "unit_count": 902
+                }
+              ]
+            }
+          ],
+          "cluster_count": 902
+        },
+        {
+          "tree_id": "knowledge.humanities",
+          "label": "人文典籍知识树",
+          "generation": 1,
+          "history_count": 1,
+          "documents": 3,
+          "published_units": 897,
+          "unit_count": 1546,
+          "vector_count": 1546,
+          "concept_nodes": 1546,
+          "middle_nodes": 0,
+          "outer_nodes": 0,
+          "growth_branches": [],
+          "concepts": [
+            {
+              "path": "人文典籍 / 兵垣四编.四卷.附录二卷.明.闵声编.明天启元年吴兴闵氏刊朱墨套印本.黑白版",
+              "unit_count": 357,
+              "documents": [
+                {
+                  "document_id": "kd-ac975fd9919a7366",
+                  "title": "兵垣四编.四卷.附录二卷.明.闵声编.明天启元年吴兴闵氏刊朱墨套印本.黑白版.pdf",
+                  "status": "published",
+                  "unit_count": 357
+                }
+              ]
+            },
+            {
+              "path": "人文典籍 / 兵学",
+              "unit_count": 26,
+              "documents": [
+                {
+                  "document_id": "kd-0cd7f989ada15ffc",
+                  "title": "黄帝经通释_胡信田注释_天工书局_1984_11427627.pdf",
+                  "status": "published",
+                  "unit_count": 4
+                },
+                {
+                  "document_id": "kd-ac975fd9919a7366",
+                  "title": "兵垣四编.四卷.附录二卷.明.闵声编.明天启元年吴兴闵氏刊朱墨套印本.黑白版.pdf",
+                  "status": "published",
+                  "unit_count": 22
+                }
+              ]
+            },
+            {
+              "path": "人文典籍 / 易学术数",
+              "unit_count": 410,
+              "documents": [
+                {
+                  "document_id": "kd-0cd7f989ada15ffc",
+                  "title": "黄帝经通释_胡信田注释_天工书局_1984_11427627.pdf",
+                  "status": "published",
+                  "unit_count": 23
+                },
+                {
+                  "document_id": "kd-ac975fd9919a7366",
+                  "title": "兵垣四编.四卷.附录二卷.明.闵声编.明天启元年吴兴闵氏刊朱墨套印本.黑白版.pdf",
+                  "status": "published",
+                  "unit_count": 7
+                },
+                {
+                  "document_id": "kd-c30538bed6cba29d",
+                  "title": "焦氏易林注：第3版下册_13246602.pdf",
+                  "status": "pending_review",
+                  "unit_count": 380
+                }
+              ]
+            },
+            {
+              "path": "人文典籍 / 焦氏易林注：第3版下册_13246602",
+              "unit_count": 269,
+              "documents": [
+                {
+                  "document_id": "kd-c30538bed6cba29d",
+                  "title": "焦氏易林注：第3版下册_13246602.pdf",
+                  "status": "pending_review",
+                  "unit_count": 269
+                }
+              ]
+            },
+            {
+              "path": "人文典籍 / 道教思想",
+              "unit_count": 31,
+              "documents": [
+                {
+                  "document_id": "kd-0cd7f989ada15ffc",
+                  "title": "黄帝经通释_胡信田注释_天工书局_1984_11427627.pdf",
+                  "status": "published",
+                  "unit_count": 29
+                },
+                {
+                  "document_id": "kd-ac975fd9919a7366",
+                  "title": "兵垣四编.四卷.附录二卷.明.闵声编.明天启元年吴兴闵氏刊朱墨套印本.黑白版.pdf",
+                  "status": "published",
+                  "unit_count": 2
+                }
+              ]
+            },
+            {
+              "path": "人文典籍 / 黄帝经通释_胡信田注释_天工书局_1984_11427627",
+              "unit_count": 453,
+              "documents": [
+                {
+                  "document_id": "kd-0cd7f989ada15ffc",
+                  "title": "黄帝经通释_胡信田注释_天工书局_1984_11427627.pdf",
+                  "status": "published",
+                  "unit_count": 453
+                }
+              ]
+            }
+          ],
+          "cluster_count": 1544
+        },
+        {
+          "tree_id": "knowledge.medical",
+          "label": "医疗知识树",
+          "generation": 2,
+          "history_count": 2,
+          "documents": 7,
+          "published_units": 1212,
+          "unit_count": 2397,
+          "vector_count": 2397,
+          "concept_nodes": 2397,
+          "middle_nodes": 4,
+          "outer_nodes": 0,
+          "growth_branches": [
+            {
+              "node_id": "knowledge.medical/2026-10-15/cluster/sc-medical-2186",
+              "generation": 2,
+              "cluster_id": "sc-medical-2186",
+              "occurrence_count": 3,
+              "children": [
+                "knowledge.medical/2026-10-15/cluster/sc-medical-2186/time",
+                "knowledge.medical/2026-10-15/cluster/sc-medical-2186/place",
+                "knowledge.medical/2026-10-15/cluster/sc-medical-2186/person"
+              ]
+            }
+          ],
+          "concepts": [
+            {
+              "path": "医疗 / 2025年版中国药典一部凡例公示稿",
+              "unit_count": 6,
+              "documents": [
+                {
+                  "document_id": "kd-7138f430f66aefdb",
+                  "title": "2025年版中国药典一部凡例公示稿.pdf",
+                  "status": "published",
+                  "unit_count": 6
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 中医基础",
+              "unit_count": 943,
+              "documents": [
+                {
+                  "document_id": "kd-34f45d3994dd76e0",
+                  "title": "扁鹊镜经.pdf",
+                  "status": "pending_review",
+                  "unit_count": 32
+                },
+                {
+                  "document_id": "kd-3adc1669a64b6f02",
+                  "title": "元汇医镜[清]敲蹻道人.pdf",
+                  "status": "pending_review",
+                  "unit_count": 217
+                },
+                {
+                  "document_id": "kd-7d8d4a3c2fbd1d03",
+                  "title": "玄隐文本底稿.txt",
+                  "status": "published",
+                  "unit_count": 452
+                },
+                {
+                  "document_id": "kd-88d6d338826d692d",
+                  "title": "陰陽大論 龜書(1).pdf",
+                  "status": "published",
+                  "unit_count": 33
+                },
+                {
+                  "document_id": "kd-93978642cc940293",
+                  "title": "中医基础理论笔记图解·张景明.pdf",
+                  "status": "pending_review",
+                  "unit_count": 177
+                },
+                {
+                  "document_id": "kd-f40442f2c7d03616",
+                  "title": "伤寒杂病论-论部条文复原版.pdf",
+                  "status": "published",
+                  "unit_count": 32
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 中医基础理论笔记图解·张景明",
+              "unit_count": 45,
+              "documents": [
+                {
+                  "document_id": "kd-93978642cc940293",
+                  "title": "中医基础理论笔记图解·张景明.pdf",
+                  "status": "pending_review",
+                  "unit_count": 45
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 伤寒杂病论-论部条文复原版",
+              "unit_count": 80,
+              "documents": [
+                {
+                  "document_id": "kd-f40442f2c7d03616",
+                  "title": "伤寒杂病论-论部条文复原版.pdf",
+                  "status": "published",
+                  "unit_count": 80
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 元汇医镜[清]敲蹻道人",
+              "unit_count": 504,
+              "documents": [
+                {
+                  "document_id": "kd-3adc1669a64b6f02",
+                  "title": "元汇医镜[清]敲蹻道人.pdf",
+                  "status": "pending_review",
+                  "unit_count": 504
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 养生防治",
+              "unit_count": 17,
+              "documents": [
+                {
+                  "document_id": "kd-3adc1669a64b6f02",
+                  "title": "元汇医镜[清]敲蹻道人.pdf",
+                  "status": "pending_review",
+                  "unit_count": 5
+                },
+                {
+                  "document_id": "kd-7d8d4a3c2fbd1d03",
+                  "title": "玄隐文本底稿.txt",
+                  "status": "published",
+                  "unit_count": 6
+                },
+                {
+                  "document_id": "kd-88d6d338826d692d",
+                  "title": "陰陽大論 龜書(1).pdf",
+                  "status": "published",
+                  "unit_count": 1
+                },
+                {
+                  "document_id": "kd-93978642cc940293",
+                  "title": "中医基础理论笔记图解·张景明.pdf",
+                  "status": "pending_review",
+                  "unit_count": 5
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 扁鹊镜经",
+              "unit_count": 49,
+              "documents": [
+                {
+                  "document_id": "kd-34f45d3994dd76e0",
+                  "title": "扁鹊镜经.pdf",
+                  "status": "pending_review",
+                  "unit_count": 49
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 本草方药",
+              "unit_count": 63,
+              "documents": [
+                {
+                  "document_id": "kd-3adc1669a64b6f02",
+                  "title": "元汇医镜[清]敲蹻道人.pdf",
+                  "status": "pending_review",
+                  "unit_count": 20
+                },
+                {
+                  "document_id": "kd-7138f430f66aefdb",
+                  "title": "2025年版中国药典一部凡例公示稿.pdf",
+                  "status": "published",
+                  "unit_count": 22
+                },
+                {
+                  "document_id": "kd-7d8d4a3c2fbd1d03",
+                  "title": "玄隐文本底稿.txt",
+                  "status": "published",
+                  "unit_count": 3
+                },
+                {
+                  "document_id": "kd-93978642cc940293",
+                  "title": "中医基础理论笔记图解·张景明.pdf",
+                  "status": "pending_review",
+                  "unit_count": 10
+                },
+                {
+                  "document_id": "kd-f40442f2c7d03616",
+                  "title": "伤寒杂病论-论部条文复原版.pdf",
+                  "status": "published",
+                  "unit_count": 8
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 玄隐文本底稿",
+              "unit_count": 451,
+              "documents": [
+                {
+                  "document_id": "kd-7d8d4a3c2fbd1d03",
+                  "title": "玄隐文本底稿.txt",
+                  "status": "published",
+                  "unit_count": 451
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 经络针灸",
+              "unit_count": 136,
+              "documents": [
+                {
+                  "document_id": "kd-34f45d3994dd76e0",
+                  "title": "扁鹊镜经.pdf",
+                  "status": "pending_review",
+                  "unit_count": 14
+                },
+                {
+                  "document_id": "kd-3adc1669a64b6f02",
+                  "title": "元汇医镜[清]敲蹻道人.pdf",
+                  "status": "pending_review",
+                  "unit_count": 46
+                },
+                {
+                  "document_id": "kd-7d8d4a3c2fbd1d03",
+                  "title": "玄隐文本底稿.txt",
+                  "status": "published",
+                  "unit_count": 50
+                },
+                {
+                  "document_id": "kd-93978642cc940293",
+                  "title": "中医基础理论笔记图解·张景明.pdf",
+                  "status": "pending_review",
+                  "unit_count": 23
+                },
+                {
+                  "document_id": "kd-f40442f2c7d03616",
+                  "title": "伤寒杂病论-论部条文复原版.pdf",
+                  "status": "published",
+                  "unit_count": 3
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 辨证诊断",
+              "unit_count": 43,
+              "documents": [
+                {
+                  "document_id": "kd-3adc1669a64b6f02",
+                  "title": "元汇医镜[清]敲蹻道人.pdf",
+                  "status": "pending_review",
+                  "unit_count": 11
+                },
+                {
+                  "document_id": "kd-7d8d4a3c2fbd1d03",
+                  "title": "玄隐文本底稿.txt",
+                  "status": "published",
+                  "unit_count": 2
+                },
+                {
+                  "document_id": "kd-88d6d338826d692d",
+                  "title": "陰陽大論 龜書(1).pdf",
+                  "status": "published",
+                  "unit_count": 1
+                },
+                {
+                  "document_id": "kd-93978642cc940293",
+                  "title": "中医基础理论笔记图解·张景明.pdf",
+                  "status": "pending_review",
+                  "unit_count": 27
+                },
+                {
+                  "document_id": "kd-f40442f2c7d03616",
+                  "title": "伤寒杂病论-论部条文复原版.pdf",
+                  "status": "published",
+                  "unit_count": 2
+                }
+              ]
+            },
+            {
+              "path": "医疗 / 陰陽大論 龜書(1)",
+              "unit_count": 60,
+              "documents": [
+                {
+                  "document_id": "kd-88d6d338826d692d",
+                  "title": "陰陽大論 龜書(1).pdf",
+                  "status": "published",
+                  "unit_count": 60
+                }
+              ]
+            }
+          ],
+          "cluster_count": 2395
+        }
+      ]
+    }
+  ]
+}

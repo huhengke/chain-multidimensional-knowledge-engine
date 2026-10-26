@@ -1,0 +1,67 @@
+{
+  "as_of": "2026-10-19",
+  "scope": "documentation-only",
+  "checks": {
+    "documents": 9,
+    "relativeFileLinks": 77,
+    "fragments": [
+      {
+        "name": "topology-views",
+        "checkedTextItems": 4,
+        "missingTextItems": 0
+      },
+      {
+        "name": "knowledge-modes",
+        "checkedTextItems": 27,
+        "missingTextItems": 0
+      },
+      {
+        "name": "product-entry",
+        "checkedTextItems": 5,
+        "missingTextItems": 0
+      },
+      {
+        "name": "implementation-baseline",
+        "checkedTextItems": 28,
+        "missingTextItems": 0
+      }
+    ],
+    "technicalHtmlTextItems": 213,
+    "technicalHtmlMissingItems": 0,
+    "existingArchitectureFigures": {
+      "before": 7,
+      "after": 7
+    },
+    "snapshotFilesVerified": 7,
+    "svgXmlAndLocalRaster": 3,
+    "htmlBrowserVisualCheck": "not-run: browser policy rejected local file protocol; no server/proxy/browser workaround attempted",
+    "runtimeTests": "not-run: no runtime change or production benchmark in this documentation task"
+  },
+  "errors": [],
+  "diagrams": [
+    {
+      "file": "三脑认知与知识引擎/docs/diagrams/three-brain-tree.svg",
+      "sha256": "a61ab09b943155b94fdb971de6d9453a54e26bb94a7f14b0922c04b13a888838",
+      "preview": "previews/three-brain-tree.png",
+      "width": 2520,
+      "height": 1420,
+      "bytes": 270707
+    },
+    {
+      "file": "三脑认知与知识引擎/docs/diagrams/knowledge-dual-time.svg",
+      "sha256": "5e9f1a65a4919606af0f5d4b646ef06060daca45cbb0cbb6172285fd9a4e412b",
+      "preview": "previews/knowledge-dual-time.png",
+      "width": 2440,
+      "height": 1180,
+      "bytes": 222576
+    },
+    {
+      "file": "三脑认知与知识引擎/docs/diagrams/knowledge-adaptive-retrieval.svg",
+      "sha256": "18f084f96d3a11e74a517ba42a2bd68b3ce719290fef9fa48314dab2cc2cb185",
+      "preview": "previews/knowledge-adaptive-retrieval.png",
+      "width": 2520,
+      "height": 1320,
+      "bytes": 272716
+    }
+  ]
+}

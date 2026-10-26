@@ -1,0 +1,159 @@
+{
+  "upstream_commit": "97796c637aa53713edc846bd0a39470d687f0fdf",
+  "files": [
+    {
+      "path": "cmd\\cognition-runtime\\main.go",
+      "sha256": "13b121b92438d3495b9620b02fc0142d7eb7d9b88380000c2e5729da53f4302a"
+    },
+    {
+      "path": "go.mod",
+      "sha256": "1fc1bba1abd530faf055a45022214760f006349f95a63679392665da8b041d5f"
+    },
+    {
+      "path": "internal\\application\\service\\host.go",
+      "sha256": "abfef4c78d609a99ebc80bdf843ec4dcfdabcfb13a7085db0af3e7e23666d802"
+    },
+    {
+      "path": "internal\\application\\service\\knowledgebase_search_fusion.go",
+      "sha256": "1ea5345c28a00ede6954030ed2edf0b1c614a7314b591a286366bbe4f7afcff4"
+    },
+    {
+      "path": "internal\\application\\service\\metric\\map.go",
+      "sha256": "694f13f30453fc8428e6d76c31ee3c51595c88474d90a034bcc666de8ac6f18a"
+    },
+    {
+      "path": "internal\\application\\service\\metric\\mrr.go",
+      "sha256": "bb5ebe90b7be0cd4b3d16f81c488c039bb2a9768eef957831b5e4021a6f6bb96"
+    },
+    {
+      "path": "internal\\application\\service\\metric\\ndcg.go",
+      "sha256": "3dd879f0126625ab54d345e02693090e1d224663abf66675b62947cec4d122e6"
+    },
+    {
+      "path": "internal\\application\\service\\metric\\precision.go",
+      "sha256": "d4da6839314a73017a73c98a6aa6a987072b96662f77b33b5697795bccb1ea31"
+    },
+    {
+      "path": "internal\\application\\service\\metric\\recall.go",
+      "sha256": "b7111ea9e19ddf2a6d5762d7a7e6485d9f9a5ca1e8eb26846d7c232c6ff24f1e"
+    },
+    {
+      "path": "internal\\application\\service\\metric\\sets.go",
+      "sha256": "313bf867beea9733e60d6b6916d6bb3d32e170b36ad3e2a5f372b4930cd48a64"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\fenced_code_test.go",
+      "sha256": "e86f7065b4d5f16a412acfd93adb6c8545db0684b1887babb6bb75233092b3d0"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\fenced_code.go",
+      "sha256": "0bc5b15b574f56b2f49ec46b31b69807965780c250ec12187cfd815c6ab21bb0"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\header_tracker.go",
+      "sha256": "47f1b7004c82834a6b42632969d2bbaaca2f347802718bee72b61a572d3be60f"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\heading_hierarchy_test.go",
+      "sha256": "354e7ed03bbe257146c4aa7b488467580ae9cf5e2c7b2f8a30908d4d7f4c82a9"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\heading_hierarchy.go",
+      "sha256": "16120d688cc7ada6e0137aed0e065882f0820f9f89b9c89e63e834a6cf907418"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\heading_splitter_test.go",
+      "sha256": "63fbd1f4c7c26a78b4fafc86d4152c0ea4e11071cf7f156c4c71d5e8885b0e4c"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\heading_splitter.go",
+      "sha256": "f23dc878e8ed4766307615e55c7942ff4a0aedc376b1070b39e2d6d02da427e6"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\heuristic_splitter_test.go",
+      "sha256": "29f0308099f7483bda82ec2360234c063051b6722d4bf212884fafa33b6ab38f"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\heuristic_splitter.go",
+      "sha256": "a191c6dd5669a14544516e00ffdaf48f3f9b089e47c51f937cf79bf719d82f4e"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\patterns_test.go",
+      "sha256": "63df0f50ced493fb1677d5d67c689de10dfb83a7f64d55c4835cf5c279c5249d"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\patterns.go",
+      "sha256": "1368090f796bef49faba9984ce9f5e0cd4cc1bfbea1864f17199a86d66a3b8f2"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\profiler_test.go",
+      "sha256": "3c7d3d02688b595aeb4178658bc8fa46bfbcde216a60a4c6afb2bb684e49d3e2"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\profiler.go",
+      "sha256": "211275213852b73599ca9458ceadb2229022d2685d75557afe106ab2a213a262"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\protected_spans_test.go",
+      "sha256": "1a09f4c523edc151ce7dffcba3ffdc2bea64418e2c18302a15b655c637077d69"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\splitter_test.go",
+      "sha256": "c76e002b10d83dec0e867071bcfaa2238790d16770b266395e760a47d3a5888b"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\splitter.go",
+      "sha256": "94f444c63118bbfa778c0611784f0a9fb6f128436313c385520cff3fdd51bf7e"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\strategy_diagnostics_test.go",
+      "sha256": "4aa70db5fb4bc3daafbba49b00cfe6e57e76756b0cbd66042ee5967ea0a19f16"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\strategy_test.go",
+      "sha256": "ccc024c2dc680f38c849822b74d913b950391c249c179336125ca4c8c253dcab"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\strategy_token_test.go",
+      "sha256": "5c19815a0b17674956bebabf6047791f263b93605ce074b0391155a70dac76d0"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\strategy.go",
+      "sha256": "0d6d15fdeb96d01bf2db64ccb0e15cd5aeab289ad419f12eaaaaf76901d8b252"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\tokens_test.go",
+      "sha256": "5f3ee1ee07678e085823992d5ec3cafb15fbed4137c1c6e19c0cbcdb790f64b3"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\tokens.go",
+      "sha256": "f64d54d7a329db1a1b1822622c12f8655cc4ec0938683de71b31b6c6aaaed847"
+    },
+    {
+      "path": "internal\\infrastructure\\chunker\\validator.go",
+      "sha256": "81c0e26819240cb817ad152a78a5f62273797868c776c4050baf1200de954463"
+    },
+    {
+      "path": "internal\\infrastructure\\docparser\\linked_images.go",
+      "sha256": "e57919f751b6a27b95b37afa8ee6282450e19e76b356d9df2a66896963f1c03b"
+    },
+    {
+      "path": "internal\\logger\\adapter.go",
+      "sha256": "33b54ccc1dcf3ce9815282e9094e2f8d760c3c299ccbae837142ef77d3a5d570"
+    },
+    {
+      "path": "internal\\types\\extract_graph.go",
+      "sha256": "db65fba38916ec655b0adbfb23671f9295e3bb178240790927b249b828c6ff73"
+    },
+    {
+      "path": "internal\\types\\host.go",
+      "sha256": "61ce3ab9148aa66d8f5b66e0638622eb72d38ab06cfb172d9975e5e73283bec4"
+    },
+    {
+      "path": "internal\\types\\retrieval_config.go",
+      "sha256": "0b6e9dd4bfeb242cd5630948aa11e29bf992db88e63f466178153de00e1b976c"
+    }
+  ],
+  "binary_sha256": "7a5fa6032c823246e806e9cbec2bdc2204a883aef887a5f245281728d39bac4c",
+  "go_version": "go version go1.27.2 windows/amd64"
+}

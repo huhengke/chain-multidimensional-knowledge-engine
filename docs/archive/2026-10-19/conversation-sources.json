@@ -1,0 +1,154 @@
+{
+  "as_of": "2026-10-19",
+  "scope": "D:\\Users\\多模态时空智能引擎-产品规划书",
+  "inspected_session_files": 182,
+  "selected_sessions": 8,
+  "sources": [
+    {
+      "thread_id": "01a12b14-1362-7691-8312-11d5f47eb240",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\11\\rollout-2026-10-11T21-08-18-01a12b14-1362-7691-8312-11d5f47eb240.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-11T13:08:33.159Z",
+      "last_message_at": "2026-10-12T13:30:15.278Z",
+      "user_messages": 38,
+      "assistant_messages": 162,
+      "compactions": 8,
+      "bytes": 30003343,
+      "topics": [
+        "verification-and-docs",
+        "architecture-and-WeKnora",
+        "retrieval-and-performance",
+        "platform-and-intake"
+      ],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    },
+    {
+      "thread_id": "01a12b14-1362-7691-8312-11d5f47eb240",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\12\\rollout-2026-10-12T21-34-42-01a12b14-1362-7691-8312-11d5f47eb240_01a13052-9c5e-7e93-9a19-31e1bbb17cb3.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-12T13:34:44.416Z",
+      "last_message_at": "2026-10-13T08:56:54.855Z",
+      "user_messages": 10,
+      "assistant_messages": 62,
+      "compactions": 6,
+      "bytes": 26595668,
+      "topics": [
+        "platform-and-intake",
+        "architecture-and-WeKnora",
+        "verification-and-docs",
+        "retrieval-and-performance"
+      ],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    },
+    {
+      "thread_id": "01a12b14-1362-7691-8312-11d5f47eb240",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\13\\rollout-2026-10-13T17-21-44-01a12b14-1362-7691-8312-11d5f47eb240_01a13491-5e45-7430-a0c0-d3685e8b0fe8.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-13T09:21:47.133Z",
+      "last_message_at": "2026-10-13T09:21:47.133Z",
+      "user_messages": 1,
+      "assistant_messages": 0,
+      "compactions": 0,
+      "bytes": 35827,
+      "topics": [],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    },
+    {
+      "thread_id": "01a12b14-1362-7691-8312-11d5f47eb240",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\13\\rollout-2026-10-13T17-27-58-01a12b14-1362-7691-8312-11d5f47eb240_01a13497-14d8-76e1-9777-b48c671392ef.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-13T09:27:59.689Z",
+      "last_message_at": "2026-10-13T14:17:32.162Z",
+      "user_messages": 3,
+      "assistant_messages": 2,
+      "compactions": 0,
+      "bytes": 321300,
+      "topics": [
+        "verification-and-docs",
+        "platform-and-intake",
+        "retrieval-and-performance"
+      ],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    },
+    {
+      "thread_id": "01a12b14-1362-7691-8312-11d5f47eb240",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\13\\rollout-2026-10-13T22-23-33-01a12b14-1362-7691-8312-11d5f47eb240_01a135a5-b096-70d0-b7b0-5f9faf65484e.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-13T14:23:35.215Z",
+      "last_message_at": "2026-10-15T09:02:24.080Z",
+      "user_messages": 24,
+      "assistant_messages": 166,
+      "compactions": 9,
+      "bytes": 70011531,
+      "topics": [
+        "platform-and-intake",
+        "retrieval-and-performance",
+        "verification-and-docs",
+        "architecture-and-WeKnora"
+      ],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    },
+    {
+      "thread_id": "01a12b14-1362-7691-8312-11d5f47eb240",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\15\\rollout-2026-10-15T17-39-41-01a12b14-1362-7691-8312-11d5f47eb240_01a13eee-84d2-7e42-a34f-64de8598676a.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-15T09:39:43.170Z",
+      "last_message_at": "2026-10-15T11:54:57.206Z",
+      "user_messages": 2,
+      "assistant_messages": 13,
+      "compactions": 1,
+      "bytes": 10522544,
+      "topics": [
+        "verification-and-docs",
+        "retrieval-and-performance",
+        "platform-and-intake",
+        "architecture-and-WeKnora"
+      ],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    },
+    {
+      "thread_id": "01a12b14-1362-7691-8312-11d5f47eb240",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\15\\rollout-2026-10-15T19-55-08-01a12b14-1362-7691-8312-11d5f47eb240_01a13f6a-878d-7063-bb66-9d3980bc39ab.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-15T11:55:09.968Z",
+      "last_message_at": "2026-10-15T13:51:44.497Z",
+      "user_messages": 4,
+      "assistant_messages": 16,
+      "compactions": 1,
+      "bytes": 11240132,
+      "topics": [
+        "platform-and-intake",
+        "verification-and-docs",
+        "retrieval-and-performance",
+        "architecture-and-WeKnora"
+      ],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    },
+    {
+      "thread_id": "01a13fb3-92fe-7b73-95b8-eff9dd062ccd",
+      "source_path": "C:\\Users\\49961\\.codex\\sessions\\2026\\10\\15\\rollout-2026-10-15T21-14-55-01a13fb3-92fe-7b73-95b8-eff9dd062ccd.jsonl",
+      "cwd": "D:\\Users\\多模态时空智能引擎-产品规划书",
+      "first_message_at": "2026-10-15T14:46:19.075Z",
+      "last_message_at": "2026-10-19T02:14:07.609Z",
+      "user_messages": 24,
+      "assistant_messages": 90,
+      "compactions": 10,
+      "bytes": 90992240,
+      "topics": [
+        "platform-and-intake",
+        "retrieval-and-performance",
+        "architecture-and-WeKnora",
+        "verification-and-docs",
+        "dual-time"
+      ],
+      "coverage": "Readable local message records indexed; topic summary is synthesized separately; compacted/deleted/cloud-only text is not reconstructed."
+    }
+  ],
+  "unreadable": [],
+  "exclusions": [
+    "Unrelated projects",
+    "Tool outputs and secrets",
+    "Deleted or unavailable cloud-only conversations",
+    "Original documents, databases, model weights and media are not copied"
+  ]
+}

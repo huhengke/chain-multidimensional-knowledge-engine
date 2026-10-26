@@ -1,0 +1,5 @@
+upstream_repository=https://github.com/Tencent/WeKnora
+status=LOCKED
+locked_commit=97796c637aa53713edc846bd0a39470d687f0fdf
+license_sha256=99f1251d7662dda0b55ba9309a754a73223b5dd56f6417cf0eebcc2fd9e480f9
+runtime=weknora-embedded-v1

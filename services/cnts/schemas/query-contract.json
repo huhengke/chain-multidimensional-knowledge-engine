@@ -1,0 +1,101 @@
+{
+  "contract_version": 1,
+  "endpoint": "POST /api/v1/engine/query",
+  "agent_channel": "http",
+  "request_scope": "one immutable runtime profile per request",
+  "dataset_execution": "one pinned generation per logical fact dataset",
+  "orchestration": {
+    "multi_dataset": "engine semantic layer",
+    "yoy_mom": "engine semantic layer",
+    "merge": "engine semantic layer",
+    "single_tree_filter_group_aggregate": "storage adapter"
+  },
+  "no_match": "empty result, never numeric zero",
+  "fallback": "forbidden",
+  "datasets": {
+    "oil_master": {
+      "label": "油品基础信息",
+      "aliases": ["油品主数据", "油品信息"],
+      "kind": "dimension",
+      "scope": {"role": "dimension", "business_domain": "oil_master"},
+      "time_granularity": "none",
+      "metrics": {},
+      "order_key": null
+    },
+    "non_oil_sales": {
+      "label": "非油品销售明细",
+      "aliases": ["非油品", "非油品销售", "线上商城", "商城销售"],
+      "kind": "fact",
+      "scope": {
+        "role": "actual",
+        "business_domain": "non_oil",
+        "preferred_for": ["day", "month"],
+        "priority": 100
+      },
+      "time_granularity": "day",
+      "metrics": {
+        "total_amount": "订单总额",
+        "cost_amount": "成本金额",
+        "freight_amount": "运费",
+        "coupon_amount": "优惠券金额",
+        "points_amount": "积分抵扣金额",
+        "discount_amount": "折扣金额",
+        "pay_amount": "支付金额",
+        "freight_discount_amount": "运费折扣",
+        "sale_amount": "销售金额",
+        "sale_tax": "销售税额",
+        "freight_pay_amount": "实付运费",
+        "freight_coupon_amount": "运费优惠券金额",
+        "freight_points_amount": "运费积分金额",
+        "real_amount": "实收金额",
+        "convert_amount": "转换金额"
+      },
+      "order_key": "shopping_order_id"
+    },
+    "oil_sales_plan": {
+      "label": "油品销售计划",
+      "aliases": ["站点销售计划", "销售计划"],
+      "kind": "fact",
+      "scope": {"role": "plan", "business_domain": "oil_plan"},
+      "time_granularity": "month",
+      "metrics": {"monsalesplan": "月销售计划"},
+      "order_key": null
+    },
+    "oil_sales_daily": {
+      "label": "油品销售日报",
+      "aliases": ["站级销售日报", "日销售"],
+      "kind": "fact",
+      "scope": {
+        "role": "actual",
+        "business_domain": "oil",
+        "preferred_for": ["day"],
+        "priority": 200
+      },
+      "time_granularity": "day",
+      "metrics": {
+        "salesvol": "销售吨数",
+        "qty": "销售升数",
+        "amount": "销售金额"
+      },
+      "order_key": null
+    },
+    "oil_monthly_sales": {
+      "label": "油品销售月报",
+      "aliases": ["油品销售", "月销售"],
+      "kind": "fact",
+      "scope": {
+        "role": "actual",
+        "business_domain": "oil",
+        "preferred_for": ["month"],
+        "priority": 200
+      },
+      "time_granularity": "month",
+      "metrics": {
+        "monthlysales": "销售吨数",
+        "monthlyqty": "销售升数",
+        "monthlyamount": "销售金额"
+      },
+      "order_key": null
+    }
+  }
+}

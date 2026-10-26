@@ -1,0 +1,44 @@
+[
+  {
+    "source": "D:\\Users\\多模态时空智能引擎-产品规划书\\三脑认知与知识引擎-产品与技术规划书.html",
+    "snapshot": "before-update/三脑认知与知识引擎-产品与技术规划书.html",
+    "bytes": 90084,
+    "sha256": "e232448e6913c89436606e9661d525d42a48a26f1d0ca392d9cdffae1030aade"
+  },
+  {
+    "source": "D:\\Users\\多模态时空智能引擎-产品规划书\\三脑认知与知识引擎-产品与技术规划书.md",
+    "snapshot": "before-update/三脑认知与知识引擎-产品与技术规划书.md",
+    "bytes": 55040,
+    "sha256": "48836297adf7f537ba5b0fe34cfc308f7e5a35ce100efa38c0fd37d2237df680"
+  },
+  {
+    "source": "D:\\Users\\多模态时空智能引擎-产品规划书\\三脑认知与知识引擎-全量实施计划与接口契约.md",
+    "snapshot": "before-update/三脑认知与知识引擎-全量实施计划与接口契约.md",
+    "bytes": 33971,
+    "sha256": "6ea099349826588b5e722dc59ce1558c0a24480f8199a1f3207341be67b2c36e"
+  },
+  {
+    "source": "D:\\Users\\多模态时空智能引擎-产品规划书\\三脑认知与知识引擎\\README.md",
+    "snapshot": "before-update/三脑认知与知识引擎/README.md",
+    "bytes": 9528,
+    "sha256": "7fdc14e2ecde1cabbf4c03a1505dfdf8fdf1ddc43a9b0d73f16aa9e6e9811203"
+  },
+  {
+    "source": "D:\\Users\\多模态时空智能引擎-产品规划书\\三脑认知与知识引擎\\docs\\production-platform.md",
+    "snapshot": "before-update/三脑认知与知识引擎/docs/production-platform.md",
+    "bytes": 15639,
+    "sha256": "15ae5bb7f4acab5b9414806d880536341923c535068b599d41759492063f7932"
+  },
+  {
+    "source": "D:\\Users\\多模态时空智能引擎-产品规划书\\三脑认知与知识引擎\\docs\\首次使用与生产验收测试手册.md",
+    "snapshot": "before-update/三脑认知与知识引擎/docs/首次使用与生产验收测试手册.md",
+    "bytes": 32427,
+    "sha256": "f9b8ddba645d11a479604070345b9cdd92bd2ad934153942100326ff01d45827"
+  },
+  {
+    "source": "D:\\Users\\多模态时空智能引擎-产品规划书\\三脑认知与知识引擎\\docs\\superpowers\\specs\\2026-10-18-knowledge-fast-retrieval-design.md",
+    "snapshot": "before-update/三脑认知与知识引擎/docs/superpowers/specs/2026-10-18-knowledge-fast-retrieval-design.md",
+    "bytes": 2956,
+    "sha256": "2e07abbb67aef49901225144811b7e861f093864bc2e81b873a012835df0f514"
+  }
+]

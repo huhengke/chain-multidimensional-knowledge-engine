@@ -1,0 +1,5 @@
+# Optional external database drivers, selected by the configured source type.
+pymysql>=1.1
+psycopg2-binary>=2.9
+oracledb>=2
+pymongo>=4.6

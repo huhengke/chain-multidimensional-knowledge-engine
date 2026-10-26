@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge-evidence.schema.json",
+  "title": "M4 知识运行时统一证据契约（六件套）",
+  "$ref": "#/$defs/KnowledgeEvidence",
+  "description": "知识树只读取通过本契约校验的证据；无可靠时间进未定时间层（time_status=undetermined），不伪造时序。",
+  "$defs": {
+    "KnowledgeSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "minLength": 1 },
+        "uri": { "type": "string" },
+        "authority": { "type": "string" },
+        "license": { "type": "string" },
+        "retrieved_at": { "type": "string" }
+      },
+      "required": ["source_id", "kind"]
+    },
+    "CanonicalDocument": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "document_id": { "type": "string", "minLength": 1 },
+        "source_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string" },
+        "parse_version": { "type": "string" },
+        "lang": { "type": "string" },
+        "content_hash": { "type": ["string", "null"] },
+        "source_object_ref": { "type": ["string", "null"] },
+        "ingest_job_id": { "type": ["string", "null"] },
+        "document_status": { "type": ["string", "null"] }
+      },
+      "required": ["document_id", "source_id"]
+    },
+    "KnowledgeUnit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit_id": { "type": "string", "minLength": 1 },
+        "document_id": { "type": "string", "minLength": 1 },
+        "unit_type": { "type": "string" },
+        "text_ref": { "type": "string" },
+        "locator": {
+          "type": "object",
+          "properties": {
+            "page": { "type": ["integer", "null"] },
+            "anchor": { "type": ["string", "null"] },
+            "timecode": { "type": ["string", "null"] }
+          }
+        },
+        "concept_path": { "type": "array", "items": { "type": "string" } },
+        "version": { "type": ["string", "null"] },
+        "parent_unit_id": { "type": ["string", "null"] },
+        "chunk_level": { "type": ["integer", "null"], "minimum": 0 },
+        "chunk_order": { "type": ["integer", "null"], "minimum": 0 },
+        "index_version": { "type": ["string", "null"] },
+        "embedding_space_id": { "type": ["string", "null"] }
+      },
+      "required": ["unit_id", "document_id"]
+    },
+    "KnowledgeEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "source_id": { "type": "string", "minLength": 1 },
+        "document_id": { "type": "string", "minLength": 1 },
+        "unit_id": { "type": "string", "minLength": 1 },
+        "locator": { "type": "object" },
+        "content_version": { "type": ["string", "null"] },
+        "parse_version": { "type": ["string", "null"] },
+        "permission_scope": { "type": "array", "items": { "type": "string" } },
+        "time_status": { "enum": ["known", "undetermined"] },
+        "citation_chain": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "type": "string", "pattern": "^(0|1)(\\.\\d+)?$" },
+        "source_object_ref": { "type": ["string", "null"] },
+        "runtime_version": { "type": ["string", "null"] },
+        "index_version": { "type": ["string", "null"] }
+      },
+      "required": ["evidence_id", "source_id", "document_id", "unit_id", "time_status"]
+    },
+    "KnowledgeRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "route_id": { "type": "string", "minLength": 1 },
+        "query": { "type": "string" },
+        "candidates": { "type": "array", "items": { "type": "string" } },
+        "selected": { "type": "array", "items": { "type": "string" } },
+        "retrieval_version": { "type": ["string", "null"] },
+        "lexical_score": { "type": "object", "additionalProperties": { "type": "string" } },
+        "semantic_score": { "type": "object", "additionalProperties": { "type": "string" } },
+        "fusion_score": { "type": "object", "additionalProperties": { "type": "string" } },
+        "rerank_score": { "type": "object", "additionalProperties": { "type": "string" } },
+        "cluster_id": { "type": ["string", "null"] },
+        "cluster_generation": { "type": ["integer", "null"], "minimum": 1 },
+        "cross_brain_link_ids": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["route_id"]
+    },
+    "KnowledgeReasoningResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "result_id": { "type": "string", "minLength": 1 },
+        "conclusion": { "type": "string" },
+        "applicable_conditions": { "type": "array", "items": { "type": "string" } },
+        "counter_examples": { "type": "array", "items": { "type": "string" } },
+        "missing_facts": { "type": "array", "items": { "type": "string" } },
+        "evidence_ids": { "type": "array", "items": { "type": "string" } },
+        "domain_risk": { "enum": ["low", "medium", "high"] },
+        "confidence": { "type": "string" },
+        "runtime_version": { "type": ["string", "null"] },
+        "review_status": { "type": ["string", "null"] }
+      },
+      "required": ["result_id", "conclusion", "domain_risk"]
+    }
+  }
+}

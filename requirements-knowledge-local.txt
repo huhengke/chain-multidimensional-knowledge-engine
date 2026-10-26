@@ -1,0 +1,4 @@
+-r requirements-platform.txt
+fastembed==0.7.4
+rapidocr==3.8.1
+pypdfium2==4.30.0

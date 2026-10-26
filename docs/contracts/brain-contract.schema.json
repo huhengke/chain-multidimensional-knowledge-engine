@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "brain-contract.schema.json",
+  "title": "脑统一调用契约（BrainQuery / BrainResult）",
+  "$ref": "#/$defs/BrainQuery",
+  "$defs": {
+    "BrainQuery": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "request_id": { "type": "string", "minLength": 1 },
+        "trace_id": { "type": "string", "minLength": 1 },
+        "day_key": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "raw_query": { "type": "string" },
+        "profile_id": { "type": ["string", "null"] },
+        "time_scope": { "anyOf": [{ "$ref": "#/$defs/TimeScope" }, { "type": "null" }] },
+        "constraints": { "type": "object" }
+      },
+      "required": ["request_id", "trace_id", "day_key", "raw_query"]
+    },
+    "BrainResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "brain": { "enum": ["memory", "knowledge", "structured"] },
+        "request_id": { "type": "string", "minLength": 1 },
+        "trace_id": { "type": "string", "minLength": 1 },
+        "day_key": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "status": { "enum": ["ok", "no_match", "unavailable", "error"] },
+        "claims": { "type": "array", "items": { "$ref": "#/$defs/Claim" } },
+        "evidence": { "type": "array", "items": { "$ref": "#/$defs/EvidenceRef" } },
+        "warnings": { "type": "array", "items": { "type": "string" } },
+        "error": { "anyOf": [{ "$ref": "#/$defs/BrainError" }, { "type": "null" }] }
+      },
+      "required": ["brain", "request_id", "trace_id", "day_key", "status"]
+    },
+    "Claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "field": { "type": "string", "minLength": 1 },
+        "value": { "type": "string" },
+        "source": { "enum": ["memory", "knowledge", "structured"] },
+        "unit": { "type": ["string", "null"] },
+        "evidence_id": { "type": ["string", "null"] }
+      },
+      "required": ["field", "value", "source"]
+    },
+    "EvidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "source": { "enum": ["memory", "knowledge", "structured"] },
+        "ref": { "type": "string", "minLength": 1 },
+        "detail": { "type": ["string", "null"] }
+      },
+      "required": ["evidence_id", "source", "ref"]
+    },
+    "BrainError": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 }
+      },
+      "required": ["code", "message"]
+    },
+    "TimeScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": { "type": "string" },
+        "end": { "type": "string" },
+        "granularity": { "enum": ["none", "day", "month", "year"] },
+        "confidence": { "enum": ["exact", "uncertain"] }
+      },
+      "required": ["start", "end", "granularity", "confidence"]
+    }
+  }
+}

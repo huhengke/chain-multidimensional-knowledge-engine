@@ -1,0 +1,77 @@
+[
+  {
+    "file": "三脑认知与知识引擎-产品与技术规划书.html",
+    "bytes": 101418,
+    "sha256": "47ca618ab4604acc86beec5209053a9c7a4450a145d2658617e5fc15c3913293"
+  },
+  {
+    "file": "三脑认知与知识引擎-产品与技术规划书.md",
+    "bytes": 64274,
+    "sha256": "cbd89ff1620f805b760d31d89525ba2a45f839ac7d4a55939b9a0648f6731861"
+  },
+  {
+    "file": "三脑认知与知识引擎-全量实施计划与接口契约.md",
+    "bytes": 38090,
+    "sha256": "68a36e13b9c37de4401fb8d609a07478bf6540b9d78008d027a0267247d91f9d"
+  },
+  {
+    "file": "三脑认知与知识引擎/README.md",
+    "bytes": 10679,
+    "sha256": "8a8b0c78651c87abde7d7ae25386eec6ba2df7f0f1b3c951d6cb08b85cca06fa"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/production-platform.md",
+    "bytes": 17084,
+    "sha256": "1f08b1eb0313b69051bed46c99332ddbe3e5d5ea2b23fde111ab2134b37845de"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/首次使用与生产验收测试手册.md",
+    "bytes": 37118,
+    "sha256": "321a7da685222a3dceb564f38e62a64309e756d814eb1a672c8aaeb2792ccbd8"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/superpowers/specs/2026-10-18-knowledge-fast-retrieval-design.md",
+    "bytes": 4041,
+    "sha256": "2b5b6607829a42e4a338f3baf7e133d65cf33be7177d78b8670643e5063acd66"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/技术模式与实现现状.md",
+    "bytes": 19165,
+    "sha256": "f21cc22360dc19f8d7177ca4d85910daf481b0da07dd267f6de86b61ce3c06a7"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/技术模式与实现现状.html",
+    "bytes": 24224,
+    "sha256": "3eea2de6af31718f6342e73ee9f9bdf656c9a210ba4c2e7c2b070d8c962cc572"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/diagrams/three-brain-tree.svg",
+    "bytes": 6577,
+    "sha256": "a61ab09b943155b94fdb971de6d9453a54e26bb94a7f14b0922c04b13a888838"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/diagrams/knowledge-dual-time.svg",
+    "bytes": 3510,
+    "sha256": "5e9f1a65a4919606af0f5d4b646ef06060daca45cbb0cbb6172285fd9a4e412b"
+  },
+  {
+    "file": "三脑认知与知识引擎/docs/diagrams/knowledge-adaptive-retrieval.svg",
+    "bytes": 3912,
+    "sha256": "18f084f96d3a11e74a517ba42a2bd68b3ce719290fef9fa48314dab2cc2cb185"
+  },
+  {
+    "file": "三脑认知与知识引擎/scripts/archive-project-docs.cjs",
+    "bytes": 7173,
+    "sha256": "13998fbe3486bc9e8e3b3ef21adb7db13b077ae6f8cbdfd4e4082565f8af23ab"
+  },
+  {
+    "file": "三脑认知与知识引擎/scripts/sync-project-docs.cjs",
+    "bytes": 13339,
+    "sha256": "dd2134b5abd3cb980d5906c6120f7ef8077dc1a1ea477d88c4ebf29f3314d062"
+  },
+  {
+    "file": "三脑认知与知识引擎/scripts/verify-project-docs.cjs",
+    "bytes": 8753,
+    "sha256": "20f0fbb22777e31adaf2f0c6cbc1c180685578f73bd7ffebbaf4fc17d84346fc"
+  }
+]

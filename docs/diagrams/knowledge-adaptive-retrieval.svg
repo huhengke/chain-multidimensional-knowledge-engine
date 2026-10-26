@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="660" viewBox="0 0 1260 660" role="img" aria-labelledby="title desc">
+  <title id="title">知识脑文字优先与语义按需的两条检索路径</title><desc id="desc">先定位时间树域和文字候选。快速路径使用本地排序且不调用查询向量和远端重排；语义路径才进行向量、星团召回、WeKnora 融合和有限模型重排。两者都核验证据。</desc>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#526d83"/></marker></defs>
+  <rect width="1260" height="660" fill="#f8fbfd"/>
+  <g font-family="Microsoft YaHei,Noto Sans SC,Arial,sans-serif" fill="#183349" text-anchor="middle">
+    <rect x="350" y="17" width="560" height="52" rx="8" fill="#e8f2fc" stroke="#3979b4" stroke-width="2"/><text x="630" y="49" font-size="19" font-weight="700">问题 → 时间 / 树域 / 权限上下文 → 文字倒排候选</text>
+    <path d="M630 69V103" fill="none" stroke="#526d83" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="345" y="109" width="570" height="68" rx="8" fill="#fff4dc" stroke="#bd8c2e" stroke-width="2"/><text x="630" y="137" font-size="17" font-weight="700">已有显式候选边界，或文字候选较小？</text><text x="630" y="161" font-size="12">当前启发式：特定词项 posting 与数量阈值，仍需召回质量校准</text>
+    <g fill="none" stroke="#526d83" stroke-width="2" marker-end="url(#a)"><path d="M465 177V204H315V237"/><path d="M795 177V204H945V237"/></g>
+    <text x="315" y="197" font-size="13">是 · lexical / boundary</text><text x="945" y="197" font-size="13">否 · semantic</text>
+    <rect x="65" y="243" width="500" height="213" rx="9" fill="#e6f6f2" stroke="#248e79" stroke-width="2"/>
+    <text x="315" y="278" font-size="20" font-weight="700">文字 / 时间候选快速路径</text><text x="315" y="314" font-size="16">发布与权限过滤 → 本地词项重合排序</text><text x="315" y="345" font-size="14">跳过 query embedding，跳过远端 rerank</text><text x="315" y="379" font-size="13">无向量的文本单元也可进入文字索引</text><text x="315" y="407" font-size="13">时间交集为空 → 真实无命中，不从全库补齐</text><text x="315" y="435" font-size="12" fill="#52677a">纯时间枚举与部分词命中问题仍需验证</text>
+    <rect x="695" y="243" width="500" height="213" rx="9" fill="#f0eafa" stroke="#8460af" stroke-width="2"/>
+    <text x="945" y="278" font-size="20" font-weight="700">按需语义与混合检索路径</text><text x="945" y="314" font-size="16">查询向量 / LRU → 树 / 日圈 / 星团原型</text><text x="945" y="345" font-size="14">有限单元候选 → 发布与权限过滤</text><text x="945" y="379" font-size="15">WeKnora RRF 融合 → 有限模型重排</text><text x="945" y="407" font-size="13">默认交互重排候选 20；证据仍需原文核验</text><text x="945" y="435" font-size="12" fill="#52677a">当前是矩阵 / 原型投影，并非 HNSW / IVF</text>
+    <g fill="none" stroke="#526d83" stroke-width="2" marker-end="url(#a)"><path d="M315 456V486H520V511"/><path d="M945 456V486H740V511"/></g>
+    <rect x="300" y="517" width="660" height="57" rx="8" fill="#ffffff" stroke="#7f9cb3" stroke-width="1.5"/><text x="630" y="542" font-size="17" font-weight="700">可追溯证据 → 按需 LLM 回答 → 引用与运行记录</text><text x="630" y="563" font-size="12" fill="#52677a">检索耗时与模型往返、TTFT、流式生成分别统计</text>
+    <text x="630" y="613" font-size="13" fill="#70551e">规模限制：签名检查仍遍历元数据，宽时间候选与冷启动回放仍待优化。</text><text x="630" y="638" font-size="12" fill="#52677a">热态检索约 1 秒是目标；不是完整长上下文回答或百万规模的已测保证。</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge-workbench.schema.json",
+  "title": "知识数据推理脑工作台状态契约",
+  "$ref": "#/$defs/KnowledgeImportJob",
+  "$defs": {
+    "ImportStep": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"stage": {"type": "string"}, "at": {"type": "string"}, "message": {"type": ["string", "null"]}, "error_code": {"type": ["string", "null"]}},
+      "required": ["stage", "at"]
+    },
+    "KnowledgeImportJob": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "job_id": {"type": "string", "minLength": 1}, "request_id": {"type": "string", "minLength": 1}, "trace_id": {"type": "string", "minLength": 1}, "status": {"type": "string"}, "source_kind": {"type": "string", "minLength": 1}, "source_object_ref": {"type": "string", "minLength": 1}, "title": {"type": ["string", "null"]}, "media_kind": {"type": "string"}, "permission_scope": {"type": "array", "items": {"type": "string"}}, "document_id": {"type": ["string", "null"]}, "index_version": {"type": ["string", "null"]}, "error_code": {"type": ["string", "null"]}, "error_message": {"type": ["string", "null"]}, "retry_count": {"type": "integer", "minimum": 0}, "created_at": {"type": "string"}, "updated_at": {"type": "string"}, "steps": {"type": "array", "items": {"$ref": "#/$defs/ImportStep"}}
+      },
+      "required": ["job_id", "request_id", "trace_id", "source_kind", "source_object_ref", "created_at", "updated_at"]
+    },
+    "KnowledgeIndexVersion": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"index_version": {"type": "string", "minLength": 1}, "tree_id": {"type": "string", "minLength": 1}, "runtime_profile": {"type": "string", "minLength": 1}, "runtime_version": {"type": "string", "minLength": 1}, "embedding_space_id": {"type": "string", "minLength": 1}, "document_ids": {"type": "array", "items": {"type": "string"}}, "unit_ids": {"type": "array", "items": {"type": "string"}}, "status": {"type": "string"}, "created_at": {"type": "string"}, "replaced_by": {"type": ["string", "null"]}},
+      "required": ["index_version", "tree_id", "runtime_profile", "runtime_version", "embedding_space_id", "created_at"]
+    },
+    "KnowledgeClusterProjection": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"cluster_id": {"type": "string", "minLength": 1}, "tree_id": {"type": "string", "minLength": 1}, "embedding_space_id": {"type": "string", "minLength": 1}, "index_version": {"type": ["string", "null"]}, "member_unit_ids": {"type": "array", "items": {"type": "string"}}, "evidence_ids": {"type": "array", "items": {"type": "string"}}, "independent_source_count": {"type": "integer", "minimum": 0}, "occurrence_count": {"type": "integer", "minimum": 0}, "centroid": {"type": "array", "items": {"type": "string"}}, "dispersion": {"type": "string"}, "threshold_events": {"type": "array", "items": {"type": "string"}}, "algo_version": {"type": "string", "minLength": 1}, "rule_version": {"type": "string", "minLength": 1}, "status": {"type": "string"}, "generation": {"type": ["integer", "null"], "minimum": 1}, "corrections": {"type": "array", "items": {"type": "string"}}, "created_at": {"type": "string"}},
+      "required": ["cluster_id", "tree_id", "embedding_space_id", "independent_source_count", "occurrence_count", "algo_version", "rule_version", "created_at"]
+    },
+    "CrossBrainLink": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"link_id": {"type": "string", "minLength": 1}, "source_brain": {"type": "string"}, "target_brain": {"enum": ["memory", "structured"]}, "source_ref": {"type": "string", "minLength": 1}, "target_ref": {"type": "string", "minLength": 1}, "anchor_type": {"enum": ["time", "entity", "event", "stable_concept", "business_dimension"]}, "anchor_value": {"type": "string", "minLength": 1}, "basis": {"type": "string", "minLength": 1}, "evidence_ids": {"type": "array", "items": {"type": "string"}}, "algorithm_version": {"type": "string", "minLength": 1}, "status": {"enum": ["candidate", "active", "paused", "revoked"]}, "manual_override": {"type": ["string", "null"]}, "revocation_reason": {"type": ["string", "null"]}, "created_at": {"type": "string"}},
+      "required": ["link_id", "target_brain", "source_ref", "target_ref", "anchor_type", "anchor_value", "basis", "algorithm_version", "created_at"]
+    },
+    "GraphProposal": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"proposal_id": {"type": "string", "minLength": 1}, "document_id": {"type": "string", "minLength": 1}, "relation_type": {"type": "string"}, "source_concept": {"type": "string", "minLength": 1}, "target_concept": {"type": "string", "minLength": 1}, "evidence_ids": {"type": "array", "items": {"type": "string"}}, "status": {"type": "string"}, "runtime_version": {"type": "string", "minLength": 1}, "created_at": {"type": "string"}},
+      "required": ["proposal_id", "document_id", "source_concept", "target_concept", "runtime_version", "created_at"]
+    },
+    "EvaluationCase": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"query": {"type": "string", "minLength": 1}, "expected_unit_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}}},
+      "required": ["query", "expected_unit_ids"]
+    },
+    "EvaluationRun": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"run_id": {"type": "string", "minLength": 1}, "request_id": {"type": "string", "minLength": 1}, "trace_id": {"type": "string", "minLength": 1}, "index_version": {"type": "string", "minLength": 1}, "status": {"enum": ["completed", "failed"]}, "recall_at_k": {"type": "string"}, "mrr": {"type": "string"}, "evaluated_cases": {"type": "integer", "minimum": 0}, "failure_samples": {"type": "array", "items": {"type": "object"}}, "created_at": {"type": "string"}},
+      "required": ["run_id", "request_id", "trace_id", "index_version", "status", "recall_at_k", "mrr", "evaluated_cases", "created_at"]
+    }
+  }
+}

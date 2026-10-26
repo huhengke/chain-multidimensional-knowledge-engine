@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="710" viewBox="0 0 1260 710" role="img" aria-labelledby="title desc">
+  <title id="title">三脑智慧树：共同规范、独立基座与向上生长的日圈主干</title>
+  <desc id="desc">三个独立智慧树分别拥有管状中通内链、周存、DNA 外链和侧枝，底部为共享规范，顶部返回统一结果。此图为结构示意，不是实际节点计数。</desc>
+  <defs><marker id="up" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#7252a6"/></marker></defs>
+  <rect width="1260" height="710" fill="#f8fbfd"/>
+  <g font-family="Microsoft YaHei,Noto Sans SC,Arial,sans-serif" fill="#183349" text-anchor="middle">
+    <rect x="395" y="18" width="470" height="57" rx="9" fill="#eee7fa" stroke="#8a6bb6" stroke-width="2"/>
+    <text x="630" y="42" font-size="18" font-weight="700">统一 Agent · 三脑核验后证据合一</text>
+    <text x="630" y="63" font-size="12" fill="#52677a">模型按脑与用途独立绑定；星团先给线索，目标脑返回证据</text>
+    <path d="M158 177H60V104H630V86M558 177H460V104H630M958 177H860V104H630" fill="none" stroke="#8a6bb6" stroke-width="2"/>
+    <path d="M630 104V82" fill="none" stroke="#8a6bb6" stroke-width="2" marker-end="url(#up)"/>
+    <text x="230" y="139" font-size="20" font-weight="700">结构化数据推理脑</text>
+    <text x="630" y="139" font-size="20" font-weight="700">知识数据推理脑</text>
+    <text x="1030" y="139" font-size="20" font-weight="700">时空记忆推理脑</text>
+    <g fill="#f0eafb" stroke="#a28bc1"><rect x="158" y="160" width="144" height="35" rx="6"/><rect x="558" y="160" width="144" height="35" rx="6"/><rect x="958" y="160" width="144" height="35" rx="6"/></g>
+    <g font-size="14"><text x="230" y="183">本脑事实结果</text><text x="630" y="183">本脑知识证据</text><text x="1030" y="183">本脑媒体观察</text></g>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g stroke="#daa34a" stroke-width="34"><path d="M230 510V218M230 342Q198 327 160 278M230 415Q272 393 302 354"/><path d="M630 510V218M630 342Q598 327 560 278M630 415Q672 393 702 354"/><path d="M1030 510V218M1030 342Q998 327 960 278M1030 415Q1072 393 1102 354"/></g>
+      <g stroke="#2caa88" stroke-width="23"><path d="M230 510V218M230 342Q198 327 160 278M230 415Q272 393 302 354"/><path d="M630 510V218M630 342Q598 327 560 278M630 415Q672 393 702 354"/><path d="M1030 510V218M1030 342Q998 327 960 278M1030 415Q1072 393 1102 354"/></g>
+      <g stroke="#287fd0" stroke-width="12"><path d="M230 510V218M230 342Q198 327 160 278M230 415Q272 393 302 354"/><path d="M630 510V218M630 342Q598 327 560 278M630 415Q672 393 702 354"/><path d="M1030 510V218M1030 342Q998 327 960 278M1030 415Q1072 393 1102 354"/></g>
+    </g>
+    <g fill="#e8f3fc" stroke="#276fad" stroke-width="1.5"><rect x="60" y="245" width="145" height="42" rx="7"/><rect x="263" y="319" width="135" height="42" rx="7"/><rect x="460" y="245" width="145" height="42" rx="7"/><rect x="663" y="319" width="135" height="42" rx="7"/><rect x="860" y="245" width="145" height="42" rx="7"/><rect x="1063" y="319" width="135" height="42" rx="7"/></g>
+    <g font-size="13" font-weight="700"><text x="133" y="270">组织 / 类别分枝</text><text x="330" y="344">指标 / 事实单元</text><text x="533" y="270">概念 / 条件分枝</text><text x="730" y="344">证据 / 版本单元</text><text x="933" y="270">地点 / 活动分枝</text><text x="1130" y="344">事件 / 记忆单元</text></g>
+    <g fill="#ffffff" stroke="#d79a3c"><rect x="52" y="384" width="145" height="48" rx="5"/><rect x="452" y="384" width="145" height="48" rx="5"/><rect x="852" y="384" width="145" height="48" rx="5"/></g>
+    <g font-size="13"><text x="124" y="404">DNA 外链</text><text x="124" y="423">明细 / 精确回退</text><text x="524" y="404">DNA 外链</text><text x="524" y="423">原文 / 页码 / 引用</text><text x="924" y="404">DNA 外链</text><text x="924" y="423">视频 / 音频 / 时间码</text></g>
+    <g fill="none" stroke="#c39142" stroke-width="1.5"><path d="M197 408H215"/><path d="M597 408H615"/><path d="M997 408H1015"/></g>
+    <g fill="#e8f3fc" stroke="#ffffff" stroke-width="1.6">
+      <ellipse cx="230" cy="454" rx="17" ry="6"/><ellipse cx="230" cy="477" rx="17" ry="6"/><ellipse cx="230" cy="363" rx="17" ry="6"/><ellipse cx="230" cy="303" rx="17" ry="6"/>
+      <ellipse cx="630" cy="454" rx="17" ry="6"/><ellipse cx="630" cy="477" rx="17" ry="6"/><ellipse cx="630" cy="363" rx="17" ry="6"/><ellipse cx="630" cy="303" rx="17" ry="6"/>
+      <ellipse cx="1030" cy="454" rx="17" ry="6"/><ellipse cx="1030" cy="477" rx="17" ry="6"/><ellipse cx="1030" cy="363" rx="17" ry="6"/><ellipse cx="1030" cy="303" rx="17" ry="6"/>
+    </g>
+    <g font-size="12" fill="#52677a" text-anchor="start"><text x="260" y="464">一天一圈 ↑</text><text x="660" y="464">存入/观察日圈 ↑</text><text x="1060" y="464">采集/事件日圈 ↑</text></g>
+    <g fill="#fff4df" stroke="#bc8d4b" stroke-width="1.6"><rect x="46" y="516" width="360" height="58" rx="6"/><rect x="446" y="516" width="360" height="58" rx="6"/><rect x="846" y="516" width="360" height="58" rx="6"/></g>
+    <g font-size="14" font-weight="700"><text x="226" y="539">结构化基座 · 字段 / 时间 / 指标口径</text><text x="626" y="539">知识基座 · 概念 / 来源 / 时间 / 版本</text><text x="1026" y="539">时空基座 · 天 / 地 / 人 / 授权</text></g>
+    <g font-size="12" fill="#52677a"><text x="226" y="560">本项目事实库 / 独立执行器</text><text x="626" y="560">WeKnora 内嵌解析与索引；内容时间另建星团</text><text x="1026" y="560">文件 + 摄像头 / RTSP</text></g>
+    <rect x="46" y="594" width="1160" height="51" rx="6" fill="#e9eef4" stroke="#9bafbf"/>
+    <text x="626" y="615" font-size="15" font-weight="700">共享日历尺、权限与统一证据契约 · 各脑基座、数据、模型空间和 generation 独立</text>
+    <text x="626" y="635" font-size="12">跨脑只走公共时间 / 实体 / 事件 / 概念锚点，目标脑重新核验</text>
+    <g font-size="12"><circle cx="370" cy="677" r="6" fill="#287fd0"/><text x="421" y="681">中通内链</text><circle cx="520" cy="677" r="6" fill="#2caa88"/><text x="563" y="681">中通周存</text><circle cx="670" cy="677" r="6" fill="#daa34a"/><text x="722" y="681">DNA 外链</text><text x="955" y="681" fill="#52677a">结构示意 · 不代表当前节点数量</text></g>
+  </g>
+</svg>

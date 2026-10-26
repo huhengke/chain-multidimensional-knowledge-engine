@@ -1,0 +1,33 @@
+.runtime/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-*/
+frontend/.build-*
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+services/agent/node_modules/
+services/cnts/target/
+third_party/weknora/bin/
+
+# Local databases, model files, logs and credentials
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.key
+*.pem
+*.pyd
+*.dll
+*.exe
+*.xlsx
+*.xls
+
+# Generated native/Python build trees
+**/__pycache__/
+**/build/
+**/target/
+
+# Nested vendor metadata is not part of this repository's history
+third_party/weknora/upstream/.git/

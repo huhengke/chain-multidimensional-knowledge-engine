@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>链式多维时空知识库引擎 · 本地控制台</title>
+  <link rel="stylesheet" href="/static/console.css">
+  <link rel="stylesheet" href="/static/console-responsive.css">
+</head>
+<body>
+  <div id="login-view" class="login-wrap">
+    <main class="login-panel">
+      <p class="eyebrow">LOCAL DEMO CONTROL PLANE</p>
+      <h1>链式多维时空知识库引擎</h1>
+      <p class="muted">本地交互验收后台，不是生产认证系统</p>
+      <form id="login-form" class="stack-form">
+        <label>账号<input id="login-user" autocomplete="username" value="admin" required></label>
+        <label>本地演示口令<input id="login-password" type="password" autocomplete="current-password" value="brain-demo-2026" required></label>
+        <button class="primary" type="submit">进入控制台</button>
+      </form>
+      <div class="demo-credentials"><strong>本地演示角色</strong><span>admin / brain-demo-2026</span><span>reviewer / review-demo-2026</span><span>observer / observe-demo-2026</span></div>
+      <p id="login-message" class="message"></p>
+    </main>
+  </div>
+
+  <div id="app-view" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><span class="brand-mark">3</span><div><strong>三脑控制台</strong><small>本地交互验收</small></div></div>
+      <nav id="nav" class="nav-list" aria-label="功能导航">
+        <button data-view="overview" class="nav-item active">系统总览</button>
+        <button data-view="query" class="nav-item">统一认知台</button>
+        <button data-view="knowledge" class="nav-item">知识认知脑</button>
+        <button data-view="memory" class="nav-item">时空记忆脑</button>
+        <button data-view="structured" class="nav-item">结构化推理脑</button>
+        <button data-view="topology" class="nav-item">拓扑与治理</button>
+      </nav>
+      <div class="sidebar-foot"><span id="side-mode">local_demo</span><button id="logout" class="link-button">退出登录</button></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="main-header"><div><p class="eyebrow">THREE-BRAIN CONTROL PLANE</p><h1 id="page-title">系统总览</h1></div><div class="user-chip"><span id="user-subject">-</span><span id="user-role" class="role-tag">-</span></div></header>
+      <div id="global-message" class="global-message" role="status"></div>
+
+      <section data-page="overview" class="page active-page">
+        <div class="notice"><strong>当前运行边界：</strong>首次进入是空的本地验收运行态。请用各脑页面亲自写入资料、执行查询和查看证据。知识脑使用受管检索运行时；记忆脑和结构化脑不共享知识向量。摄像头只在点击启动后打开。</div>
+        <div id="brain-cards" class="brain-grid"></div>
+        <div class="toolbar"><button id="refresh-overview" class="secondary">刷新状态</button></div>
+        <details class="fixture-details"><summary>可选演示夹具（不会自动加载）</summary><p>仅用作快速对照基线。加载后，每条记录都会标记为 <code>demo_fixture</code>；它不会变成真实业务数据。</p><div class="toolbar"><button id="load-fixtures" class="secondary">加载可选夹具</button><button id="clear-runtime" class="danger-button">清空当前本地运行态</button></div></details>
+        <div class="two-col"><article class="panel"><div class="panel-head"><h2>运行时与 profile</h2></div><pre id="runtime-json" class="json-view"></pre></article><article class="panel"><div class="panel-head"><h2>待复核对象</h2></div><div id="pending-list" class="list"></div></article></div>
+        <article class="panel"><div class="panel-head"><h2>最近控制面审计</h2></div><div id="overview-audit" class="table-wrap"></div></article>
+      </section>
+
+      <section data-page="query" class="page">
+        <div class="notice">先在各脑写入你自己的验收数据，再输入问题。一次请求按独立脑边界执行；没有接入、没有命中或模型不可用都会保留真实状态。</div>
+        <article class="panel"><div class="panel-head"><h2>统一认知请求</h2></div><form id="query-form" class="stack-form"><label>问题<textarea id="query-text" required placeholder="输入需要三个脑分别回答的问题"></textarea></label><div class="check-row"><label><input class="target-check" type="checkbox" value="memory" checked>记忆脑</label><label><input class="target-check" type="checkbox" value="knowledge" checked>知识脑</label><label><input class="target-check" type="checkbox" value="structured" checked>结构化脑</label></div><button class="primary" type="submit">执行三阶段查询</button></form></article>
+        <div id="query-result" class="query-result"></div>
+      </section>
+
+      <section data-page="knowledge" class="page">
+        <div class="notice"><strong>知识脑路径：</strong>资料接入 → 父子分块 → 混合检索/重排 → 知识星团 → 智慧树周存。WeKnora 只作为知识脑内部受管运行时；跨脑只生成可审计候选关联。</div>
+        <div class="three-col"><article class="panel"><h2>知识运行时</h2><pre id="knowledge-runtime" class="json-view"></pre></article><article class="panel"><h2>文档数量</h2><div id="knowledge-count" class="metric">-</div><p class="muted">高风险资料会进入人工复核。</p></article><article class="panel"><h2>关联候选</h2><div id="knowledge-link-count" class="metric">-</div><p class="muted">候选边不代表跨脑自动合并。</p></article></div>
+        <div class="two-col"><article class="panel"><div class="panel-head"><h2>手工导入资料</h2></div><form id="knowledge-import-form" class="stack-form"><label>标题<input id="knowledge-title" placeholder="输入资料标题"></label><label>内容<textarea id="knowledge-content" required placeholder="粘贴需要导入的知识正文"></textarea></label><label>风险域<select id="knowledge-risk"><option value="">普通</option><option value="safety">安全</option><option value="quality">质量</option></select></label><button class="primary" type="submit">导入文本并运行知识管道</button></form><form id="knowledge-file-form" class="stack-form separated-form"><label>本地文本文件<input id="knowledge-file" type="file" accept=".txt,.md,.markdown,.csv,.html,.htm,text/plain,text/markdown,text/csv,text/html" required></label><label>文件类型<select id="knowledge-file-kind"><option value="text">文本</option><option value="markdown">Markdown</option><option value="csv">CSV</option><option value="html">HTML</option><option value="table">表格文本</option></select></label><button class="secondary" type="submit">导入本地文件</button></form></article><article class="panel"><div class="panel-head"><h2>知识检索</h2></div><form id="knowledge-search-form" class="inline-form"><input id="knowledge-query" required placeholder="输入检索词"><button class="primary" type="submit">检索</button></form><div id="knowledge-search-result" class="list"></div></article></div>
+        <article class="panel"><div class="panel-head"><h2>文档与复核</h2><button id="refresh-knowledge" class="secondary">刷新</button></div><div id="knowledge-documents" class="list"></div></article>
+      </section>
+
+      <section data-page="memory" class="page">
+        <div class="notice"><strong>双入口：</strong>离线受管文件/事件和实时本机摄像头、RTSP 都汇聚到 <code>MemoryBrain.ingest</code>。当前没有 ASR、OCR、视觉或声学模型，真实帧会留存为受管采样并显示不可用原因，不生成伪造识别。</div>
+        <div class="two-col"><article class="panel"><div class="panel-head"><h2>离线记忆导入</h2></div><form id="memory-import-form" class="stack-form"><label>类型<select id="memory-kind"><option value="text">文本事件</option><option value="image">图片</option><option value="video">视频文件</option><option value="audio">音频文件</option></select></label><label>文件（媒体类型必选；文本可不选）<input id="memory-file" type="file"></label><label>事件说明<textarea id="memory-text" placeholder="输入你观察到的事件；这是用户文本，不是模型识别"></textarea></label><div class="two-input"><label>时间<input id="memory-time" type="datetime-local"></label><label>地点<input id="memory-place" placeholder="可选"></label></div><button class="primary" type="submit">写入记忆脑</button></form></article><article class="panel"><div class="panel-head"><h2>本机摄像头 / RTSP</h2><button id="refresh-sources" class="secondary">枚举设备</button></div><div class="stream-tabs"><button data-kind="camera" class="stream-tab active">本机摄像头</button><button data-kind="rtsp" class="stream-tab">RTSP</button></div><form id="stream-form" class="stack-form"><div id="camera-fields"><label>设备<select id="camera-device"></select></label></div><div id="rtsp-fields" class="hidden"><label>RTSP 地址<input id="rtsp-url" type="url" placeholder="rtsp://主机:端口/路径" autocomplete="off"></label><p class="muted">地址只在当前服务进程内保存；不会回显到接口、审计或错误信息。</p></div><label>采样间隔（秒）<input id="sample-interval" type="number" min="0.25" max="60" step="0.25" value="2"></label><button class="primary" type="submit">创建流会话</button></form><div id="stream-actions" class="hidden toolbar"><button id="start-stream" class="primary">启动采集</button><button id="stop-stream" class="secondary">停止并清除凭据</button></div><div id="stream-state" class="stream-state empty-state">尚未创建流会话。创建不会打开设备，启动才会连接。</div><img id="stream-preview" class="stream-preview hidden" alt="最近受管采样帧预览"><form id="stream-annotation-form" class="stack-form hidden"><label>事件说明（独立用户文本记忆）<input id="stream-annotation" required placeholder="输入现场观察"></label><button class="secondary" type="submit">写入事件说明</button></form></article></div>
+        <article class="panel"><div class="panel-head"><h2>记忆单元、星团与 generation</h2><button id="refresh-memory" class="secondary">刷新</button></div><div id="memory-summary" class="metric-row"></div><div id="memory-list" class="list"></div></article>
+      </section>
+
+      <section data-page="structured" class="page">
+        <div class="notice"><strong>结构化脑验收路径：</strong>先手工写入本地测试指标，再按指定数据集查询。它沿用版本化数据集、约束映射、定点值与证据的原有契约，不使用 WeKnora 或知识向量。未写入的数据集明确返回无命中。</div>
+        <div class="three-col"><article class="panel"><h2>数据集声明</h2><div id="dataset-list" class="list"></div></article><article class="panel"><h2>已写入的本地数据</h2><div id="structured-registrations" class="list"></div></article><article class="panel"><h2>验收范围</h2><p class="muted">本页是结构化脑适配、映射、定点数与证据输出的本地验收入口，不等同于已接入外部业务数据库。</p></article></div>
+        <div class="two-col"><article class="panel"><div class="panel-head"><h2>写入本地测试指标</h2></div><form id="structured-import-form" class="stack-form"><label>数据集<select id="structured-input-dataset" required></select></label><label>聚合指标 JSON<textarea id="structured-aggregations" required placeholder='例如：{&quot;monthlysales&quot;:&quot;123.45&quot;}'></textarea></label><label>记录数<input id="structured-record-count" type="number" min="1" max="1000000" value="1" required></label><button class="primary" type="submit">写入结构化脑</button></form></article><article class="panel"><div class="panel-head"><h2>执行结构化查询</h2></div><form id="structured-query-form" class="stack-form"><label>数据集<select id="structured-query-dataset" required></select></label><label>问题<input id="structured-query-text" required placeholder="描述需要验证的指标问题"></label><button class="primary" type="submit">查询并展开证据</button></form><pre id="structured-query-result" class="json-view hidden"></pre></article></div>
+      </section>
+
+      <section data-page="topology" class="page">
+        <div class="notice">拓扑和治理只查看真实投影与审计。跨脑关联使用时间、实体、事件、稳定概念等公共锚点，不混合三个脑的原始向量。你可以在这里对待复核门禁执行批准、拒绝或回滚。</div>
+        <div class="two-col"><article class="panel"><div class="panel-head"><h2>拓扑 generation / 星团</h2><button id="refresh-topology" class="secondary">刷新</button></div><pre id="topology-json" class="json-view"></pre></article><article class="panel"><div class="panel-head"><h2>治理门禁与审计</h2><button id="refresh-governance" class="secondary">刷新</button></div><div id="governance-list" class="list"></div></article></div>
+      </section>
+    </main>
+  </div>
+  <script src="/static/console.js"></script>
+</body>
+</html>

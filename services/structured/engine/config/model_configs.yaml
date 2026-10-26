@@ -1,0 +1,15 @@
+version: 1
+active: openai
+providers:
+  - id: openai
+    name: OpenAI compatible
+    provider: openai
+    protocol: openai-compatible
+    purpose: [profile, propose, clarify, chat]
+    base_url_env: STRUCTURED_MODEL_BASE_URL
+    default_base_url: https://api.openai.com/v1
+    model_env: STRUCTURED_MODEL_NAME
+    default_model: ''
+    api_key_env: STRUCTURED_MODEL_API_KEY
+    supports_images: false
+    timeout_seconds: 60

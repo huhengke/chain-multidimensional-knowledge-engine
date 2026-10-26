@@ -1,0 +1,17 @@
+{
+  "purpose": "Migrated code build artifacts only; no business catalog or database is included",
+  "date": "2026-10-13",
+  "artifacts": [
+    {
+      "path": "cnts/bin/cnts.exe",
+      "sha256": "1f4ac93e308965a09d0faecfeba786588aeab37fefd372915ea3b10f843d7862",
+      "source": "cnts/crates"
+    },
+    {
+      "path": "cnts/python/cnts_engine/_native.pyd",
+      "sha256": "fae6c1e37bee7fd8dd2de9f918907aec28b8bf28e3bef399af8a63849f7111fc",
+      "source": "cnts/crates/cnts-python",
+      "abi": "Windows x86_64 CPython 3.11"
+    }
+  ]
+}

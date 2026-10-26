@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="三脑认知与知识引擎产品与技术规划书，定义多模态时空记忆、知识认知、结构化数据推理的统一智慧树认知拓扑。">
+  <title>三脑认知与知识引擎 - 产品与技术规划书 V3.3</title>
+  <style>
+    :root { --ink:#172033; --muted:#5f6b7a; --line:#dbe2ea; --paper:#fff; --canvas:#f4f7fa; --memory:#087e8b; --memory-soft:#e5f6f7; --knowledge:#7750ad; --knowledge-soft:#f1ebfa; --data:#1769aa; --data-soft:#e8f2fb; --base:#875f33; --base-soft:#fff5e6; --success:#167b58; --success-soft:#e8f7ef; --warning:#9b6500; --warning-soft:#fff6dc; --shadow:0 8px 24px rgba(23,32,51,.06); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font-family:"Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.72; }
+    .container { max-width:1220px; margin:0 auto; padding:34px 22px 64px; }
+    .hero { padding:44px 46px; color:#fff; background:#17324a; border-radius:8px; box-shadow:var(--shadow); }
+    .eyebrow { margin:0 0 10px; color:#a9d8e8; font-size:13px; font-weight:700; }
+    .hero h1 { margin:0; font-size:34px; line-height:1.25; letter-spacing:0; }
+    .hero p { max-width:850px; margin:14px 0 0; color:#d8e6ed; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .hero-meta span { padding:5px 10px; color:#eaf4f8; border:1px solid rgba(255,255,255,.3); border-radius:4px; font-size:13px; }
+    .toc,.section { margin-top:22px; background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .toc { padding:22px 28px; }
+    .toc strong { display:block; margin-bottom:10px; }
+    .toc ol { columns:2; margin:0; padding-left:22px; }
+    .toc li { margin:5px 0; break-inside:avoid; }
+    .toc a { color:var(--data); text-decoration:none; }
+    .toc a:hover { text-decoration:underline; }
+    .section { padding:34px 40px; }
+    .section h2 { margin:0 0 20px; padding-bottom:12px; border-bottom:2px solid var(--data); font-size:25px; line-height:1.35; }
+    .section h3 { margin:31px 0 13px; color:#263952; font-size:19px; }
+    .section h4 { margin:22px 0 8px; color:#374b64; font-size:16px; }
+    p { margin:10px 0; }
+    ul,ol { padding-left:23px; }
+    li { margin:7px 0; }
+    code { padding:2px 5px; color:#7b2948; background:#f7edf1; border-radius:3px; font-family:Consolas,monospace; font-size:.9em; }
+    pre { margin:16px 0; padding:18px; overflow:auto; color:#dce8ef; background:#162837; border-radius:6px; font-size:13px; line-height:1.6; }
+    pre code { padding:0; color:inherit; background:transparent; }
+    .callout { margin:18px 0; padding:16px 18px; border-left:4px solid var(--data); border-radius:0 6px 6px 0; background:var(--data-soft); }
+    .callout.memory { border-color:var(--memory); background:var(--memory-soft); }
+    .callout.knowledge { border-color:var(--knowledge); background:var(--knowledge-soft); }
+    .callout.base { border-color:var(--base); background:var(--base-soft); }
+    .callout.warning { border-color:var(--warning); background:var(--warning-soft); }
+    .callout.success { border-color:var(--success); background:var(--success-soft); }
+    .callout strong { color:#1f3854; }
+    .status-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0; }
+    .status { padding:14px; border:1px solid var(--line); border-radius:6px; background:#fff; }
+    .status .tag { display:inline-block; margin-bottom:7px; padding:2px 7px; border-radius:3px; font-size:12px; font-weight:700; }
+    .tag.live { color:#126447; background:#dff5e9; }.tag.candidate { color:#9b6500; background:#fff0c6; }.tag.plan { color:#6b499b; background:#eee6fa; }
+    .diagram { margin:22px 0; padding:22px; overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:#fbfcfd; }
+    .diagram-title { margin-bottom:17px; color:#40536a; font-size:14px; font-weight:700; }
+    .control-plane { min-width:880px; display:grid; grid-template-columns:repeat(4,1fr); gap:10px; padding:12px; border:2px solid #7a99b2; border-radius:8px; background:#edf4f8; }
+    .control-plane .plane-title { grid-column:1 / -1; color:#284963; text-align:center; font-weight:700; }
+    .control-plane span { padding:8px; border:1px solid #c8d8e4; border-radius:4px; background:#fff; text-align:center; font-size:13px; }
+    .query-split { min-width:1080px; display:grid; grid-template-columns:1.1fr repeat(3,1fr); gap:12px; margin-top:18px; }.query-channel { min-height:154px; padding:14px; border:2px solid var(--line); border-radius:7px; background:#fff; }.query-channel strong { display:block; color:#2b5275; }.query-channel span { display:block; margin-top:5px; color:var(--muted); font-size:12px; }.query-channel.star { border-color:#d49a20; background:#fff8e6; }.query-channel.star strong { color:#8a5b00; }.query-channel.memory { border-color:var(--memory); background:var(--memory-soft); }.query-channel.knowledge { border-color:var(--knowledge); background:var(--knowledge-soft); }.query-channel.data { border-color:var(--data); background:var(--data-soft); }.channel-state { display:inline-block; margin-top:10px; padding:2px 6px; color:#72500a; border:1px solid #e8c369; border-radius:3px; background:#fff; font-size:11px; }
+    .brain-grid { min-width:880px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px; }
+    .brain-card { min-height:430px; padding:18px; border:2px solid; border-radius:8px; }
+    .brain-card h3 { margin:0 0 7px; font-size:19px; }
+    .brain-card p { font-size:14px; }
+    .brain-card.memory { border-color:var(--memory); background:var(--memory-soft); }.brain-card.knowledge { border-color:var(--knowledge); background:var(--knowledge-soft); }.brain-card.data { border-color:var(--data); background:var(--data-soft); }
+    .brain-card.memory h3 { color:var(--memory); }.brain-card.knowledge h3 { color:var(--knowledge); }.brain-card.data h3 { color:var(--data); }
+    .brain-box { margin:10px 0; padding:10px; border-left:4px solid; border-radius:4px; background:#fff; font-size:13px; }
+    .memory .brain-box { border-color:var(--memory); }.knowledge .brain-box { border-color:var(--knowledge); }.data .brain-box { border-color:var(--data); }
+    .merge-node { min-width:880px; margin-top:18px; padding:15px; color:#4d317c; border:2px solid #8161b2; border-radius:8px; background:#f5effe; text-align:center; font-weight:700; }
+    .topology-layout { min-width:920px; display:grid; grid-template-columns:270px 1fr; gap:30px; align-items:center; }
+    .rings-wrap { display:grid; min-height:280px; place-items:center; }.ring-outer,.ring-store,.ring-inner { display:grid; border-radius:50%; place-items:center; }
+    .ring-outer { width:258px; height:258px; border:18px solid #d99a29; background:rgba(255,232,178,.24); }.ring-store { width:188px; height:188px; border:18px solid #2aab8f; background:rgba(183,240,224,.25); }.ring-inner { width:116px; height:116px; color:#1b5aa9; border:18px solid #2976de; background:#d9eaff; text-align:center; font-size:13px; font-weight:700; }
+    .ring-label { margin-top:10px; color:var(--muted); text-align:center; font-size:13px; }
+    .topology-text { display:grid; gap:11px; }.topology-step { position:relative; padding:12px 14px 12px 46px; border:1px solid var(--line); border-radius:6px; background:#fff; }.topology-step b { position:absolute; top:12px; left:13px; display:grid; width:24px; height:24px; color:#fff; border-radius:50%; background:#346f9d; place-items:center; font-size:12px; }.topology-step small { display:block; margin-top:3px; color:var(--muted); }
+    .flow { min-width:910px; display:flex; align-items:stretch; }.flow-step { position:relative; flex:1; min-height:102px; padding:13px 14px; border:1px solid var(--line); background:#fff; }.flow-step:first-child { border-radius:6px 0 0 6px; }.flow-step:last-child { border-radius:0 6px 6px 0; }.flow-step + .flow-step::before { position:absolute; z-index:1; top:40px; left:-10px; width:18px; height:18px; content:""; border-top:2px solid #7f97ab; border-right:2px solid #7f97ab; background:#fff; transform:rotate(45deg); }.flow-step strong { display:block; color:#2b5275; }.flow-step span { display:block; margin-top:5px; color:var(--muted); font-size:12px; }
+    .wk-architecture { background:#f8fcfb; }.wk-architecture-grid { display:grid; grid-template-columns:160px minmax(0,1fr) 160px; gap:16px; align-items:center; }.wk-io { padding:14px 12px; color:#223540; border:1px solid #c9d9d6; background:#fff; text-align:center; }.wk-io b { display:block; color:#164f49; font-size:14px; }.wk-io span { display:block; margin-top:5px; color:#52616b; font-size:12px; }.wk-brain { position:relative; overflow:visible; border:2px solid #17806f; background:#fff; box-shadow:0 2px 6px rgba(18,64,59,.08); }.wk-brain::before,.wk-brain::after { position:absolute; top:50%; color:#1769aa; font-size:22px; font-weight:800; line-height:1; }.wk-brain::before { left:-1px; content:"←"; transform:translateX(-100%); }.wk-brain::after { right:-1px; content:"→"; transform:translateX(100%); }.wk-brain-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid #a8d8ce; background:#e5f7f2; }.wk-brain-head h4 { margin:0; color:#07594f; font-size:17px; }.wk-brain-head span { color:#356860; font-size:12px; font-weight:700; }.wk-brain-body { padding:16px; }.wk-runtime { padding:12px; border:1px solid #84c6b9; background:#edf9f6; }.wk-section-head { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }.wk-section-head strong { color:#07594f; font-size:14px; }.wk-section-head span { color:#33655f; font-size:12px; }.wk-runtime-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:10px; }.wk-step { position:relative; min-height:94px; padding:10px; border:1px solid #a9d9d0; background:#fbfffe; }.wk-step:not(:last-child)::after { position:absolute; z-index:2; top:50%; right:-9px; color:#087e8b; content:"→"; transform:translateY(-50%); font-size:17px; font-weight:800; }.wk-tag { display:inline-block; margin-bottom:6px; padding:2px 5px; color:#07594f; background:#d2eee8; font-size:10px; font-weight:800; }.wk-step b,.wk-tree-layer b,.wk-growth-card b,.wk-chain-card b { display:block; color:#173b4c; font-size:13px; }.wk-step span,.wk-tree-layer span,.wk-growth-card span,.wk-chain-card span { display:block; margin-top:4px; color:#51616a; font-size:12px; }.wk-projection { margin:13px 0; color:#08746a; text-align:center; font-size:14px; font-weight:800; }.wk-projection::before,.wk-projection::after { display:inline-block; width:21%; height:1px; margin:0 9px 4px; content:""; background:#91c7be; }.wk-tree { padding:12px; border:1px solid #91adca; background:#f8fbfe; }.wk-tree h4 { margin:0; color:#194d78; font-size:15px; }.wk-tree > p { margin:3px 0 0; color:#567087; font-size:12px; }.wk-tree-layers { display:grid; grid-template-columns:1fr 1.35fr 1fr; gap:9px; margin-top:10px; }.wk-tree-layer { min-height:105px; padding:10px; border:1px solid #bfcede; background:#fff; }.wk-tree-layer.inner { border-top:4px solid #6398c6; }.wk-tree-layer.middle { border-top:4px solid #17806f; background:#f0fbf8; }.wk-tree-layer.middle b { color:#07594f; }.wk-tree-layer.outer { border-top:4px solid #b17b18; background:#fffaf0; }.wk-tree-layer.outer b { color:#704a00; }.wk-growth { display:grid; grid-template-columns:1fr auto 1fr; gap:9px; align-items:center; margin-top:10px; padding:10px; border:1px dashed #8ba7bf; background:#f7fbfe; }.wk-growth-card { padding:8px 10px; border:1px solid #cad8e4; background:#fff; }.wk-growth-arrow { color:#1769aa; font-size:21px; font-weight:800; }.wk-lifecycle { margin-top:11px; padding:10px 12px; color:#3e5660; border-left:4px solid #5b9d92; background:#eef3f2; font-size:12px; }.wk-chain { margin-top:16px; padding:14px; border:1px dashed #89a8c3; background:#f7fbfe; }.wk-chain h4 { margin:0; color:#194d78; font-size:15px; }.wk-chain > p { margin:4px 0 0; color:#536a7c; font-size:12px; }.wk-chain-grid { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:10px; margin-top:10px; }.wk-chain-card { padding:10px; border:1px solid #cad6df; background:#fff; }.wk-chain-card.knowledge { border-color:#6ab3a8; background:#edfaf7; }.wk-chain-label { display:inline-block; margin-bottom:5px; color:#536c79; font-size:10px; font-weight:800; }.wk-forbid { margin:10px 0 0; color:#5d4a43; font-size:12px; }.wk-forbid strong { color:#9d2818; }
+    .mini-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:16px 0; }.mini-card { padding:13px; border:1px solid var(--line); border-radius:6px; background:#fff; }.mini-card strong { display:block; margin-bottom:4px; color:#2b5275; }.mini-card span { color:var(--muted); font-size:13px; }
+    .branch-tree { padding:18px 20px; color:#dbeaf2; border-radius:7px; background:#172c3b; font-family:Consolas,"Microsoft YaHei",monospace; font-size:13px; line-height:1.82; }.branch-tree .base-t { color:#ffc76c; }.branch-tree .trunk { color:#79b9ff; }.branch-tree .branch { color:#67d5aa; }.branch-tree .outer { color:#d7a4ff; }.branch-tree .warn { color:#f6a5a5; }
+    .multi-axis { min-width:1060px; display:grid; grid-template-columns:210px 1fr; gap:18px; align-items:stretch; }.star-map { padding:16px; border:2px solid #d49a20; border-radius:8px; background:#fff8e6; }.star-map h4 { margin:0 0 9px; color:#8a5b00; }.star-chip { display:block; position:relative; margin:10px 0; padding:7px 9px 7px 26px; border:1px solid #e6bd54; border-radius:14px; background:#fff; color:#755109; font-size:12px; }.star-chip::before { position:absolute; top:9px; left:10px; width:8px; height:8px; content:""; border-radius:50%; background:#e39a00; box-shadow:0 0 0 3px #fff1c8; }.star-map small { display:block; margin-top:12px; color:#7d6c4b; font-size:12px; line-height:1.55; }.trace-ledger { margin-top:12px; padding:10px; border:1px solid #64aab3; border-radius:6px; background:#edf9fa; color:#245d64; font-size:11px; line-height:1.55; }.trace-ledger b { display:block; color:#087e8b; }.trace-ledger code { color:#275f67; background:#dff2f3; }.forest-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }.forest-card { padding:13px; border:2px solid; border-radius:8px; background:#fff; }.forest-card.memory { border-color:var(--memory); }.forest-card.knowledge { border-color:var(--knowledge); }.forest-card.data { border-color:var(--data); }.forest-card h4 { margin:0 0 5px; font-size:15px; }.forest-card p { min-height:39px; margin:0 0 8px; color:var(--muted); font-size:12px; line-height:1.45; }.local-ruler { display:flex; justify-content:space-between; margin:7px 0 6px; padding:4px 5px; color:#4d5d70; border-top:1px dashed #a9bbca; border-bottom:1px dashed #a9bbca; font-size:10px; }.tree-axis { position:relative; display:grid; gap:9px; min-height:170px; padding:8px 8px 8px 28px; border-left:4px solid #7291ac; }.tree-axis::before { position:absolute; top:0; bottom:0; left:10px; content:""; border-left:1px dashed #91a6b8; }.tree-layer { position:relative; padding:6px 8px; border:1px solid #d7e0e7; border-radius:4px; background:#fbfdff; font-size:11px; }.tree-layer::before { position:absolute; top:12px; left:-24px; width:12px; height:12px; content:""; border:2px solid #4d87bb; border-radius:50%; background:#fff; }.tree-layer b { color:#315c80; }.tree-layer span { color:var(--muted); }.tree-branch { position:relative; margin-left:16px; padding:5px 7px; border-left:3px solid #68bfa4; background:#f3fbf8; color:#33685c; font-size:10px; }.tree-branch::before { position:absolute; top:0; left:-17px; width:15px; height:14px; content:""; border-bottom:2px solid #68bfa4; }.axis-caption { margin-top:9px; color:var(--muted); font-size:11px; line-height:1.45; }
+    table { width:100%; margin:16px 0; border-collapse:collapse; font-size:14px; }th,td { padding:11px 12px; border:1px solid var(--line); vertical-align:top; text-align:left; }th { color:#2a4560; background:#edf3f7; }tr:nth-child(even) td { background:#fbfcfd; }.matrix td:first-child { width:18%; color:#2d4864; font-weight:700; }
+    .phase { display:grid; grid-template-columns:160px 1fr; gap:14px; margin:13px 0; padding:15px; border:1px solid var(--line); border-radius:7px; background:#fff; }.phase-label { color:#315879; font-weight:700; }.phase-label small { display:block; margin-top:5px; color:var(--muted); font-weight:400; }
+    .checklist { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }.check { padding:12px 14px; border:1px solid var(--line); border-radius:6px; background:#fff; }.check b { color:#275474; }.footer { padding:34px 18px; color:var(--muted); text-align:center; font-size:13px; }
+    @media (max-width:760px) { html,body { width:100vw; max-width:100vw; overflow-x:hidden; }.container { width:100vw; max-width:100vw; min-width:0; padding:18px 12px 42px; }.hero,.toc,.section { width:calc(100vw - 24px); min-width:0; max-width:calc(100vw - 24px); }.hero { padding:30px 24px; }.hero h1 { font-size:27px; }.hero p,.hero-meta span,p,li,td { width:auto; max-width:100%; overflow-wrap:anywhere; word-break:break-word; }.hero p { width:100%; }.hero-meta { max-width:100%; }.hero-meta span { min-width:0; }.section { padding:25px 20px; }.section h2 { font-size:22px; }.toc ol { columns:1; }.status-grid,.checklist { grid-template-columns:1fr; }.phase { grid-template-columns:1fr; }table { display:block; max-width:100%; overflow-x:auto; font-size:13px; } }
+    @media (max-width:900px) { .wk-architecture-grid,.wk-runtime-grid,.wk-tree-layers,.wk-chain-grid { grid-template-columns:1fr; }.wk-io { position:relative; }.wk-brain::before,.wk-brain::after { display:none; }.wk-io:first-child::after { position:absolute; bottom:-25px; left:50%; color:#1769aa; content:"↓"; transform:translateX(-50%); font-size:20px; font-weight:800; }.wk-architecture-grid > .wk-io:last-child { margin-top:12px; }.wk-architecture-grid > .wk-io:last-child::before { position:absolute; top:-25px; left:50%; color:#1769aa; content:"↓"; transform:translateX(-50%); font-size:20px; font-weight:800; }.wk-step:not(:last-child)::after { top:auto; right:50%; bottom:-23px; content:"↓"; transform:translateX(50%); }.wk-step { min-height:0; }.wk-growth { grid-template-columns:1fr; }.wk-growth-arrow { transform:rotate(90deg); text-align:center; }.wk-projection::before,.wk-projection::after { width:14%; } }
+    @media print { body { background:#fff; }.container { max-width:none; padding:0; }.hero,.toc,.section { box-shadow:none; }.section { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">PRODUCT AND TECHNOLOGY BLUEPRINT · V3.3</p>
+      <h1>三脑认知与知识引擎</h1>
+      <p>以统一智慧树认知拓扑连接多模态时空记忆、知识认知与结构化数据推理。三脑采用同尺多轴的时间主干，每天一圈；所有向量先进入留痕层，再由记忆星团（特征共振索引）自动形成跨时间的快速回忆通道。</p>
+      <div class="hero-meta"><span>产品与技术规划书</span><span>结构基线：三脑并行</span><span>版本：V3.3</span><span>状态：自动生长与治理边界基线</span></div>
+    </header>
+
+    <nav class="toc" aria-label="目录"><strong>目录</strong><ol>
+      <li><a href="#part1">产品定位与设计原则</a></li><li><a href="#part2">三脑总体架构</a></li><li><a href="#part3">统一智慧树认知拓扑</a></li><li><a href="#part4">多模态时空记忆脑</a></li><li><a href="#part5">知识认知脑</a></li><li><a href="#part6">结构化数据推理脑</a></li><li><a href="#part7">跨脑编排、Agent 与产品界面</a></li><li><a href="#part8">数据治理、隐私与安全</a></li><li><a href="#part9">实施路线与验收标准</a></li><li><a href="#part10">工程约束与风险边界</a></li>
+    </ol></nav>
+
+    <section class="section" id="part1">
+      <h2>第一部分：产品定位与设计原则</h2>
+      <h3>1.1 目标问题</h3>
+      <p>现有系统通常把结构化业务数据、个人图像视频音频、专业文档知识分别放在互不理解的工具中：表格能算数但不理解自然表达；相册能按时间浏览却难以按事件回忆；知识库能召回文本却难以证明结论来源。三脑认知与知识引擎的目标，是让这些材料在同一受控入口下可被查询、解释、追溯和组合。</p>
+      <div class="callout"><strong>产品定义：</strong>三脑不是三个聊天机器人，而是三类具有不同事实来源、查询方式和证据规则的认知执行器。Agent 负责理解、编排和呈现；认知脑负责返回可验证的结果；模型不得越过数据和权限边界自行编造结论。</div>
+      <h3>1.2 三脑分工</h3>
+      <table class="matrix"><thead><tr><th>认知脑</th><th>核心对象</th><th>主要价值</th><th>结果必须附带的证据</th></tr></thead><tbody>
+        <tr><td>多模态时空记忆脑</td><td>图片、视频、音频、文字记录、传感器与时空元数据</td><td>按某段时间、地点、人物或活动回忆与钻取真实经历</td><td>媒体片段、采集时间、地点来源、特征版本和权限范围</td></tr>
+        <tr><td>知识认知脑</td><td>文本、PDF、Word、PPT、网页、OCR 与转写材料</td><td>按概念与语义检索知识，并返回可追溯的解释</td><td>原文段落、页码/时间码、版本、来源、置信度与冲突状态</td></tr>
+        <tr><td>结构化数据推理脑</td><td>Excel、数据库表、通用事实、维表/主数据和指标口径</td><td>把自然语言转换为标准查询并做精确筛选、分组与聚合</td><td>数据集、时间范围、标准条件、口径、聚合结果与运行配置档</td></tr>
+      </tbody></table>
+      <h3>1.3 不可妥协的设计原则</h3>
+      <ul><li><strong>同一时间尺、独立智慧树：</strong>三脑及脑内每棵树使用一致的日历刻度和日界线，但各有独立时间主干、分枝和数据覆盖范围；不把三脑画成一根公共物理轴。</li><li><strong>一天一圈：</strong>时间是三脑共同主特征。时空脑与知识脑的单个日圈是三维向量集合，结构化数据脑的单个日圈是一维事实序列；时间 <code>T</code> 负责排列、定位与反查，不参与记忆星团的聚合主键。</li><li><strong>向量先留痕、再生长：</strong>每个向量先写入时间无关的向量留痕层，记录其空间位置、次数、中心与离散度；达到策略阈值后自动聚类、形成星团并推动中通特征和分枝生长。</li><li><strong>自动拓扑、人工治理：</strong>普通低风险字段角色、共有特征、分枝候选和星团由系统自动生成、更新和重建；用户可查看、修改、拆分、合并、暂停或禁用。权限、高敏感身份/位置、生物特征、不可逆业务口径与跨数据集总量语义仍需策略门禁或明确确认。</li><li><strong>查询和写入分离：</strong>查询读取已激活的拓扑版本；留痕、聚类、生长和规则更新均有版本、阈值事件和可回滚记录，不因日常自动生长阻塞查询。</li><li><strong>不伪造精度：</strong>没有足够的时间粒度、位置依据、证据片段或数值口径时，系统必须披露限制或拒答。</li></ul>
+    </section>
+
+    <section class="section" id="part2">
+      <h2>第二部分：三脑总体架构</h2>
+      <p>用户问题、文件或实时媒体先进入统一认知控制面。控制面先将明确时间条件编译为三脑可执行的日历范围，再一分四路：一条进入由向量留痕自动聚合的记忆星团（特征共振索引），另外三条分别进入认知脑。记忆星团不是第四个脑，也不保存原始事实；它以时间无关的向量位置和重复次数建立索引，再通过成员引用反查日圈、树、节点与证据。三脑独立返回后再进行脑内与跨脑合并。</p>
+      <div class="diagram" role="img" aria-label="统一控制面、记忆星团和三脑并行架构图"><div class="diagram-title">图 1：输入 → 记忆星团与三脑并行 → 脑内合并 → 多脑合一输出</div>
+        <div class="control-plane"><div class="plane-title">统一认知控制面</div><span>输入接入与会话</span><span>权限、隐私与保留策略</span><span>模型通道、Skill 与工具编排</span><span>审计、运行配置档与版本固定</span></div>
+        <div class="query-split"><article class="query-channel star"><strong>记忆星团（自动特征共振索引）</strong><span>向量留痕层按空间位置和次数自动聚合；以“星团 → 日圈/树/节点/证据引用”反查，不逐日全量扫描。</span><em class="channel-state">快速阶段：可先回答“我记得”</em></article><article class="query-channel memory"><strong>多模态时空记忆脑</strong><span>在自身智慧树森林中，按时间圈、地点、人物、场景和动作特征钻取。</span></article><article class="query-channel knowledge"><strong>知识认知脑</strong><span>在自身智慧树森林中，按可靠时间、概念、条件、证据和版本核对。</span></article><article class="query-channel data"><strong>结构化数据推理脑</strong><span>在自身智慧树森林中，按时间、标准条件、口径和指标精确计算。</span></article></div>
+        <div class="brain-grid">
+          <article class="brain-card memory"><h3>多模态时空记忆脑</h3><p>面向个人生活记忆和时空事件，接入图片、视频、音频、文本记录及合法授权的设备数据。</p><div class="brain-box"><strong>基座：</strong>天、地、人、权限与来源归一</div><div class="brain-box"><strong>主干：</strong>独立时间尺；每日一圈，承载三维时空向量集合</div><div class="brain-box"><strong>自动生枝：</strong>按地点稳定性、动作连续性和向量重复次数形成场景、活动、动作或习惯</div><div class="brain-box"><strong>外链：</strong>媒体片段、关键帧、波形、转写、动作特征</div></article>
+          <article class="brain-card knowledge"><h3>知识认知脑</h3><p>面向专业知识和可追溯资料，以原文、版本和本体关系作为可发布知识的基础。WeKnora 只作为本脑内部受管运行时，结果经统一证据契约投影到知识智慧树。</p><div class="brain-box"><strong>基座：</strong>领域、本体、概念、版本、来源与置信度</div><div class="brain-box"><strong>主干：</strong>独立时间尺；每日一圈，承载三维概念与证据向量集合</div><div class="brain-box"><strong>自动生枝：</strong>同一嵌入空间的近邻按主题共现、概念稳定性和证据密度自动形成主题、概念、条件与证据类型</div><div class="brain-box"><strong>外链：</strong>原文块、页码、时间码、图表和向量候选</div></article>
+          <article class="brain-card data"><h3>结构化数据推理脑</h3><p>承接现有 AI 数据引擎，面向受控事实数据、主数据、指标口径和精确计算。</p><div class="brain-box"><strong>基座：</strong>时间、组织、产品、指标、口径和能力翻译</div><div class="brain-box"><strong>主干：</strong>独立时间尺；每日一圈，承载一维事实数据序列</div><div class="brain-box"><strong>自动生枝：</strong>按覆盖率、区分度、层级关系、基数和阈值选择组织、地域、品类、产品或渠道</div><div class="brain-box"><strong>外链：</strong>非共有字段、倒排索引、明细与精确事实回退</div></article>
+        </div><div class="merge-node">脑内合并 → 多脑合一：记忆星团的快速线索与三脑独立结果按证据、时间、口径和权限合并 → 一个统一输出</div>
+      </div>
+      <h3>2.1 当前工程基线与规划范围</h3>
+      <div class="status-grid"><div class="status"><span class="tag live">现有工程基线</span><strong>结构化数据推理脑</strong><br><small>已有数据集注册、基座特征、时间规则、智慧树、统一查询、Agent 通道和图表呈现。具体部署能力以本地验收为准。</small></div><div class="status"><span class="tag candidate">候选实现</span><strong>CNTS 二进制执行器</strong><br><small>以不可变 generation 和 Catalog 降低重复存储，并保持既有查询契约。候选配置须经管理员验收后人工激活。</small></div><div class="status"><span class="tag plan">一期建设</span><strong>多模态时空记忆脑与知识认知脑</strong><br><small>本规划书定义产品、数据、治理与验收边界；不将其误表述为当前已上线功能。</small></div></div>
+    </section>
+
+    <section class="section" id="part3">
+      <h2>第三部分：统一智慧树认知拓扑</h2>
+      <p>智慧树是三脑共用的认知拓扑，不是结构化数据脑专属模型。每棵树都按可靠时间纵向形成独立主干，在容量或语义复杂度达到阈值时按确认维度横向生长。DNA 双链描述数据连接的物理拓扑，不增加一个额外业务查询层。</p>
+      <h3>3.1 同尺多轴，每天一圈</h3>
+      <p>三脑共享同一日历尺与日界线，但不共享一根物理时间轴。每个脑可有多棵智慧树，每棵树都以自己的时间主干连续堆叠日圈；相同日期在不同树内可对齐查询，但树可以拥有不同的数据覆盖、分枝和空白日期。查询必须先给出明确时间条件，系统将其分别映射到每棵符合权限与能力条件的树。</p>
+      <div class="callout base"><strong>日圈的载荷不同：</strong>多模态时空记忆脑与知识认知脑中，一天是一组三维向量单元；同一特征跨日可保持近似坐标，允许 <code>ε</code> 差异。结构化数据推理脑中，一天是一维事实序列。时间 <code>T</code> 负责把这些日圈排列、对齐和反查，不代表三脑合并为一个球体或一个数据库。</div>
+      <div class="diagram" role="img" aria-label="中通内链、周存和 DNA 外链的同心层结构图"><div class="diagram-title">图 2：每棵树的单个日圈与分枝节点均具备三层物理空间</div><div class="topology-layout"><div class="rings-wrap"><div class="ring-outer"><div class="ring-store"><div class="ring-inner">中通<br>DNA 内链</div></div></div><div class="ring-label">日圈由内向外：定位 → 摘要/聚合 → 专属证据与下钻</div></div><div class="topology-text"><div class="topology-step"><b>1</b><strong>基座规范化</strong><small>把自然表达翻译为标准时间、地点、人物、概念、数据集、条件或权限参数。</small></div><div class="topology-step"><b>2</b><strong>中通内链进入</strong><small>使用本树的时间主干和稳定共有锚点缩小候选范围，不承载全部字段或全部媒体特征。</small></div><div class="topology-step"><b>3</b><strong>中通周存经过</strong><small>读取日圈内已物化的聚合、摘要、版本状态、事件连续性或外链指针。</small></div><div class="topology-step"><b>4</b><strong>DNA 外链出去</strong><small>按需要读取非共有特征、知识原文、媒体片段、动作序列或精确事实明细。</small></div><div class="topology-step"><b>5</b><strong>结果与证据返回</strong><small>树内先合并，各脑独立返回，再由控制面按口径和证据类型合并，不将异类结果强行相加。</small></div></div></div></div>
+      <h3>3.2 同一拓扑的三种载荷</h3>
+      <table><thead><tr><th>拓扑层</th><th>多模态时空记忆脑</th><th>知识认知脑</th><th>结构化数据推理脑</th></tr></thead><tbody>
+        <tr><td>时间主干 / 日圈</td><td>同尺独立主干；每个日圈为采集/事件时间下的三维时空向量集合</td><td>同尺独立主干；每个日圈为发布、生效、修订或采集时间下的三维概念与证据向量集合；无可靠时间则显式标记未定时间层</td><td>同尺独立主干；每个日圈为日粒度的一维事实序列；非日粒度数据须声明限制，不得伪装为日数据</td></tr>
+        <tr><td>中通内链</td><td>时间、地点、人物等稳定时空锚点</td><td>时间版本、领域和稳定概念锚点</td><td>时间和跨数据集共有稳定特征</td></tr>
+        <tr><td>中通周存</td><td>场景摘要、事件连续性、媒体索引与状态</td><td>概念版本摘要、证据集合、冲突/发布状态，以及 WeKnora 索引版本、嵌入空间、近邻/重排轨迹投影</td><td>时间层聚合、指标块、数据集范围和外链指针</td></tr>
+        <tr><td>DNA 外链</td><td>原图、视频段、音频、转写、关键点与动作特征</td><td>原文块、页码、图片、表格、引用关系和向量候选</td><td>非共有字段、倒排关系、分枝入口和精确事实回退</td></tr>
+        <tr><td>聚合上浮</td><td>事件/场景摘要，不能伪造未观察到的细节</td><td>证据归并与版本比较，不能伪造学术或业务共识</td><td>按确定口径的数量、金额、完成率等精确聚合</td></tr>
+      </tbody></table>
+      <h3>3.3 向量留痕层、自动生长与记忆星团</h3>
+      <p>所有脑产生的向量均先进入<strong>向量留痕层</strong>，再写入智慧树的日圈、周存和外链。留痕层的聚合身份不包含日期：它仅以向量空间/模型版本、归一化后的空间位置、向量值和出现次数识别同类特征；重复命中只增加次数并更新中心、离散度、密度和稳定度。日期不是星团的组成字段，而由独立的成员引用边 <code>occurrence_id → {tree_id, day_key, node_id, evidence_ref}</code> 保存，用于日后反查“在哪些天、哪棵树、什么证据中出现过”。</p>
+      <div class="callout memory"><strong>自动生长机制：</strong>留痕入账后，生长引擎按次数、向量紧密度、稳定性、覆盖范围、区分度、层级关联和策略阈值自动生成共有中通特征、分枝和记忆星团。以“在同一地点持续练太极”为例，地点与连续动作向量持续重复会提高同一空间区域的计数；达到阈值后自动形成“太极”星团及地点 → 活动 → 动作阶段分枝。用户无需逐笔确认，可在之后查看依据、调阈值、拆分、合并、暂停或禁用。</div>
+      <div class="diagram" role="img" aria-label="向量留痕层自动聚合为记忆星团并驱动三脑智慧树生长"><div class="diagram-title">图 3：每个日圈先留痕；时间无关的向量计数自动形成记忆星团，再反查日圈和证据</div><div class="multi-axis"><aside class="star-map"><h4>记忆星团 · 自动生成</h4><span class="star-chip">太极 · 命中 38 次 · 已自动生长</span><span class="star-chip">公园场景 · 子簇 · 紧密度达标</span><span class="star-chip">动作阶段 · 子簇 · 自动分裂</span><div class="trace-ledger"><b>向量留痕层</b><code>space + model + cell</code><br>值 / 次数 / 中心 / 离散度<br>聚合键不含日期；成员引用另存日圈、树、节点和证据。</div><small>查询先命中星团，再与时间范围在成员引用上求交集，最后回到对应智慧树下钻。</small></aside><div class="forest-grid"><article class="forest-card memory"><h4>多模态时空记忆脑</h4><p>多棵时空智慧树；日圈为三维时空向量集合。</p><div class="local-ruler"><span>12/01</span><span>12/02</span><span>12/03</span></div><div class="tree-axis"><div class="tree-layer"><b>树 A · 12/01 日圈</b><br><span>地点/场景/动作向量 → 留痕</span></div><div class="tree-branch">自动：公园 → 太极 → 动作阶段</div><div class="tree-layer"><b>树 B · 12/03 日圈</b><br><span>近似向量 → 同一星团成员</span></div></div><div class="axis-caption">相同日历刻度，独立主干；普通低风险特征自动生长。</div></article><article class="forest-card knowledge"><h4>知识认知脑</h4><p>多棵知识智慧树；日圈为三维概念与证据向量集合。</p><div class="local-ruler"><span>12/01</span><span>12/02</span><span>12/03</span></div><div class="tree-axis"><div class="tree-layer"><b>树 C · 12/01 日圈</b><br><span>概念/条件/版本向量 → 留痕</span></div><div class="tree-branch">自动：主题 → 概念 → 证据版本</div><div class="tree-layer"><b>树 D · 12/03 日圈</b><br><span>近似向量 → 同一星团成员</span></div></div><div class="axis-caption">星团关联依赖各脑映射契约，不假定原始 XYZ 坐标天然等值。</div></article><article class="forest-card data"><h4>结构化数据推理脑</h4><p>多棵数据智慧树；日圈为一维事实序列。</p><div class="local-ruler"><span>12/01</span><span>12/02</span><span>12/03</span></div><div class="tree-axis"><div class="tree-layer"><b>树 E · 12/01 日圈</b><br><span>字段统计/指标块 → 留痕</span></div><div class="tree-branch">自动：组织 → 类别 → 指标</div><div class="tree-layer"><b>树 F · 12/03 日圈</b><br><span>稳定维度 → 自动分枝</span></div></div><div class="axis-caption">数值结果仍按口径精确计算；自动生长不改变事实或指标定义。</div></article></div></div></div>
+      <h3>3.4 自动主干与分枝生长规则</h3>
+      <div class="branch-tree" aria-label="智慧树自动动态分枝示例"><span class="base-t">每棵树的基座：自然语言与多模态输入标准化、权限判断、实体映射</span><br>└─ <span class="trunk">本树时间主干：2026-10-01 / 一个可靠日圈</span><br>&nbsp;&nbsp;├─ <span class="branch">自动共有特征：稳定地点 / 概念 / 数据维度 → 写入中通内链或周存</span><br>&nbsp;&nbsp;├─ <span class="branch">自动分枝：地点 → 人物 → 场景 → 活动 → 动作阶段；由重复次数和聚类稳定度驱动</span><br>&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="outer">DNA 外链：视频段、音频段、关键帧、动作特征序列</span><br>&nbsp;&nbsp;├─ <span class="branch">知识分枝：领域 → 概念 → 条件 → 证据来源 → 版本；由主题共现和证据密度驱动</span><br>&nbsp;&nbsp;│&nbsp;&nbsp;└─ <span class="outer">DNA 外链：原文块、页码、图表、引用与向量候选</span><br>&nbsp;&nbsp;└─ <span class="branch">结构化数据分枝：组织 → 区域 → 类别 → 产品 → 指标；由覆盖率、层级和基数阈值驱动</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <span class="outer">DNA 外链：精确明细、非共有字段与倒排条件</span><br><span class="warn">策略门禁：随机标识、自由文本、未经授权的人脸身份、手机号、精确地址等高敏感或高基数字段禁止自动生长；它们只能保留在受控外链或等待专门授权。</span></div>
+      <div class="callout base"><strong>“天、地、人”保持为时空记忆的三基座：</strong>天表示时间与环境条件，地表示地点和空间场景，人表示人物与关系。活动、事件、习惯、动作、概念和指标均是由数据特征驱动生长的节点或分枝，而不是第四基座。</div>
+    </section>
+
+    <section class="section" id="part4">
+      <h2>第四部分：多模态时空记忆脑</h2>
+      <p>多模态时空记忆脑把个人生活记忆作为第一阶段产品能力。它接入图像、视频、音频、文字记录和经授权的设备数据，为每个媒体片段建立可解释的时空记忆单元；不是把所有内容一次性转成文本，也不是把向量相似度当作唯一事实。</p>
+      <h3>4.1 输入与五层记忆管道</h3>
+      <div class="diagram" role="img" aria-label="多模态时空记忆输入和自动生长处理管道"><div class="diagram-title">图 4：多模态记忆从原始材料、向量留痕到自动生长的可查询记忆单元</div><div class="flow"><div class="flow-step"><strong>1. 安全接入</strong><span>上传、相册授权、摄像头片段、音频、文字与设备元数据</span></div><div class="flow-step"><strong>2. 提取向量</strong><span>ASR、OCR、关键帧、场景、对象、波形、姿态与动作片段</span></div><div class="flow-step"><strong>3. 天地人归一</strong><span>时间、地点、人物、来源和权限；不确定项保留未知状态</span></div><div class="flow-step"><strong>4. 向量留痕与自动生长</strong><span>先记录空间位置和次数，再聚类形成周存摘要、分枝与星团</span></div><div class="flow-step"><strong>5. 检索与治理</strong><span>形成日圈、外链证据、自动星团和版本；支持回忆、钻取、纠偏与跨脑查询</span></div></div></div>
+      <h3>4.2 记忆单元与原始媒体分离</h3>
+      <table><thead><tr><th>层</th><th>保存内容</th><th>目的</th><th>禁止行为</th></tr></thead><tbody>
+        <tr><td>原始媒体库</td><td>加密原图、视频、音频和原始元数据</td><td>证据保全、按权限回放</td><td>不得把原始文件直接暴露给无权限 Agent 或外部模型</td></tr>
+        <tr><td>特征与索引库</td><td>关键帧、转写、波形摘要、视觉/动作特征、嵌入</td><td>候选检索和快速定位</td><td>不得把相似度当作人物、活动或地点的最终事实</td></tr>
+        <tr><td>智慧树拓扑</td><td>时间圈、天地人锚点、分枝、周存摘要和外链指针</td><td>按时间和稳定特征钻取记忆</td><td>不得用单个偶然特征污染主干</td></tr>
+        <tr><td>记忆发布记录</td><td>确认状态、提取模型版本、规则版本、操作者和原因</td><td>可复核、可修正、可回滚</td><td>不得静默把 AI 推断升级为已确认记忆</td></tr>
+      </tbody></table>
+      <h3>4.3 自然记忆、习惯与动态生长</h3>
+      <p>系统在已授权数据中自动识别高频稳定模式，例如常见地点序列、时间段或重复活动。每个可靠日圈形成同一坐标语义下的三维时空向量集合；同类特征跨日保持近似位置并允许 <code>ε</code> 差异。每个向量先写入留痕层；当重复次数、紧密度、稳定性和策略条件达标时，系统自动将其升级为可长期路由的中通特征、分枝或记忆星团。用户可查看覆盖样本、置信度、相反样本和影响范围，并可随时修正或撤销，但普通低风险模式不以人工确认为前置条件。</p>
+      <div class="callout memory"><strong>示例：</strong>某人长时间在公园持续练太极时，时间与地点先进入日圈和中通内链；动作向量在留痕层持续累加。地点稳定、动作连续且次数达到阈值后，系统自动生长“公园 → 太极 → 动作阶段”分枝并形成对应星团；关键帧、视频片段、音频、姿态关键点和节奏描述仍通过 DNA 外链取回。查询“昨天在哪里看到某人练习某活动”时，系统先定位时间圈，再按自动形成的分枝下钻，最后返回经过权限筛选的证据片段。</div>
+      <h3>4.4 记忆星团（特征共振索引）</h3>
+      <p>记忆星团由留痕层自动形成，而非人工逐项发布。例如“公园打太极”不是重复保存多天的原始视频，而是由近似的动作/场景向量自动聚合出的特征簇。星团本体只保存原型向量、允许偏差、出现次数、中心、离散度、子簇、算法/规则版本和自动生长事件；其成员引用另行保存日圈、树、节点与证据，避免把时间塞入星团的聚合身份。查询“这个月哪些天打过太极”时，先命中星团，再以时间范围过滤成员引用，最后回到各日圈和对应智慧树获取完整证据。</p>
+      <div class="callout memory"><strong>“我记得”的边界：</strong>只有自动星团达到当前策略阈值、成员可追溯且当前用户具备访问权限时，系统才可先返回“我记得”的快速线索。低次数、离散度过大或权限不足的命中只能显示为“待核对线索”；星团不替代随后的时空、知识和结构化数据核验。敏感身份、声纹、精确位置等不进入默认自动星团。</div>
+      <h3>4.5 动作特征与未来具身执行</h3>
+      <p>一期支持将动作以可查询、可追溯的结构化描述保存，例如动作段落、关键点序列引用、姿态阶段、方向、节奏、持续时间、置信度、镜头条件和来源时间码。该描述可被知识脑关联到动作规范或注意事项。</p>
+      <div class="callout warning"><strong>明确不在一期执行：</strong>动作特征不等于机器人控制代码。人体骨架、机器人自由度、环境约束、碰撞检测、速度限制、校准、仿真验证和紧急停止属于后续具身执行层，必须使用独立安全协议，不得由聊天模型直接下发。</div>
+    </section>
+
+    <section class="section" id="part5">
+      <h2>第五部分：知识认知脑</h2>
+      <p>知识认知脑服务于专业资料、个人笔记、规则文档和多模态材料转写后的知识内容。它的目标不止于“检索到文档”：系统须把专业知识沉淀为可引用的事实、概念、规则、适用条件、例外和案例证据，并在问题进入时给出有证据边界的专业分析。它的核心不是“把文档扔进向量库”，而是保留知识的概念结构、版本、来源、适用条件和冲突状态。</p>
+      <h3>5.1 知识导入五层管道</h3>
+      <div class="mini-cards"><div class="mini-card"><strong>解析</strong><span>抽取文本、表格、页码、标题层级、图片 OCR、音视频转写和媒体时间码。</span></div><div class="mini-card"><strong>切分</strong><span>按章节、语义、表格和论点切为可引用知识单元，避免任意截断。</span></div><div class="mini-card"><strong>自动标注与生长</strong><span>自动识别候选领域、概念、条件、来源、时间、版本、置信度和关联实体；低风险稳定模式进入留痕并自动生长。</span></div><div class="mini-card"><strong>策略门禁</strong><span>高风险本体关系、法律/安全结论、冲突裁决、发布级别和不可逆语义进入受控复核；支持修改、拒绝与回滚。</span></div><div class="mini-card"><strong>发布</strong><span>写入知识版本、证据索引和外链；旧版仍可追溯，查询固定已发布版本。</span></div></div>
+      <h3>5.2 检索、证据与版本规则</h3>
+      <ul><li><strong>向量检索：</strong>用于从大量知识单元中召回候选，不是最终结论，也不能取代本体过滤和权限判断。</li><li><strong>知识本体：</strong>用于表示领域、概念、属性、条件、关系和版本；概念路径可形成知识分枝。</li><li><strong>可靠时间主干：</strong>使用发布、生效、修订、采集等有来源的时间字段。没有可靠时间的材料进入“未定时间层”，不能伪造时序。</li><li><strong>证据返回：</strong>回答必须可展开到原文、页码、段落、图表、媒体时间码或引用关系。</li><li><strong>冲突表达：</strong>不同来源或版本存在矛盾时，保留并列证据、适用条件与发布日期，禁止由模型静默裁决。</li></ul>
+      <div class="callout knowledge"><strong>与多模态记忆脑的关系：</strong>一段视频的转写可以成为知识导入候选，但原视频仍归多模态时空记忆脑管理；知识脑记录的是可发布的文本知识单元、概念关系与引用证据。两个脑通过人物、地点、事件、概念和时间锚点关联，不互相复制原始材料。</div>
+      <h3>5.3 专业知识推理：从资料召回到可核验建议</h3>
+      <p>法律、精密制造等专业问题不能只靠“相似段落拼接”。知识认知脑应在检索结果之上执行受控的专业推理：先识别问题事实、时间和适用域，再匹配定义、规则、例外、版本和相似案例，最后给出结论、适用条件、反例、待补事实及逐项证据。模型只负责解释、补足询问和组织表述，不得把未被证据支持的推测包装成专业结论。</p>
+      <table><thead><tr><th>推理对象</th><th>知识脑保存与检索</th><th>回答时必须输出</th><th>不可自动越过的边界</th></tr></thead><tbody><tr><td>专业事实</td><td>定义、术语、参数、实体属性与来源版本</td><td>事实陈述、来源位置、有效版本与置信度</td><td>无来源时不得伪造事实</td></tr><tr><td>规则与条件</td><td>前提、适用范围、例外、约束、失效条件</td><td>规则命中链、前提是否已满足、缺失事实</td><td>不得把一般规则宣称为个案结论</td></tr><tr><td>案例与先例</td><td>案例事实、处理过程、结果、差异点与证据</td><td>相似点、关键差异、可比性限制与引用</td><td>不得把相似案例当作唯一结论依据</td></tr><tr><td>冲突知识</td><td>相互矛盾的版本、观点、适用域与发布日期</td><td>并列证据、冲突原因和当前不可确定项</td><td>不得静默选择模型偏好的来源</td></tr></tbody></table>
+      <div class="callout warning"><strong>专业边界：</strong>知识认知脑可以形成“基于当前资料的分析、建议和待补事实”，但法律、医疗、安全、质量放行等高风险领域须标注证据等级与适用范围；需要执业判断、签发或现场确认的事项不得由系统自动替代。</div>
+      <h3>5.4 WeKnora 源码内嵌知识运行时（候选实施方案）</h3>
+      <p>知识认知脑拟直接抽取并维护 WeKnora 的可复用源码模块，作为<strong>知识认知脑内部</strong>的“知识运行时”，而非通过外部 WeKnora 产品或接口旁路接入。该运行时负责将文件、网页和案例材料转换为可追溯的知识证据；知识智慧树、向量留痕、知识星团、三脑路由、统一 Agent、权限策略与最终输出仍由本系统主导。WeKnora 采用可替换的文档解析、向量化、检索和推理组件，适合按模块内嵌，而不是整体替代智慧树架构。当前内建运行时仅为开发/回归基线；上游提交未锁定前，不得表述为已经接入 WeKnora。<a href="https://github.com/Tencent/WeKnora" target="_blank" rel="noopener">上游源码</a>。</p>
+      <div class="diagram wk-architecture" role="img" aria-label="WeKnora 作为知识认知脑内部运行时，受控投影到知识智慧树并生成跨脑链式关联的目标架构图"><div class="diagram-title">图 5：WeKnora 嵌入知识认知脑与智慧树，不另起一套知识产品</div><div class="wk-architecture-grid"><aside class="wk-io"><b>三脑控制面</b><span>来源、权限、版本、审计与统一路由。</span></aside><article class="wk-brain"><header class="wk-brain-head"><h4>知识认知脑 / KnowledgeBrain</h4><span>WeKnora 的唯一宿主与唯一对外边界</span></header><div class="wk-brain-body"><section class="wk-runtime"><div class="wk-section-head"><strong>内嵌 WeKnora 受管运行时</strong><span>不启动独立产品服务，不对 Agent 直接暴露</span></div><div class="wk-runtime-grid"><div class="wk-step"><span class="wk-tag">WEKNORA</span><b>解析</b><span>受管文档、多模态对象与稳定定位。</span></div><div class="wk-step"><span class="wk-tag">WEKNORA</span><b>父子分块</b><span>上下文关系与可引用知识单元。</span></div><div class="wk-step"><span class="wk-tag">WEKNORA</span><b>索引与近邻</b><span>向量/关键词、混合召回与版本。</span></div><div class="wk-step"><span class="wk-tag">WEKNORA</span><b>重排与评测</b><span>检索轨迹、模型版本与可观测性。</span></div></div></section><div class="wk-projection">受控契约投影到知识智慧树 ↓</div><section class="wk-tree"><h4>知识智慧树</h4><p>结构、权限、生命周期仍由三脑系统统一拥有。</p><div class="wk-tree-layers"><div class="wk-tree-layer inner"><b>中通内链</b><span>时间、领域、稳定概念和版本锚点。</span></div><div class="wk-tree-layer middle"><b>中通周存</b><span>索引版本、嵌入空间、近邻/重排轨迹、概念摘要、证据集合与发布状态。</span></div><div class="wk-tree-layer outer"><b>DNA 外链</b><span>原文块、页码、图片、表格、引用关系与向量候选。</span></div></div><div class="wk-growth"><div class="wk-growth-card"><b>知识域向量留痕与自动星团</b><span>同空间近邻、去重、次数、紧密度与离散度。</span></div><div class="wk-growth-arrow">→</div><div class="wk-growth-card"><b>自动知识分枝与新 generation</b><span>主题、概念、条件、证据版本；页面可事后纠偏。</span></div></div></section><div class="wk-lifecycle"><strong>生命周期规则：</strong>普通低风险资料自动导入、索引、聚类、生长和发布；删除、权限收回、索引重建均由知识树版本驱动并可回滚。</div></div></article><aside class="wk-io"><b>可追溯知识结果</b><span>结论、条件、冲突、原文定位与版本。</span></aside></div><section class="wk-chain"><h4>跨脑链式联想：由知识树发出关联边，而非让 WeKnora 脱离智慧树</h4><p>关联使用公共锚点；目标脑保持既有实现，并在自己的树内独立检索、鉴权与返回证据。</p><div class="wk-chain-grid"><div class="wk-chain-card knowledge"><span class="wk-chain-label">关联源</span><b>知识星团 / 知识智慧树</b><span>经时间、实体、事件、稳定概念建立可审计链路。</span></div><div class="wk-chain-card"><span class="wk-chain-label">不改造</span><b>多模态时空记忆脑</b><span>沿自身智慧树和权限规则返回媒体证据。</span></div><div class="wk-chain-card"><span class="wk-chain-label">不改造</span><b>结构化数据推理脑</b><span>沿自身智慧树和口径规则返回精确结果。</span></div></div><p class="wk-forbid"><strong>禁止：</strong>不同脑的原始向量直接混合；WeKnora 绕开知识树独立发布或回答；跨脑关联绕过目标脑的权限、版本或证据核验。</p></section></div>
+      <table><thead><tr><th>处理方式</th><th>一阶段范围</th><th>与智慧树的关系</th><th>明确排除</th></tr></thead><tbody><tr><td>直接内嵌源码模块</td><td>文档解析、切分与父子块、混合检索、重排、自动 Wiki/图谱、检索评测与观测</td><td>只能产出候选知识单元和证据；经统一证据契约投影到本脑知识树的内链、周存与外链，并由树控制版本和发布</td><td>不把其默认知识库模型作为本系统最终拓扑或独立服务</td></tr><tr><td>统一 Agent 与治理层</td><td>继续使用三脑系统的对话、附件、模型通道、Skill、权限、审计、会话与输出界面</td><td>Agent 通过受控知识工具调用运行时，不直接操作其底层存储</td><td>不内嵌 WeKnora 的 Vue 工作台、通用聊天会话、登录/租户/RBAC 页面和独立 Agent 产品层</td></tr><tr><td>专业领域推理包</td><td>本体、术语表、规则、案例模板、冲突策略和领域提示约束</td><td>作为基座规范、知识分枝和周存推理摘要的来源；低风险候选可自动生长</td><td>不允许模型绕过证据、版本、策略门禁或专业签发要求</td></tr></tbody></table>
+      <h3>5.5 内部契约、来源治理与实现前置条件</h3>
+      <p>内嵌不是复制后无边界调用。运行时输出必须转换为统一的 <code>KnowledgeSource</code>、<code>CanonicalDocument</code>、<code>KnowledgeUnit</code>、<code>KnowledgeEvidence</code>、<code>KnowledgeRoute</code> 和 <code>KnowledgeReasoningResult</code> 契约；其中每个证据至少携带来源、定位、内容版本、解析版本、权限范围、时间状态和引用链。知识树只读取已通过该契约校验的证据，禁止直接依赖上游内部表结构。</p>
+      <ul><li><strong>源码边界：</strong>由于上游采用 Go 的内部源码组织，实施时应以锁定提交的受管源码快照/派生模块方式维护，而不是把不稳定内部包作为普通依赖；上游提交号、抽取目录、改动记录和升级差异须可追溯。</li><li><strong>许可证与归属：</strong>实施前固定上游版本，保留原许可证、版权声明及第三方依赖通知，并在 <code>THIRD_PARTY_NOTICES.md</code> 中记录来源、提交号、所用模块和本项目修改内容；未完成审查不得发布包含该源码的交付物。</li><li><strong>逻辑与数据边界：</strong>解析、切分、索引、近邻、混合检索与重排结果先经统一证据契约，再投影到知识智慧树：稳定概念/时间/领域进入中通内链；索引版本、嵌入空间、近邻与重排轨迹进入中通周存；原文块、页码、图表、引用关系和向量候选保留在 DNA 外链。物理索引可重建，但从属于知识树版本和生命周期，不能独立发布、授权或回答。</li><li><strong>自动生长与跨脑边界：</strong>同一嵌入空间内的近邻可自动触发知识留痕、知识星团与新 generation；普通低风险材料不要求逐笔确认，页面用于事后拆分、合并、暂停、重建或纠偏。跨脑只沿时间、实体、事件或稳定概念锚点关联；不混合原始向量，目标脑仍独立检索、鉴权和返回证据。</li><li><strong>运行边界：</strong>知识运行时作为知识脑内部组件部署并只暴露最小受控契约；它不替代或改写多模态时空记忆脑、现有结构化数据执行器、CNTS 或既有数据集的运行配置档。</li></ul>
+    </section>
+
+    <section class="section" id="part6">
+      <h2>第六部分：结构化数据推理脑</h2>
+      <p>结构化数据推理脑完整继承现有 AI 数据引擎的产品边界：数据集注册、字段角色分析、基座特征、时间规则、智慧树、精确聚合、统一查询和审计。它服务于业务表，也服务于任何具有明确字段、口径和时间粒度的受控数据集。注册与权限由人负责；字段角色候选、共有中通特征、分枝层级和物化聚合由系统依据数据画像与经验库给出并落盘，低风险项可自动写入，指标口径、跨数据集相加规则和敏感字段仍受策略门禁。</p>
+      <div class="callout base"><strong>本节与现有实现的对应：</strong>本节枚举、字段名与约束以现有工程契约为准（<code>schemas/*.json</code>、<code>topology-contract.json</code>、<code>query-contract.json</code>、<code>organization-bridge.json</code>）。标注“已实现”者指当前引擎已具备；标注“候选/待建”者须经验收后启用。规划表述不得超出契约允许范围。</div>
+      <h3>6.1 数据接入与字段治理</h3>
+      <div class="diagram" role="img" aria-label="结构化数据接入和智慧树自动构建流程图"><div class="diagram-title">图 6：结构化数据从注册、自动画像到可查询的受控流程</div><div class="flow"><div class="flow-step"><strong>注册</strong><span>选择 Excel 或数据库表，填写数据集范围、来源和权限。</span></div><div class="flow-step"><strong>自动画像</strong><span>字段统计、经验库和模型识别时间、维度、指标、忽略字段及可生长特征。</span></div><div class="flow-step"><strong>自动构建与策略门禁</strong><span>自动写入安全字段角色、主干/分枝和周存；敏感字段、口径与总量规则进入受控审核。</span></div><div class="flow-step"><strong>导入构建</strong><span>写入事实或主数据，生成周存、外链、拓扑和必要聚合。</span></div><div class="flow-step"><strong>验收激活</strong><span>行数、范围、指标、分枝、查询样例和审计通过后作为运行配置档启用。</span></div></div></div>
+      <h4>6.1.1 数据集注册契约（声明驱动）</h4>
+      <p>注册以声明驱动：每张数据集以一份 <code>schema</code> 声明其时间字段、维度分层、生长维度与指标，引擎据此生成时序树、查询契约与语义资产。当前基线包含一个维表/主数据数据集 <code>oil_master</code> 与四个事实数据集 <code>non_oil_sales</code>、<code>oil_sales_plan</code>、<code>oil_sales_daily</code>、<code>oil_monthly_sales</code>。schema 校验强制：时间字段、维度与指标三类不得重叠；<code>growth_dimensions</code> 必须是 <code>common_dimensions</code> 的子集；指标小数位 <code>scale</code> 限定 0–12。</p>
+      <table><thead><tr><th>注册字段</th><th>含义</th><th>取值 / 约束</th><th>状态</th></tr></thead><tbody>
+        <tr><td><code>dataset_id</code></td><td>数据集唯一标识</td><td>如 <code>oil_sales_daily</code></td><td>已实现</td></tr>
+        <tr><td><code>kind</code></td><td>数据集种类</td><td><code>fact</code>（事实）/ <code>dimension</code>（维表·主数据）</td><td>已实现</td></tr>
+        <tr><td><code>time_field</code> + <code>time_format</code></td><td>主时间列与解析格式</td><td>如 <code>date</code> + <code>%Y-%m-%d</code>；维表为 <code>none</code></td><td>已实现</td></tr>
+        <tr><td><code>common_dimensions</code></td><td>共有维度（→ 中通内链）</td><td>写入内链的稳定共有锚点</td><td>已实现</td></tr>
+        <tr><td><code>outer_dimensions</code></td><td>非共有维度（→ DNA 外链）</td><td>保留在外链</td><td>已实现</td></tr>
+        <tr><td><code>growth_dimensions</code> + <code>growth_threshold</code></td><td>生长维度与阈值</td><td>growth ⊆ common；分区节点数超阈值即按序分枝并重建 generation</td><td>已实现</td></tr>
+        <tr><td><code>metrics</code></td><td>指标声明</td><td>每项 <code>name</code> / <code>scale</code>(0–12) / <code>unit</code></td><td>已实现</td></tr>
+        <tr><td><code>scope</code> / <code>aliases</code> / <code>order_key</code></td><td>查询契约侧声明</td><td><code>role</code>（actual/plan/dimension）、业务域、时间粒度偏好、别名、明细排序键</td><td>已实现</td></tr>
+      </tbody></table>
+
+      <h4>6.1.2 字段角色体系（逐条对应）</h4>
+      <p>字段角色不写死在业务表里，而由注册与字段画像给出候选；候选来源分为经验库、规则、模型及其组合。低风险角色可自动落盘，敏感字段与不可逆口径须人工确认。</p>
+      <table><thead><tr><th>角色</th><th>含义</th><th>在智慧树中的位置</th><th>候选来源</th></tr></thead><tbody>
+        <tr><td><code>common</code></td><td>共有维度 / 稳定特征</td><td>中通内链（inner_chain）</td><td>经验库 / 规则 / 模型 / 组合</td></tr>
+        <tr><td><code>growth</code></td><td>可生长维度（common 子集）</td><td>中通内链 → 分枝</td><td>同上</td></tr>
+        <tr><td><code>outer</code></td><td>非共有维度</td><td>DNA 外链（outer_chain）</td><td>同上</td></tr>
+        <tr><td><code>ignore</code></td><td>忽略字段</td><td>不进入拓扑</td><td>同上</td></tr>
+      </tbody></table>
+      <div class="callout warning"><strong>治理边界：</strong>高基数标识（随机 ID、订单号）、自由文本与策略禁止字段不得自动成为 <code>common</code> / <code>growth</code>，只能进入外链或等待专门授权。角色候选与最终决定须记录来源、版本与操作者，可复核、可回滚。</div>
+
+      <h4>6.1.3 主数据与组织映射</h4>
+      <p>组织名称到标准条件的翻译按数据集声明（<code>organization-bridge</code>），逐层给出编码列与名称列；解析失败时拒绝请求，绝不删除用户已给出的过滤条件。例如 <code>oil_sales_daily</code> 使用 <code>bigareacode/bigareaname</code>（大区）、<code>branchcode/branchname</code>（县公司）、<code>areacode/areaname</code>（区域）、<code>oucode/shortname</code>（站点）四层；<code>non_oil_sales</code> 使用 <code>store_province / store_city / store_branch / store_area / store_ou</code> 五层。</p>
+
+      <h3>6.2 基座、智慧树与精确查询</h3>
+      <ul><li><strong>基座：</strong>将相对时间、组织名称、产品别名、派生指标和业务口径翻译为标准条件；基座不保存事实时间序列，也不替代时间主干。</li><li><strong>时间主干：</strong>自动从可解析且覆盖充分的时间字段中选择粒度最高的可靠候选，并按日、月、年等粒度纵向堆叠；识别不确定时标记限制，不伪装为精确日数据。</li><li><strong>自动中通与动态分枝：</strong>构建器按覆盖率、重复率、区分度、层级依赖、基数、熵和记录阈值自动选择共有中通特征；超过阈值时按组织、地域、类别、产品或渠道等自然层级递归生长。高基数标识、自由文本和策略禁止字段不自动生长。</li><li><strong>聚合上浮：</strong>周存自动保存物化聚合用于快速读取；多维过滤、复杂分组与未物化目标层必须回到事实数据精确计算。</li><li><strong>统一合并：</strong>多数据集先独立计算。只有在口径可比且问题要求总量时才相加；分项问题并列呈现；无命中不能误报为参与查询或数值零。</li></ul>
+      <h4>6.2.1 时间规则（逐条对应）</h4>
+      <table><thead><tr><th>规划术语</th><th>实现字段 / 契约</th><th>取值与约束</th></tr></thead><tbody>
+        <tr><td>时间主干</td><td><code>time_field</code> + <code>time_granularity</code></td><td>粒度枚举 <code>none</code> / <code>day</code> / <code>month</code>；维表为 <code>none</code></td></tr>
+        <tr><td>时间范围</td><td><code>period: {start, end}</code></td><td><code>YYYY-MM-DD</code>，且 <code>start ≤ end</code></td></tr>
+        <tr><td>粒度上卷</td><td>虚拟时间分组</td><td><code>year / half_year / quarter / month / day</code> 由时间主干按需派生，不新增物理存储</td></tr>
+        <tr><td>选主</td><td>可解析且覆盖充分</td><td>取粒度最高的可靠候选作为主干</td></tr>
+        <tr><td>不确定时间</td><td>限制标记</td><td>无法可靠解析或覆盖不足时显式标注，不伪装为精确日数据</td></tr>
+      </tbody></table>
+
+      <h4>6.2.2 指标口径（逐条对应）</h4>
+      <table><thead><tr><th>规划术语</th><th>实现字段 / 契约</th><th>取值与约束</th></tr></thead><tbody>
+        <tr><td>指标定义</td><td><code>metrics[].name</code></td><td>如 <code>salesvol</code>（销售吨数）、<code>qty</code>（销售升数）、<code>amount</code>（销售金额）、<code>sale_amount</code></td></tr>
+        <tr><td>小数位 / 单位</td><td><code>scale</code> / <code>unit</code></td><td><code>scale ∈ 0–12</code>；单位如 <code>CNY</code>、<code>ton</code></td></tr>
+        <tr><td>口径落库</td><td>Decimal / 定点整数</td><td>指标按 <code>scale</code> 解析为定点整数参与聚合，避免浮点误差</td></tr>
+        <tr><td>派生指标</td><td>派生指标定义</td><td>由基础指标按声明推导（如完成率），口径受门禁</td></tr>
+        <tr><td>无命中</td><td><code>no_match</code></td><td>返回空结果，绝不伪装为数值 <code>0</code></td></tr>
+        <tr><td>跨数据集合并</td><td><code>merge_mode</code></td><td>当前仅 <code>separate</code>：各数据集独立计算；同比/环比与跨数据集口径由语义层后续阶段承担</td></tr>
+      </tbody></table>
+
+      <h4>6.2.3 智慧树生长与聚合上浮</h4>
+      <ul><li><strong>三层物理空间：</strong><code>inner_chain</code>（中通内链）= 时间与声明共有特征；<code>middle_store</code>（周存）= 物化聚合与聚合上浮；<code>outer_chain</code>（DNA 外链）= 数据集专属与非共有特征索引。DNA 只描述物理拓扑，不新增一个业务查询层。</li><li><strong>动态分枝：</strong>时序分区节点数超过 <code>growth_threshold</code> 时按 <code>growth_dimensions</code> 顺序分枝；阈值来自不可变 schema，变更即构建新 generation。</li><li><strong>聚合上浮：</strong>周存保存物化聚合用于快速读取；多维过滤、复杂分组与未物化目标层必须回到事实数据精确计算。</li><li><strong>统一合并：</strong>多数据集先独立计算；只有口径可比且问题要求总量时才相加，分项问题并列呈现，无命中不得误报为参与查询或数值零。</li></ul>
+
+      <h3>6.3 物理执行器与运行配置档</h3>
+      <table><thead><tr><th>能力</th><th>Legacy 执行器</th><th>CNTS 执行器</th><th>共同约束</th></tr></thead><tbody><tr><td>物理存储</td><td>关系型事实、维表与现有查询层</td><td>不可变二进制 generation 与多数据集 Catalog</td><td>Agent 不直接访问底层文件或数据库</td></tr><tr><td>语义资产</td><td>基座特征、时间规则、经验库、组织映射和拓扑声明</td><td>将同类语义资产与 generation 固定为 Catalog 版本</td><td>一次查询固定一个完整运行配置档</td></tr><tr><td>切换方式</td><td>作为可激活配置档的一种执行器</td><td>候选构建、验收、锁定、管理员人工激活</td><td>不允许查询失败时静默回退，也不允许混用两套配置档</td></tr></tbody></table>
+      <div class="callout success"><strong>核心保持不变：</strong>无论底层使用何种物理载体，基座翻译、时间主干、中通内链、周存、DNA 外链、动态生长、分枝和聚合上浮的业务含义与查询契约不变；改变的只是物理存储和执行方式。</div>
+      <h3>6.4 现有实现对应与状态</h3>
+      <p>下表把本节规划表述与现有工程实现逐条对齐，区分“当前已实现”“候选/待建”，避免把规划能力误表述为已上线能力。</p>
+      <table><thead><tr><th>规划能力</th><th>现有实现</th><th>状态</th></tr></thead><tbody>
+        <tr><td>数据集注册 / 字段角色</td><td>Legacy 引擎数据集注册与字段画像；声明驱动多数据集构建器</td><td>已实现</td></tr>
+        <tr><td>基座特征 / 时间规则 / 组织桥</td><td>基座、时间规则、经验库、<code>organization-bridge</code> 作为语义资产绑定进 Catalog</td><td>已实现</td></tr>
+        <tr><td>智慧树 / 精确聚合 / 统一查询</td><td>Legacy 执行器：关系型事实、维表与统一查询入口 <code>POST /api/v1/engine/query</code></td><td>已实现</td></tr>
+        <tr><td>Agent 通道</td><td>只读 MCP：<code>engine_healthz / engine_list_datasets / engine_dataset_contract / engine_query / engine_records_query</code></td><td>已实现</td></tr>
+        <tr><td>图表呈现</td><td>前端按结构化结果为表格与图表</td><td>已实现</td></tr>
+        <tr><td>CNTS 二进制执行器</td><td>不可变 generation + 五数据集 Catalog；候选档 <code>cnts-candidate-20261007-v2</code> 已验收锁定，活动档仍为 <code>legacy-local-v1</code></td><td>候选，待管理员人工激活</td></tr>
+        <tr><td>多数据集合并 / 同比环比</td><td>Phase 0 每次只查一个数据集且仅 <code>merge_mode=separate</code></td><td>待建</td></tr>
+        <tr><td>完全自动字段生长</td><td>角色由经验库/规则/模型给出候选，敏感与口径项需人工确认</td><td>部分实现</td></tr>
+      </tbody></table>
+    </section>
+
+    <section class="section" id="part7">
+      <h2>第七部分：跨脑编排、Agent 与产品界面</h2>
+      <h3>7.1 Agent 的职责边界</h3>
+      <p>Agent 是统一入口与编排层，不是数据事实源。它通过受控 HTTP/MCP 或同等契约调用记忆星团与三脑能力，负责理解问题、校验时间条件、生成结构化请求、组织表格和图表、呈现证据以及保存会话。Agent 不得绕过引擎直读数据库、原始媒体或知识库内部文件。</p>
+      <div class="diagram" role="img" aria-label="自动记忆星团与三脑并行查询流程图"><div class="diagram-title">图 7：一次查询的自动快速记得、并行核对与多脑合一</div><div class="flow"><div class="flow-step"><strong>输入理解</strong><span>识别问题、附件、权限和期望输出；时间缺失时请求补充或使用策略允许的默认范围。</span></div><div class="flow-step"><strong>基座编译</strong><span>生成统一日历范围，并分别生成时空、知识和结构化数据可执行参数。</span></div><div class="flow-step"><strong>星团快速检索</strong><span>自动星团命中后，在成员引用上与时间范围求交，返回日圈、树、节点与证据引用。</span></div><div class="flow-step"><strong>三脑并行核对</strong><span>每脑在自身智慧树森林中查询、树内合并并固定版本与 trace。</span></div><div class="flow-step"><strong>多脑合一</strong><span>区分数值、媒体观察和知识证据；保留冲突、限制与无命中说明。</span></div><div class="flow-step"><strong>统一输出</strong><span>先给可核验“我记得”线索，再给完整结论、口径、来源与可展开证据。</span></div></div></div>
+      <h3>7.2 分阶段输出契约</h3>
+      <div class="callout base"><strong>阶段一：快速记得。</strong>若自动星团达到策略阈值、成员可追溯且权限允许，界面可以先显示“我记得：……”及时间范围、星团版本、命中次数和可展开的证据数量；它是索引线索，不是最终的完整结论。<br><strong>阶段二：并行核对。</strong>界面显示“正在核对时空记录、知识证据和结构化数据”，该状态仅说明可见的工作阶段，不展示或伪造模型内部思维过程。<br><strong>阶段三：正式回答。</strong>三脑完成后，按问题语义合并输出。若某脑超时、无权限或无命中，必须明确披露；不得用星团线索替代缺失的精确数值、原始证据或知识结论。</div>
+      <h3>7.3 三类典型问题</h3>
+      <table><thead><tr><th>用户问题类型</th><th>路由</th><th>正确返回方式</th></tr></thead><tbody><tr><td>“上周某地点发生过什么？”</td><td>多模态时空记忆脑</td><td>按授权返回时间范围、场景摘要、相关媒体片段和不确定项。</td></tr><tr><td>“某项技能的规范和注意事项是什么？”</td><td>知识认知脑</td><td>返回知识结论、适用条件、原文段落、页码/时间码和版本。</td></tr><tr><td>“某时间段各单位的指标、计划和完成情况如何？”</td><td>结构化数据推理脑</td><td>返回数据集、标准条件、表格、图表、计算口径和精确聚合结果。</td></tr><tr><td>“我上周的练习记录与规范要求有什么差异？”</td><td>多模态记忆脑 + 知识认知脑；存在记录表时可叠加结构化数据脑</td><td>并列呈现观察到的动作特征、知识证据和数值记录；不得把相似度伪装为医学或训练结论。</td></tr></tbody></table>
+      <h3>7.4 产品页面信息架构</h3>
+      <div class="mini-cards"><div class="mini-card"><strong>Agent 工作台</strong><span>会话、附件、模型通道、可用 Skill、结构化图表、来源卡片，以及“快速记得 / 并行核对 / 正式回答”状态。</span></div><div class="mini-card"><strong>认知拓扑总览</strong><span>同尺多轴的三类树、时间主干、自动分枝、周存、外链、记忆星团和查询高亮；显示真实与抽样节点数。</span></div><div class="mini-card"><strong>记忆星团管理</strong><span>向量留痕、自动星团、成员日圈、子簇、生长阈值、次数、离散度、证据、版本和拆分/合并/暂停/重建记录。</span></div><div class="mini-card"><strong>多模态记忆管理</strong><span>媒体接入、提取任务、天地人候选、隐私设置、保留期限与删除记录；普通低风险特征自动生长。</span></div><div class="mini-card"><strong>知识导入与证据管理</strong><span>知识脑内部 WeKnora 运行时状态、解析、切分、检索、图谱、自动知识星团/分枝生长、版本发布、冲突处理与原文证据跳转；显示索引版本、嵌入空间、近邻轨迹和事后纠偏。</span></div><div class="mini-card"><strong>数据集管理</strong><span>Excel/数据库注册、自动字段画像、策略门禁、导入进度、拓扑构建和查询验收。</span></div><div class="mini-card"><strong>运行配置档</strong><span>引擎、数据集、语义资产、验收结果、激活记录与人工回切；不与普通系统参数混用。</span></div></div>
+    </section>
+
+    <section class="section" id="part8">
+      <h2>第八部分：数据治理、隐私与安全</h2>
+      <h3>8.1 个人记忆与多模态数据</h3>
+      <ul><li>媒体接入必须具有来源标识、采集/上传授权、用途说明、数据域和保留期限；用户可以查看、导出、纠正、停用或删除自己的记忆资产。</li><li>人物身份识别、声纹关联和精确位置属于高敏感能力：默认不自动将候选身份写为事实，必须设置单独授权和确认机制。</li><li>原始媒体、日圈向量、向量留痕、记忆星团索引、拓扑摘要和访问日志分层保存；最小权限原则贯穿检索、预览、下载和 Agent 工具调用。</li><li>自动星团必须保留聚合键、出现次数、中心、离散度、阈值事件、算法/规则版本，以及与树/日圈/节点/证据的成员引用；撤销、删除或权限变化必须使对应成员引用和检索结果同步失效。</li><li>摄像头或在线视频采用受控片段化接入：先声明来源、时段、保留策略和访问角色，再形成可发布记忆单元，不能无限制持续收集。</li></ul>
+      <h3>8.2 知识与结构化数据治理</h3>
+      <ul><li>每个知识单元带来源、版本、适用条件、自动/人工状态和引用位置；废止、草稿与正式发布状态必须可区分。</li><li>知识运行时的上游来源、锁定提交、抽取模块、许可证/版权通知、依赖清单和本地改动必须记录；禁止没有来源治理的源码复制或静默升级。</li><li>结构化数据集带来源、字段声明、时间粒度、指标口径、数据集能力、构建版本和验收结果；系统可自动生成字段角色和拓扑，但不可逆口径或敏感字段不自动启用。</li><li>三脑通过实体、事件、时间和稳定语义锚点关联时，必须记录关联依据、算法/规则版本、自动状态与人工覆盖状态；不同脑的向量坐标不能因名称相同而被视为天然等值。</li><li>所有跨脑请求记录请求标识、输入权限、时间范围、星团版本、路由决策、已使用资产版本、返回证据和失败原因，支持审计与问题复现。</li></ul>
+      <div class="callout warning"><strong>向量数据库的边界：</strong>向量检索适合多模态相似召回和文本知识候选发现；它不替代结构化数据的精确筛选与计算，也不替代智慧树的物理拓扑、权限判断、时间比较、版本控制和审计。</div>
+    </section>
+
+    <section class="section" id="part9">
+      <h2>第九部分：实施路线与验收标准</h2>
+      <p>实施采用“统一契约先行、每脑独立可验收、跨脑最后合并”的顺序。每阶段产出可单独测试、回退和演示的能力，避免用大模型回答掩盖底层数据或治理问题。</p>
+      <div class="phase"><div class="phase-label">阶段 A：统一骨架<small>契约与治理先行</small></div><div>定义三脑统一查询协议、统一日历尺与日界线、天地人/知识/数据基座接口、同尺多轴拓扑字段、资产版本、权限上下文、证据卡片和审计模型。完成 Agent 到认知脑与记忆星团的稳定通道，禁止 Agent 直接读取存储。</div></div>
+      <div class="phase"><div class="phase-label">阶段 B：多模态时空记忆<small>一期能力</small></div><div>完成图片、视频、音频与文字接入；关键帧、转写、场景、动作候选提取；天地人归一；以每天一圈构建时间主干、向量留痕、周存摘要、自动分枝与外链回放。输出动作特征契约，但不接入机器人控制。</div></div>
+      <div class="phase"><div class="phase-label">阶段 C：知识认知、源码内嵌与记忆星团<small>一期能力</small></div><div>固定 WeKnora 上游提交，建立受管源码快照、许可证/通知与统一证据契约；仅在知识认知脑内嵌文档解析、切分与父子块、混合检索、重排、Wiki/图谱、检索评测与观测模块。输出先投影到知识树中通内链/周存/DNA 外链；物理索引可重建但由知识树版本控制。同一嵌入空间的近邻自动驱动知识星团、分枝和 generation，用户在页面事后纠偏。多模态时空记忆脑和结构化数据推理脑不因此改写；跨脑只通过时间、实体、事件、稳定概念锚点让目标脑独立检索。三脑系统继续提供 Agent、会话、权限、审计与统一输出，不内嵌上游的独立产品界面、登录/租户/RBAC 与通用聊天层。</div></div>
+      <div class="phase"><div class="phase-label">阶段 D：结构化数据接入<small>现有能力强化</small></div><div>继续完善数据集注册、自动字段画像、自动中通/分枝生长、精确聚合、智慧树重建、运行配置档和 CNTS 候选构建。任何生产切换以完整引擎与数据集配置档为原子单位。</div></div>
+      <div class="phase"><div class="phase-label">阶段 E：跨脑编排<small>一期收口</small></div><div>实现“快速记得 → 三脑并行核对 → 多脑合一”的分阶段输出、实体/事件/时间锚点、跨脑证据卡片、结果口径校验和统一输出。验证单脑与跨脑问题在权限、证据、时间范围和错误提示上的一致性。</div></div>
+      <div class="phase"><div class="phase-label">后续：具身执行层<small>独立安全项目</small></div><div>在动作特征、仿真、设备模型、安全策略、人工确认和紧急停止均具备后，再建设动作映射与控制适配器。它不属于三脑认知层的一期验收范围。</div></div>
+      <h3>9.1 最小验收矩阵</h3>
+      <div class="checklist"><div class="check"><b>多模态记忆</b><br><small>按时间、地点、人物查询时只返回已授权且可追溯的媒体证据；未知项不被伪造为事实。</small></div><div class="check"><b>知识认知与专业推理</b><br><small>每个关键结论可回溯到原文位置、版本、适用条件和自动/人工状态；规则前提、缺失事实、相似案例差异与冲突来源并列展示。</small></div><div class="check"><b>WeKnora 内嵌边界</b><br><small>解析、检索、图谱和评测输出只在知识认知脑内通过统一证据契约投影到智慧树；索引版本、嵌入空间与近邻/重排轨迹在中通周存可观察，原文定位仍由 DNA 外链展开。</small></div><div class="check"><b>结构化推理</b><br><small>自然语言到标准条件、直接查询和 Agent 调用的指标、过滤、分组和时间范围一致。</small></div><div class="check"><b>同尺多轴智慧树</b><br><small>三脑均使用一致日历尺和每天一圈的主干规则，但树、自动分枝、周存、外链与覆盖范围独立；拓扑角色与空间层不混用。</small></div><div class="check"><b>向量留痕与记忆星团</b><br><small>每个向量先留痕；近似向量达到次数和紧密度阈值后自动聚合。星团主键不含日期，但可按成员引用准确反查日圈；撤销、删除或权限变化后索引同步失效。</small></div><div class="check"><b>自动生长与纠偏</b><br><small>普通低风险共有特征和分枝无需人工确认即可生长；用户可查看依据、调阈值、合并、拆分、暂停或禁用；高敏感和不可逆语义必须被策略门禁拦截。</small></div><div class="check"><b>分阶段与跨脑输出</b><br><small>“我记得”仅来自满足阈值且可核验的自动星团成员；三脑完成后再输出完整答案，数值、媒体观察和知识引用各带证据。</small></div><div class="check"><b>治理与切换</b><br><small>权限、自动阈值事件、人工覆盖、审计与运行配置档切换均可复现、可验证、可人工回切。</small></div></div>
+    </section>
+
+    <section class="section" id="part10">
+      <h2>第十部分：工程约束与风险边界</h2>
+      <h3>10.1 技术选型原则</h3>
+      <table><thead><tr><th>问题</th><th>优先技术路线</th><th>不应采用的替代</th></tr></thead><tbody><tr><td>结构化指标、过滤与同环比</td><td>事实数据、声明驱动查询、Decimal/定点聚合、智慧树聚合块与精确回退</td><td>仅用向量检索或大模型文本推断数值</td></tr><tr><td>多模态媒体存储与回放</td><td>受控对象存储/媒体库 + 特征索引 + 拓扑元数据 + 权限校验</td><td>把完整视频或音频直接塞入关系型字段或提示词</td></tr><tr><td>知识检索与专业推理</td><td>仅知识脑内嵌的受管 WeKnora 运行时 + 原文解析、知识本体、规则/案例推理包、版本治理、混合召回、重排与证据引用；统一证据契约后投影到知识智慧树与自动知识星团</td><td>整体搬入另一套知识产品，或只保留 embedding 而丢失原文、版本、来源、适用条件和智慧树路径</td></tr><tr><td>物理存储优化</td><td>运行配置档下的 Legacy/CNTS 可验证切换；不可变候选构建与验收</td><td>查询失败时静默切换后端或混合不同数据版本</td></tr><tr><td>具身控制</td><td>独立动作映射、仿真、安全控制与设备适配层</td><td>由 Agent 根据自然语言直接生成并下发控制动作</td></tr></tbody></table>
+      <h3>10.2 主要风险与缓解</h3>
+      <ul><li><strong>多模态误识别：</strong>普通活动、场景和动作可按策略自动形成可纠偏特征；身份、声纹和精确位置等敏感事实不能仅凭相似度自动固化，必须受单独授权与门禁约束。</li><li><strong>星团错误聚合：</strong>特征相似不等于同一事件；聚类须同时满足最小次数、紧密度、离散度、上下文一致性、模型版本和策略阈值。分歧较大时自动分裂为子簇，并提供拆分、合并、暂停和重建，而不是强行合并或默认等待人工逐项确认。</li><li><strong>个人隐私扩大化：</strong>数据域、权限、保留期限和删除能力先于规模化采集；敏感身份与精确位置采用单独授权。</li><li><strong>知识幻觉与错误适用：</strong>所有关键结论返回原文证据、版本、适用条件和未满足前提；无法支撑或存在冲突时明确“未找到足够证据”或“不能据此确定”。</li><li><strong>源码内嵌漂移：</strong>上游模块、依赖或许可证变化可能使本地修改不可维护；必须锁定提交、保留通知、以统一契约隔离内部表结构，并以解析/检索/引用回归集验证升级。</li><li><strong>双知识架构：</strong>若上游运行时绕开统一证据契约直接形成答案或持久化最终拓扑，会产生平行知识库；WeKnora 只能作为知识脑内部受管组件，其可重建索引必须投影到本脑智慧树并受树生命周期约束；Agent、权限、审计、知识星团和智慧树必须保持系统唯一入口和版本真相。</li><li><strong>跨脑错误合并：</strong>数值、媒体观察和知识观点按类型并列；只有受控的可比口径才能汇总。</li><li><strong>智慧树膨胀：</strong>阈值、生长维度、安全深度和高基数排除规则版本化；自动合并低价值重复节点、停用长期失效分枝，重建以新拓扑版本原子切换而非覆盖线上版本。</li><li><strong>存储切换风险：</strong>完整运行配置档、不可变数据版本、验收门禁、原子激活和人工回切，禁止自动回退。</li></ul>
+      <div class="callout success"><strong>完成定义：</strong>用户能够从统一 Agent 入口按时间条件访问自动记忆星团与三脑；每个向量均可追溯其留痕、阈值事件和成员引用，“我记得”来自满足阈值且权限允许的星团命中。完整答案说明它使用了哪一脑、哪一版本、什么时间范围和哪些证据；结构化结果可精确复算，多模态记忆可按权限回放，知识结论可定位原文。三脑共享智慧树的认知路径，但不牺牲各自的真实性、隐私和专业边界。</div>
+    </section>
+
+    <footer class="footer">三脑认知与知识引擎 · 产品与技术规划书 V3.3<br>本文档是产品与技术规划基线。WeKnora 仅内嵌于知识认知脑，并经智慧树投影、自动生长和事后纠偏运行；多模态时空记忆脑与结构化数据推理脑保持既有边界。实际部署与生产启用须以对应环境验收结果为准。</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "dataset": "oil_sales_daily_shadow",
+  "recommendations": [
+    {
+      "recommendation_id": "org-universalcode-33351140-v1",
+      "match": {"universalcode": "33351140"},
+      "candidate_mapping": {
+        "oucode": "100045001001010",
+        "shortname": "交控乐东服务区南站",
+        "branchcode": "100045001",
+        "branchname": "交控石化分公司",
+        "areacode": "100045001001",
+        "areaname": "交控34片区",
+        "bigareacode": "100045",
+        "bigareaname": "交控"
+      },
+      "evidence": "同一 UniversalCode 在后续有效日报中只出现一条完整组织链；尚未确认历史生效日期",
+      "status": "pending_review"
+    },
+    {
+      "recommendation_id": "org-universalcode-33351141-v1",
+      "match": {"universalcode": "33351141"},
+      "candidate_mapping": {
+        "oucode": "100045001001009",
+        "shortname": "交控乐东服务区北站",
+        "branchcode": "100045001",
+        "branchname": "交控石化分公司",
+        "areacode": "100045001001",
+        "areaname": "交控34片区",
+        "bigareacode": "100045",
+        "bigareaname": "交控"
+      },
+      "evidence": "同一 UniversalCode 在后续有效日报中只出现一条完整组织链；尚未确认历史生效日期",
+      "status": "pending_review"
+    },
+    {
+      "recommendation_id": "org-universalcode-33351186-v1",
+      "match": {"universalcode": "33351186"},
+      "candidate_mapping": {
+        "oucode": "100047001001056",
+        "shortname": "海口迎宾大道站",
+        "branchcode": "100047001",
+        "branchname": "海口市县公司",
+        "areacode": "100047001001",
+        "areaname": "海口",
+        "bigareacode": "100047",
+        "bigareaname": "海口分公司"
+      },
+      "evidence": "同一 UniversalCode 在后续有效日报中只出现一条完整组织链；尚未确认历史生效日期",
+      "status": "pending_review"
+    }
+  ]
+}
